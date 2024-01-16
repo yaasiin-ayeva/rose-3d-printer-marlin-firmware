@@ -1,0 +1,25 @@
+\section{Analyse de l'existant}
+Le squelette de l'imprimante 3D comportait déjà le minimum de matériel dont nous avions besoin. On avait entre autre :
+\begin{itemize}
+	\item La carte Arduino Mega
+	\item La carte RAMPS v1.4 de RepRap
+	\item La tête de laser
+	\item Les moteurs pour les mouvements des axes X, Y et Z
+	\item Un moniteur à molette avec un port SD
+	\item deux capteurs de fin de course (sur les axes X et Y)
+	\item Une source d'alimentation (power supply) qui transforme le 220V du secteur en 12V
+\end{itemize}
+
+\section{Besoins externes}
+Sur le plan matériel, nous n'avions pas besoins de grand chose. Ce qui manquait était les compétences en code surtout; et de savoir quel composant branché à quel endroit. Il fallait donc passer du temps sur les sites officiels des constructeurs et dans divers forums en ligne pour en savoir plus. Nous avons donc mis à jour un dépôt Git dans lequel une section \textbf{documentation} rassemblait toutes nos trouvailles. Avant de débuter la configuration de la firmware, il était impératif pour nous de pouvoir répondre aux questions suivante :
+\begin{itemize}
+	\item Style escompté de l'imprimante : Cartesian, Delta, CoreXY, ou SCARA
+    \item De quel type de driver board disposons nous : RAMPS, RUMBA, Teensy, etc.
+    \item la carte Arduino compatible avec le driver board : Mega 2560
+    \item Le nombre d'extrudeurs
+    \item le stepping par millimètre pour les axes XYZ et les extrudeurs
+    \item La position des capteurs de fin de course (Endstop)
+	\item La marque et le modèle du contrôleur LCD dont nous disposons
+    \item Modules complémentaires et composants personnalisés
+\end{itemize}
+

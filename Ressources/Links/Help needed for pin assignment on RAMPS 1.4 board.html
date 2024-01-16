@@ -1,0 +1,1672 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- START TEMPLATE header.tpl -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<title>Help needed for pin assignment on RAMPS 1.4 board.</title>
+
+
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="Help%20needed%20for%20pin%20assignment%20on%20RAMPS%201.4%20board_fichiers/css.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="Help%20needed%20for%20pin%20assignment%20on%20RAMPS%201.4%20board_fichiers/css_002.css" media="print">
+
+
+<script type="text/javascript" src="Help%20needed%20for%20pin%20assignment%20on%20RAMPS%201.4%20board_fichiers/javascript.php"></script>
+
+
+    
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://reprap.org/forum/feed.php?133,836616,type=rss">
+    
+
+
+
+
+
+
+
+    <meta name="description" content=" I am using the following: RAMPS 1.4, Marlin firmware V 1.1.8. Recently I decided to build a Laser engraver/cutter. I disassembled an older printer and ordered parts to build one that looks like the Eleksmaker A3. Additionally I purchased a 7W diode laser that requires a 5A driver board. Since I am ">
+
+
+
+
+
+
+
+    <!--[if lte IE 6]>
+    <style type="text/css">
+        #phorum {
+        width:       expression(document.body.clientWidth > 900
+                     ? '900px': 'auto' );
+        margin-left: expression(document.body.clientWidth > 900
+                     ? parseInt((document.body.clientWidth-900)/2) : 0 );
+        }
+    </style>
+    <![endif]-->
+
+
+<!--
+Some Icons courtesy of:
+  FAMFAMFAM - http://www.famfamfam.com/lab/icons/silk/
+  Tango Project - http://tango-project.org/
+-->
+<script src="Help%20needed%20for%20pin%20assignment%20on%20RAMPS%201.4%20board_fichiers/prompt.js"></script></head>
+
+<body onload="">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div id="phorum">
+
+      
+
+          
+
+          
+
+          
+
+          <div id="user-info" class="logged-out">
+              
+
+              
+                  <span class="welcome">Welcome!</span>
+                  <a class="icon icon-key-go" href="https://reprap.org/forum/login.php?133">Log In</a>
+                  <a class="icon icon-user-add" href="https://reprap.org/forum/register.php?133">Create A New Profile</a>
+              
+          </div> <!-- end of div id=user-info -->
+
+          
+
+          
+
+          
+
+          <div id="logo">
+            <map name="forum-button-strip">
+              <area href="https://reprap.org/forum/" alt="RepRap forum" title="RepRap forum" shape="rect" coords="0, 0, 148, 28">
+              <area href="https://reprap.org/wiki/" alt="RepRap wiki" title="RepRap wiki" shape="rect" coords="258, 0, 344, 28">
+              <area href="https://reprap.org/wiki/IRC" alt="RepRap IRC" title="RepRap IRC" shape="rect" coords="354, 0, 426, 28">
+            </map>
+            <img src="Help%20needed%20for%20pin%20assignment%20on%20RAMPS%201.4%20board_fichiers/forum-button-strip.png" alt="RepRap forum" usemap="#forum-button-strip" width="583" height="28" border="0">
+          </div> <!-- end of div id=logo -->
+
+          
+
+          
+
+          
+
+          
+
+          <div id="breadcrumb">
+              
+              
+                  
+                  
+                      <a href="https://reprap.org/forum/index.php">Home</a>
+                  
+                  
+              
+                   &gt;
+                  
+                      <a rel="breadcrumb-folder[130]" href="https://reprap.org/forum/index.php?130">Fabrication</a>
+                  
+                  
+              
+                   &gt;
+                  
+                      <a rel="breadcrumb-forum[133]" href="https://reprap.org/forum/list.php?133">Laser Cutter Working Group</a>
+                  
+                  
+              
+                   &gt;
+                  
+                      Topic
+                  
+                  
+              
+          </div> <!-- end of div id=breadcrumb -->
+
+          
+
+          <div id="search-area" class="icon-zoom">
+              <form id="header-search-form" action="https://reprap.org/forum/search.php?133" method="get">
+                  <input type="hidden" name="forum_id" value="133">
+<input type="hidden" name="posting_token:post" value="4b91808272085d762851e63f86344a8f">
+
+                  <input type="hidden" name="phorum_page" value="search">
+                  <input type="hidden" name="match_forum" value="ALL">
+                  <input type="hidden" name="match_dates" value="365">
+                  <input type="hidden" name="match_threads" value="0">
+                  <input type="hidden" name="match_type" value="ALL">
+                  <input type="text" name="search" size="20" class="styled-text"><input type="submit" value="Search" class="styled-button"><br>
+                  <a href="https://reprap.org/forum/search.php?133">Advanced</a>
+              </form>
+          </div> <!-- end of div id=search-area -->
+
+          
+
+          <div id="page-info">
+              
+                  
+
+                  <h1 class="heading">Help needed for pin assignment on RAMPS 1.4 board.</h1>
+                  <div class="description">Posted by <a href="https://reprap.org/forum/profile.php?133,41218">kd6hq</a>&nbsp;</div>
+              
+          </div> <!-- end of div id=page-info -->
+
+          
+
+          
+
+          
+
+          
+
+          
+       
+
+<!-- END TEMPLATE header.tpl -->
+
+<!-- BEGIN TEMPLATE read.tpl -->
+<div class="nav">
+    <a class="icon icon-folder" href="https://reprap.org/forum/index.php">Forum List</a>
+    <a class="icon icon-list" href="https://reprap.org/forum/list.php?133">Message List</a>
+    <a class="icon icon-comment-add" href="https://reprap.org/forum/posting.php?133">New Topic</a>
+</div>
+
+
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,41218">kd6hq</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,836616#msg-836616" rel="nofollow">Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            October 21, 2018 12:46PM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 5 years ago<br>
+                            Posts: 223
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             I am using the following: RAMPS 1.4, Marlin firmware V 1.1.8.<br>
+ <br>
+Recently I decided to build a Laser engraver/cutter.  I disassembled an older printer and ordered parts to build  <br>
+one that looks like the Eleksmaker A3.  Additionally I purchased a 7W diode laser that requires a 5A driver board.  <br>
+Since I am using a RAMPS 1.4 board I have been using the PWM signal from D9.  I would like to continue <br>
+using D9 but so far all the 5A driver boards I have found want 0-5V TTL signals.  I understand that it is possible <br>
+to reassign the pins to a 5V PWM signal.  <br>
+<br>
+Will this work?  Is it possible to feed a PWM signal where a TTL signal is expected?<br>
+<br>
+I've never reassigned a pin before, so I don't know what the "define statement" should look like or where it should be placed.  <br>
+<br>
+I understand that Marlin V 1.1.9 has settings for Laser/Spindle operation.  <br>
+Would it be simpler to switch versions?<br>
+<br>
+thanks for the help.<br>
+Don
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,836616#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,836616,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-836683"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,9448">Dust</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,836683#msg-836683" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            October 22, 2018 09:32AM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 9 years ago<br>
+                            Posts: 5,691
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             You cant re assign D9 to annother pin as such...  (well not without hacking the arduino IDE) <br>
+<br>
+I would try using D8, If you then provide the 11amp power plug on the ramps with 5v the output of D8 is 5v..<br>
+<br>
+PWM is still TTL,   just lots of on and off's, If its a digital laser 
+on/off, it should be fine. If its actually powering the laser, It may 
+not like it, and both on and off states can be delayed (capacitors in 
+drivers)  <br>
+<br>
+     <br>
+It sort of depends what the gcode what ever your using is generating...   <br>
+<br>
+Some software uses the fan on/off gcode, If this is the case for you, you can redefine which pin that command toggles.<br>
+<br>
+pins are defined in pins_RAMPS.h<br>
+<br>
+eg<br>
+#ifndef RAMPS_D8_PIN<br>
+  #define RAMPS_D8_PIN      8<br>
+#endif<br>
+#ifndef RAMPS_D9_PIN<br>
+  #define RAMPS_D9_PIN      9<br>
+#endif<br>
+<br>
+If you wanted to swap anything that used D8 to use D9 you could just change this to<br>
+<br>
+#ifndef RAMPS_D8_PIN<br>
+  #define RAMPS_D8_PIN      9<br>
+#endif<br>
+#ifndef RAMPS_D9_PIN<br>
+  #define RAMPS_D9_PIN      8<br>
+#endif<br>
+<br>
+<br>
+Or you can also just solder a wire to the input of the mosfet, its still 5v there....<br>
+<br>
+<small>Edited 1 time(s). Last edit at 10/22/2018 09:34AM by Dust.</small>
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,836683#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,836683,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-836686"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,41218">kd6hq</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,836686#msg-836686" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            October 22, 2018 10:16AM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 5 years ago<br>
+                            Posts: 223
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             Thank you Dust<br>
+<br>
+OK, I found<br>
+ // Heaters / Fans<br>
+//<br>
+#ifndef MOSFET_D_PIN<br>
+  #define MOSFET_D_PIN  -1<br>
+#endif<br>
+#ifndef RAMPS_D8_PIN<br>
+  #define RAMPS_D8_PIN   8<br>
+#endif<br>
+#ifndef RAMPS_D9_PIN<br>
+  #define RAMPS_D9_PIN   9<br>
+#endif<br>
+#ifndef RAMPS_D10_PIN<br>
+  #define RAMPS_D10_PIN 10<br>
+#endif<br>
+<br>
+So I will change it to look like this..<br>
+<br>
+#ifndef MOSFET_D_PIN<br>
+  #define MOSFET_D_PIN  -1<br>
+#endif<br>
+#ifndef RAMPS_D8_PIN<br>
+  #define RAMPS_D8_PIN   9<br>
+#endif<br>
+#ifndef RAMPS_D9_PIN<br>
+  #define RAMPS_D9_PIN   8<br>
+#endif<br>
+#ifndef RAMPS_D10_PIN<br>
+  #define RAMPS_D10_PIN 10<br>
+#endif<br>
+<br>
+However right below this I happen to see:<br>
+<br>
+if ENABLED(IS_RAMPS_EFB )                      // Hotend, Fan, Bed       <br>
+  #define FAN_PIN        RAMPS_D9_PIN<br>
+  #define HEATER_BED_PIN RAMPS_D8_PIN<br>
+<br>
+#elif ENABLED(IS_RAMPS_EFF)                    // Hotend, Fan, Fan<br>
+  #define FAN_PIN        RAMPS_D9_PIN<br>
+  #define FAN1_PIN       RAMPS_D8_PIN<br>
+<br>
+Should I also change the board type to "EFF"  from  "EFB"?<br>
+<br>
+<br>
+Since I originally ask this question I have come up with another.<br>
+I will be using two steppers on the Y axis.  I know that I could simply 
+solder them wires together into one plug to run them in parallel.  That I
+ have already done and it works fine.<br>
+However if I swapped the pin allocation for Y and Z pins setup in the pins_RAMPS_h <br>
+<br>
+#define Y_STEP_PIN         60<br>
+#define Y_DIR_PIN          61<br>
+#define Y_ENABLE_PIN       56<br>
+#define Y_CS_PIN           49<br>
+<br>
+#define Z_STEP_PIN         46<br>
+#define Z_DIR_PIN          48<br>
+#define Z_ENABLE_PIN       62<br>
+#define Z_CS_PIN           40<br>
+<br>
+I think I should be able to use the two plugs on the board  since Y and Z
+ would be swapped?  Would it really be that simple or are there other 
+places changes would need to be made?<br>
+ I would also need to change the speed, steps etc. settings etc.<br>
+<br>
+thank you for the help.
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,836686#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,836686,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-836733"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,9448">Dust</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,836733#msg-836733" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            October 22, 2018 11:58PM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 9 years ago<br>
+                            Posts: 5,691
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             "Should I also change the board type to "EFF" from "EFB"?"<br>
+<br>
+It will make zero difference<br>
+as both have #define FAN_PIN RAMPS_D9_PIN <br>
+<br>
+yes swapping Y and Z is just that easy<br>
+<br>
+your steps/speeds etc all remain unchanged as they are for Y, and  at the board level its using Z.<br>
+<br>
+Only thing you need to check is that they have the correct microstepping jumpers as thats hardware
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,836733#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,836733,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-836751"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,41218">kd6hq</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,836751#msg-836751" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            October 23, 2018 04:52AM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 5 years ago<br>
+                            Posts: 223
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             Thank you Dust
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,836751#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,836751,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-837522"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,65435">trapperjohn</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,837522#msg-837522" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            November 02, 2018 02:51AM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 3 years ago<br>
+                            Posts: 35
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             Your laser driver board has two inputs, right? One should 
+be power and one should be TTL. The TTL input is then used to control 
+the current that is fed into your laser, i.e. 0V = Laser off, 5V = Laser
+ max (or inverted). A PWM signal can be used to "simulate" these 
+voltages.<br>
+<br>
+If you enable the laser option ("SPINDLE_LASER_ENABLE") within Marlin's 
+Configuration_adv.h, there are 3 pins assigned in pins_RAMPS.h (Marlin 
+1.1.9): Pin 4 for "Laser enable", pin 6 as PWM and pin 5 as direction 
+pin (only necessary for CNC spindles).  All these pins can be found in 
+the "SERVOS" area on the RAMPS PCB.<br>
+<br>
+SPINDLE_LASER_POWERUP_DELAY/POWERDOWN_DELAY should also be reduced - 
+depends on your laser driver, but I guess this should be a really low 
+value.<br>
+<br>
+You should also change the SPEED_POWER_SLOPE/INTERCEPT/MIN/MAX values 
+below because Marlin's default setting describes a 30,000 RPM spindle. I
+ use SLOPE=1, INTERCEPT=0, MIN=0, MAX=255 so I can directly set the PWM 
+value between 0..255 from the G-code.<br>
+<br>
+edit: In my configuration, I don't use "laser enable" and "direction" 
+pins - I only connect the laser PWM pin to the TTL input. The laser 
+power input is directly connected to the power supply via a dedicated 
+physical switch. I'd like to have full control of when the laser is 
+enabled or not and avoid loosing my eyesight due to errors in Marlin or a
+ bad G-code script...<br>
+<br>
+<small>Edited 1 time(s). Last edit at 11/02/2018 02:58AM by trapperjohn.</small>
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,837522#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,837522,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-837526"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,41218">kd6hq</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,837526#msg-837526" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            November 02, 2018 03:14AM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 5 years ago<br>
+                            Posts: 223
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             Hi trapperjon<br>
+<br>
+Thanks for the input.<br>
+<br>
+Well you close but not quite correct.  The laser driver module dose have
+ 2 inputs, on 12V and the other 12V PWM input.  Currently the PWM input 
+is being provided via D9 on the RAMPS 1.4 board with a configuration of 
+"EFB".  If I understand you correctly I should be able to change this, 
+by using a driver board that uses a TTL level signal and by changing the
+ board type to "SF" instead of "EFB".<br>
+<br>
+I would need to move the pins but that should not be a big problem.  I'm
+ currently using the servo pins to drive a fan.  I should be able to use
+ the pins on Aux-1 or -2 for the this.<br>
+<br>
+What program are you using to run the laser?  Are you using the M106/107 or M03/05 commands?<br>
+<br>
+I'm using a program called Light Burn and it automatically generates the
+ appropriate coded depending on how you setup the program.
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,837526#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,837526,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-837535"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,65435">trapperjohn</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,837535#msg-837535" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            November 02, 2018 06:40AM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 3 years ago<br>
+                            Posts: 35
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             I did not change the board type, just enable the laser option in the advanced config header.<br>
+<br>
+What specific laser driver do you own? <br>
+<br>
+You could also use for example a MOSFET or an opto-coupler between the RAMPS board and your laser driver to feed the PWM input:<br>
+<br>
+<pre class="bbcode">                12V
+                  |
+                  | 
+5V PWM output -&gt; MOSFET
+                  | 
+                  |
+                12V PWM input</pre>
+<br>
+I use M3 / M5 commands and the Jtech Photonics Plugin for Inkscape. 
+Currently I'm modifying it to generate G-code also from (grayscale) 
+images (without dithering but modifying the laser output instead). But 
+this still needs a lot of fine-tuning ...<br>
+<br>
+<small>Edited 1 time(s). Last edit at 11/02/2018 07:06AM by trapperjohn.</small>
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,837535#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,837535,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-837540"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,41218">kd6hq</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,837540#msg-837540" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            November 02, 2018 07:18AM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 5 years ago<br>
+                            Posts: 223
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             I'm using one of the Jtech current drive modules.<br>
+With a ramps board it uses D9 in a "EFB" board setting.<br>
+So the pwm signal is 12V from D9.<br>
+<br>
+You might want to look at Light Burn, it has a 30 day free trial.<br>
+When using Marlin it defaults to M106 commands but has an option<br>
+to use M03/05 commands also.<br>
+<br>
+Jtech has not come out with a 5 amp driver board yet so I have been looking <br>
+at  [<a href="https://www.ebay.com/itm/5A-Adjustable-Buck-Constant-Current-Laser-LED-Driver-w-TTL-PWM-Modulation/323503511686" target="_blank" rel="nofollow">www.ebay.com</a>]  this one, but it uses a TTL level input.<br>
+<br>
+So by using pin 6 should take care of it.  Did you add a pull up resistor to it?<br>
+<br>
+Why did you not choose to define the board as "SF" ?  Was there a specific reason not to?
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,837540#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,837540,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-837790"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,65435">trapperjohn</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,837790#msg-837790" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            November 05, 2018 01:09PM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 3 years ago<br>
+                            Posts: 35
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             The laser is attached to my 3D printer using a quick swap 
+mounting plate therefore I didn't want to break 3D printing 
+functionality... <br>
+[<a href="https://www.thingiverse.com/thing:3138038" target="_blank" rel="nofollow">www.thingiverse.com</a>]<br>
+<br>
+Unfortunately I just found out that M3/M5 commands lead to stuttering 
+moves. Each time an M3 command appears between G1 commands, the laser 
+stops for a short moment. I already removed the powerup/powerdown delays
+ from the firmware but this did not help. This totally breaks grayscale 
+engraving ... <br>
+<br>
+The M106 command seems to not have that affect as the fan speed is 
+always applied to the next "move block".  I'll check if there is an easy
+ possibility to convert M3/M5 to work in the same way (or reconfigure my
+ laser to use a fan output ...).
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,837790#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,837790,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-837798"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,41218">kd6hq</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,837798#msg-837798" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            November 05, 2018 02:52PM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 5 years ago<br>
+                            Posts: 223
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             I don't know if it would work for but I'm using one current modules from JTech.<br>
+It uses the D9 fan control on the RAMPS board.  On the JTech web sight 
+there in some information about using it with the RAMPS board.  <br>
+I'm not sure how it would work with your "quick" swap setup.  Also it uses the M106 command.
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,837798#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,837798,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-837809"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,249">VDX</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,837809#msg-837809" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            November 05, 2018 05:23PM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                            <strong>Admin</strong><br>
+                        
+                        
+                        
+                            Registered: 13 years ago<br>
+                            Posts: 12,810
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             ... in my modules I'm simpy using the extruder STEP pulses -
+ so it's simply: G0-moves are without laser, G1-moves with ... and the 
+pulsing rate is exactly synchronized with the speed - so no "burned 
+edges", as with PWM and accelerated moves.<br>
+<br>
+To adjust the power I'm changing the pulses lengths - "lowest power" 
+will emit 5µs long pulses ... then, the more power, the longer a pulse  
+...<br>
+<br>
+<hr>Viktor<br>
+--------<br>
+Aufruf zum Projekt "Müll-freie Meere" - [<a href="https://reprap.org/forum/list.php?426" target="_blank">reprap.org</a>] -- Deutsche Facebook-Gruppe - [<a href="https://www.facebook.com/groups/383822522290730" target="_blank" rel="nofollow">www.facebook.com</a>]<br>
+<br>
+Call for the project "garbage-free seas" - [<a href="https://reprap.org/forum/list.php?425" target="_blank">reprap.org</a>]
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,837809#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,837809,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-837820"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,65435">trapperjohn</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,837820#msg-837820" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            November 06, 2018 02:34AM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 3 years ago<br>
+                            Posts: 35
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             Accelerated moves are actually no issue for me - I'm mostly
+ targeting grayscale engraving which I'm doing line-wise. The laser is 
+always moving from left to right at the same speed and laser power 
+modulated via PWM. Acceleration and deceleration are done before and 
+after the the laser is switched on.<br>
+<br>
+But if I understand the Marlin config correctly, I just need to disable 
+laser support and define pin 6 as FAN1_PIN. No need to change any 
+connection at all. Will try that today...
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,837820#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,837820,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-838237"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,41218">kd6hq</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,838237#msg-838237" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            November 11, 2018 12:15PM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 5 years ago<br>
+                            Posts: 223
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             Just wondering how pin 6 worked out for you?
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,838237#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,838237,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-838365"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,65435">trapperjohn</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,838365#msg-838365" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            November 12, 2018 04:23PM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 3 years ago<br>
+                            Posts: 35
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             <div id="div_ca11d6132b0f3084545a0f500d2cc52b" class="mod_embed_images_extended" style="width:533px">
+
+  
+
+    
+      
+    
+
+    <div id="imagediv_ca11d6132b0f3084545a0f500d2cc52b" class="mod_embed_images_image" style="width:533px; height:400px">
+
+    
+
+    <a href="https://reprap.org/forum/file.php?133,file=107983">
+        
+    </a>
+
+    
+
+    <a href="https://reprap.org/forum/file.php?133,file=107983" target="_new"><img src="Help%20needed%20for%20pin%20assignment%20on%20RAMPS%201.4%20board_fichiers/47_800x400.png" id="image_ca11d6132b0f3084545a0f500d2cc52b" alt="photo5406709809975241121.jpg" title="photo5406709809975241121.jpg" width="533" height="400"></a></div>
+
+    <div class="mod_embed_images_info " id="info_ca11d6132b0f3084545a0f500d2cc52b" style="display:block">
+      <a id="link_ca11d6132b0f3084545a0f500d2cc52b" href="https://reprap.org/forum/file.php?133,file=107983">photo5406709809975241121.jpg</a>
+    </div>
+
+  
+
+ </div>
+
+
+<script type="text/javascript">
+mod_embed_images_loadimage('ca11d6132b0f3084545a0f500d2cc52b', '/forum/thumbcache/dfd/c74/6a1/c3b/01c/650/5cd/1af/818/bdc/47_800x400.png', 'https://reprap.org/forum/file.php?133,file=107983', 'https://reprap.org/forum/addon.php?133,module=embed_images,check_scaling=1,file_id=107983', '', 838365, 800, 400, 'Loading image ...', false);
+</script>
+<br>
+Very good so far - still dialing in speed and power levels, but the first attempts look promising.<br>
+<br>
+<small>Edited 1 time(s). Last edit at 11/12/2018 04:26PM by trapperjohn.</small><br>
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,838365#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,838365,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-838369"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,249">VDX</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,838369#msg-838369" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            November 12, 2018 04:41PM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                            <strong>Admin</strong><br>
+                        
+                        
+                        
+                            Registered: 13 years ago<br>
+                            Posts: 12,810
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             <img class="mod_smileys_img" src="Help%20needed%20for%20pin%20assignment%20on%20RAMPS%201.4%20board_fichiers/smiley15.gif" alt="smileys with beer" title="smileys with beer"><br>
+<br>
+<hr>Viktor<br>
+--------<br>
+Aufruf zum Projekt "Müll-freie Meere" - [<a href="https://reprap.org/forum/list.php?426" target="_blank">reprap.org</a>] -- Deutsche Facebook-Gruppe - [<a href="https://www.facebook.com/groups/383822522290730" target="_blank" rel="nofollow">www.facebook.com</a>]<br>
+<br>
+Call for the project "garbage-free seas" - [<a href="https://reprap.org/forum/list.php?425" target="_blank">reprap.org</a>]
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,838369#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,838369,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-838384"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,41218">kd6hq</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,838384#msg-838384" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            November 12, 2018 07:59PM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 5 years ago<br>
+                            Posts: 223
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             Here is a Face book group you may be interested in.<br>
+[<a href="https://www.facebook.com/groups/107222596696733/" target="_blank" rel="nofollow">www.facebook.com</a>]<br>
+Most of the folks on there are using 2.5W diode lasers.<br>
+<br>
+It looks like your laser may be scorching the wood just a little.<br>
+Do you have any kind of Air-assist on your machine?  If not you <br>
+may want to consider it.  Air-assist blows the charcoal away before it has a chance to land on the wood.<br>
+<br>
+Some coasters I made for a friend.<br>
+<br>
+<div id="div_4a6f3dfecca8bfd4eec038991d925c93" class="mod_embed_images_extended" style="width:431px">
+
+  
+
+    
+      
+    
+
+    <div id="imagediv_4a6f3dfecca8bfd4eec038991d925c93" class="mod_embed_images_image" style="width:431px; height:400px">
+
+    
+
+    <a href="https://reprap.org/forum/file.php?133,file=107987">
+        
+    </a>
+
+    
+
+    <a href="https://reprap.org/forum/file.php?133,file=107987" target="_new"><img src="Help%20needed%20for%20pin%20assignment%20on%20RAMPS%201.4%20board_fichiers/6d_800x400.png" id="image_4a6f3dfecca8bfd4eec038991d925c93" alt="img001.jpg" title="img001.jpg" width="431" height="400"></a></div>
+
+    <div class="mod_embed_images_info " id="info_4a6f3dfecca8bfd4eec038991d925c93" style="display:block">
+      <a id="link_4a6f3dfecca8bfd4eec038991d925c93" href="https://reprap.org/forum/file.php?133,file=107987">img001.jpg</a>
+    </div>
+
+  
+
+ </div>
+
+
+<script type="text/javascript">
+mod_embed_images_loadimage('4a6f3dfecca8bfd4eec038991d925c93', '/forum/thumbcache/15b/384/462/172/d88/3bc/38d/ffa/f47/581/6d_800x400.png', 'https://reprap.org/forum/file.php?133,file=107987', 'https://reprap.org/forum/addon.php?133,module=embed_images,check_scaling=1,file_id=107987', '', 838384, 800, 400, 'Loading image ...', false);
+</script>
+<br>
+<br>
+Other than that I would say that you are very<br>
+much on your way.<br>
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,838384#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,838384,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-838399"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,65435">trapperjohn</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,838399#msg-838399" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            November 13, 2018 02:36AM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 3 years ago<br>
+                            Posts: 35
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             Thanks - there is no real ventilation yet (only the air flow through the box). <br>
+<br>
+And I think that also the dark parts are still a bit overpowered.
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,838399#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,838399,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-838413"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,41218">kd6hq</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,838413#msg-838413" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            November 13, 2018 06:03AM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 5 years ago<br>
+                            Posts: 223
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             Have a look at this post that I did on Face book.<br>
+<br>
+[<a href="https://www.facebook.com/groups/107222596696733/permalink/347232009362456/" target="_blank" rel="nofollow">www.facebook.com</a>]<br>
+<br>
+One way to do air assist setup:<br>
+<br>
+<div id="div_dacefd273bb7ae2d45aff08b7011f8eb" class="mod_embed_images_extended" style="width:383px">
+
+  
+
+    
+      
+    
+
+    <div id="imagediv_dacefd273bb7ae2d45aff08b7011f8eb" class="mod_embed_images_image" style="width:383px; height:400px">
+
+    
+
+    <a href="https://reprap.org/forum/file.php?133,file=107991">
+        
+    </a>
+
+    
+
+    <a href="https://reprap.org/forum/file.php?133,file=107991" target="_new"><img src="Help%20needed%20for%20pin%20assignment%20on%20RAMPS%201.4%20board_fichiers/ae_800x400.png" id="image_dacefd273bb7ae2d45aff08b7011f8eb" alt="PIC00005.jpg" title="PIC00005.jpg" width="383" height="400"></a></div>
+
+    <div class="mod_embed_images_info " id="info_dacefd273bb7ae2d45aff08b7011f8eb" style="display:block">
+      <a id="link_dacefd273bb7ae2d45aff08b7011f8eb" href="https://reprap.org/forum/file.php?133,file=107991">PIC00005.jpg</a>
+    </div>
+
+  
+
+ </div>
+
+
+<script type="text/javascript">
+mod_embed_images_loadimage('dacefd273bb7ae2d45aff08b7011f8eb', '/forum/thumbcache/016/a1b/bb4/501/64e/da0/475/e64/36e/37f/ae_800x400.png', 'https://reprap.org/forum/file.php?133,file=107991', 'https://reprap.org/forum/addon.php?133,module=embed_images,check_scaling=1,file_id=107991', '', 838413, 800, 400, 'Loading image ...', false);
+</script>
+<br>
+<br>
+<small>Edited 1 time(s). Last edit at 11/13/2018 06:12AM by kd6hq.</small><br>
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,838413#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,838413,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-838797"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,41218">kd6hq</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,838797#msg-838797" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            November 17, 2018 12:06PM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 5 years ago<br>
+                            Posts: 223
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             I was just wondering what constant current laser driver you are using?
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,838797#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,838797,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    
+        <a name="msg-838897"></a>
+    
+
+    <div class="message">
+        <div class="generic">
+            <table cellspacing="0" border="0">
+                <tbody><tr>
+                    <td width="100%">
+                        <div class="message-author icon-user">
+                            <a href="https://reprap.org/forum/profile.php?133,65435">trapperjohn</a>
+                            
+                        </div>
+                        <small>
+                            <strong><a href="https://reprap.org/forum/read.php?133,836616,838897#msg-838897" rel="nofollow">Re: Help needed for pin assignment on RAMPS 1.4 board.</a> </strong><br>
+                            November 18, 2018 02:41PM
+                        </small>
+                    </td>
+                    <td class="message-user-info" nowrap="nowrap">
+                        
+                        
+                        
+                            Registered: 3 years ago<br>
+                            Posts: 35
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <div class="message-body">
+            
+
+             I use the 4.5A driver from Lasertack<br>
+[<a href="https://lasertack.com/2a-smd-laserdiodentreiber-2" target="_blank" rel="nofollow">lasertack.com</a>]<br>
+<br>
+attached to a 3.5W NUBM05 diode.
+
+            
+
+            <div class="message-options">
+                
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,838897#REPLY" rel="nofollow">Reply</a>
+                <a class="icon icon-comment-add" href="https://reprap.org/forum/read.php?133,836616,838897,quote=1#REPLY" rel="nofollow">Quote</a>
+                
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+
+<div class="nav">
+    <!-- BEGIN TEMPLATE paging.tpl -->
+
+<!-- END TEMPLATE paging.tpl -->
+
+    <!-- CONTINUE TEMPLATE read.tpl -->
+    <a class="icon icon-prev" href="https://reprap.org/forum/read.php?133,1542570068,newer">Newer Topic</a>
+    <a class="icon icon-next" href="https://reprap.org/forum/read.php?133,1542570068,older">Older Topic</a>
+</div>
+
+<div id="thread-options" class="nav">
+    <a class="icon icon-printer" href="https://reprap.org/forum/read.php?133,836616,printview,page=1" target="_blank">Print View</a>
+    
+    
+    
+        <a class="icon icon-feed" href="https://reprap.org/forum/feed.php?133,836616,type=rss">RSS</a>
+    
+    
+</div>
+
+
+    <a name="REPLY"></a>
+
+<!-- END TEMPLATE read.tpl -->
+
+<!-- BEGIN TEMPLATE message.tpl -->
+
+
+    <div class="information">
+        Sorry, only registered users may post in this forum.
+        
+            <p><a href="https://reprap.org/forum/login.php?133">Click here to login</a></p>
+        
+        
+    </div>
+
+<!-- END TEMPLATE message.tpl -->
+
+<!-- BEGIN TEMPLATE footer.tpl -->
+        <div id="footer-plug">
+          This <a href="http://www.phorum.org/">forum</a>
+          is powered by <a href="http://www.phorum.org/">Phorum</a>.
+        </div>
+    </div> <!-- end of div id="phorum" -->
+
+
+
+
+</body></html>
+<!-- END TEMPLATE footer.tpl -->

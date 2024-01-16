@@ -1,0 +1,14 @@
+﻿"Symbol";"Value";"Unit";
+"REFERENCE";"ASME B18.3 - HSBHCS - UNC - NS No. 6 x L 0.625 - TL 0.625";"";
+"TraceParts.PartStandardAcronym";"ANSI_INCH";"";
+"TraceParts.PartStatus";"Published";"";
+"TraceParts.PartNumber";"10-23082007-092837";"";
+"STANDARD";"ASME B18.3-2003";"";
+"TraceParts.PartLanguage";"en";"";
+"DESIGN";"Hexagon Socket Button Head Cap Screw, ASME B18.3, No. 6 - 32 x 0.625";"";
+"TraceParts.InstanceId";"10-23082007-092837DL3YLHBH0ED6WXDYMVTPC54X2";"";
+"TraceParts.PartTitle";"Hexagon Socket Button Head Cap Screws - Coarse UNC";"";
+"TraceParts.PartStatusId";"";"";
+"TraceParts.PartVersion";"1.3.1";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.ClassPath";"/ANSI_INCH_1/ANSI_INCH.010/";"";

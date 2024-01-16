@@ -1,0 +1,1323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope="" itemtype="http://schema.org/WebPage" style="height: auto;"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<script src="Calibration%20of%20your%20RepRap%20-%20StillExtruding_fichiers/cbgapi.loaded_1" async=""></script><script src="Calibration%20of%20your%20RepRap%20-%20StillExtruding_fichiers/cbgapi.loaded_0" async=""></script><script type="text/javascript">/* Copyright 2008 Google. */ (function() { /*
+
+Copyright The Closure Library Authors.
+SPDX-License-Identifier: Apache-2.0
+*/
+(function(){function e(g){this.t={};this.tick=function(h,k,f){this.t[h]=[void 0!=f?f:(new Date).getTime(),k];if(void 0==f)try{window.console.timeStamp("CSI/"+h)}catch(m){}};this.tick("start",null,g)}var a;if(window.performance)var d=(a=window.performance.timing)&&a.responseStart;var l=0<d?new e(d):new e;window.jstiming={Timer:e,load:l};if(a){var b=a.navigationStart;0<b&&d>=b&&(window.jstiming.srt=d-b)}if(a){var c=window.jstiming.load;0<b&&d>=b&&(c.tick("_wtsrt",void 0,b),c.tick("wtsrt_","_wtsrt",
+d),c.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),c&&0<b&&(c.tick("_tbnd",void 0,window.chrome.csi().startE),c.tick("tbnd_","_tbnd",b))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,c&&0<b&&(c.tick("_tbnd",void 0,window.external.startE),c.tick("tbnd_","_tbnd",b))),a&&(window.jstiming.pt=a)}catch(g){}})(); })()
+</script>
+<link rel="shortcut icon" type="image/x-icon" href="https://www.google.com/images/icons/product/sites-16.ico">
+<link rel="apple-touch-icon" href="https://ssl.gstatic.com/sites/p/e8d00c/system/app/images/apple-touch-icon.png" type="image/png">
+<script type="text/javascript">/* Copyright 2008 Google. */ (function() { function d(a){return document.getElementById(a)}window.byId=d;function g(a){return a.replace(/^\s+|\s+$/g,"")}window.trim=g;var h=[],k=0;window.JOT_addListener=function(a,b,c){var f=new String(k++);a={eventName:a,handler:b,compId:c,key:f};h.push(a);return f};window.JOT_removeListenerByKey=function(a){for(var b=0;b<h.length;b++)if(h[b].key==a){h.splice(b,1);break}};window.JOT_removeAllListenersForName=function(a){for(var b=0;b<h.length;b++)h[b].eventName==a&&h.splice(b,1)};
+window.JOT_postEvent=function(a,b,c){var f={eventName:a,eventSrc:b||{},payload:c||{}};if(window.JOT_fullyLoaded)for(b=h.length,c=0;c<b&&c<h.length;c++){var e=h[c];e&&e.eventName==a&&(f.listenerCompId=e.compId||"",(e="function"==typeof e.handler?e.handler:window[e.handler])&&e(f))}else window.JOT_delayedEvents.push({eventName:a,eventSrc:b,payload:c})};window.JOT_delayedEvents=[];window.JOT_fullyLoaded=!1;
+window.JOT_formatRelativeToNow=function(a,b){a=((new Date).getTime()-a)/6E4;if(1440<=a||0>a)return null;var c=0;60<=a&&(a/=60,c=2);2<=a&&c++;return b?window.JOT_siteRelTimeStrs[c].replace("__duration__",Math.floor(a)):window.JOT_userRelTimeStrs[c].replace("__duration__",Math.floor(a))}; })()
+</script>
+<script>
+
+  
+
+  var breadcrumbs = [{"path":"/site/repraplogphase/calibration-of-your-reprap","deleted":false,"title":"Calibration of your RepRap","dir":"ltr"}];
+  var JOT_clearDotPath = 'https://ssl.gstatic.com/sites/p/e8d00c/system/app/images/cleardot.gif';
+
+  
+  var JOT_userRelTimeStrs = ["il y a une minute","il y a __duration__ minutes","il y a une heure","il y a __duration__ heures"];
+
+  
+  
+
+  
+
+  var webspace = {"gvizGstaticVersion":"current","enableAnalytics":false,"pageSharingId":"jotspot_page","codeembeds":{"outerIframeSrc":"https://www.gstatic.com/jotspot/embeds/code/0f08d42392f2000e7e3f3daf5b427a43/outer_iframe.html","innerIframeSrc":"https://591249867-jotspot-embeds.googleusercontent.com/code/8d87fa64604b2a11fae2ed06104c58d3/inner_iframe.html"},"enableUniversalAnalytics":false,"sharingPolicy":"OPENED","siteTitle":"StillExtruding","jot2atari":{"eligibility":"ineligible"},"onepickUrl":"https://docs.google.com/picker","adsensePublisherId":"ca-pub-8267254024178624","features":{"moreMobileStyleImprovements":null,"googleChartsOverGstatic":true,"subscriptionDataMigrationInProgress":null,"plusBadge":false},"isPublic":true,"newSitesBaseUrl":"https://sites.google.com","isConsumer":true,"serverFlags":{"jot2AtariLearnMoreUrl":"https://support.google.com/sites/answer/7035197"},"domainAnalyticsAccountId":"","plusPageId":"","signInUrl":"https://accounts.google.com/AccountChooser?continue\u003dhttps://sites.google.com/site/repraplogphase/calibration-of-your-reprap\u0026service\u003djotspot","analyticsAccountId":"","scottyUrl":"/_/upload","homePath":"/","siteNoticeUrlEnabled":null,"plusPageUrl":"","adsensePromoClickedOrSiteIneligible":true,"csiReportUri":"https://gg.google.com/csi","sharingId":"jotspot","termsUrl":"//www.google.com/intl/fr/policies/terms/","gvizVersion":1,"editorResources":{"sitelayout":["https://ssl.gstatic.com/sites/p/e8d00c/system/app/css/sitelayouteditor.css"],"text":["https://ssl.gstatic.com/sites/p/e8d00c/system/js/codemirror.js","https://ssl.gstatic.com/sites/p/e8d00c/system/app/css/codemirror_css.css","https://ssl.gstatic.com/sites/p/e8d00c/system/js/trog_edit__fr.js","https://ssl.gstatic.com/sites/p/e8d00c/system/app/css/trogedit.css","/site/repraplogphase/_/rsrc/1592465244000/system/app/css/editor.css","https://ssl.gstatic.com/sites/p/e8d00c/system/app/css/codeeditor.css","/site/repraplogphase/_/rsrc/1592465244000/system/app/css/camelot/editor-jfk.css"]},"sharingUrlPrefix":"/_/sharing","isAdsenseEnabled":true,"domain":"defaultdomain","baseUri":"/site/repraplogphase","name":"repraplogphase","siteTemplateId":false,"siteNoticeRevision":null,"siteNoticeUrlAddress":null,"siteNoticeMessage":null,"page":{"isRtlLocale":false,"canDeleteWebspace":null,"isPageDraft":null,"parentPath":null,"parentWuid":null,"siteLocale":"en","timeZone":"America/Los_Angeles","type":"text","title":"Calibration of your RepRap","locale":"fr","wuid":"wuid:gx:3fc5a2550c1fc7c5","revision":9,"path":"/calibration-of-your-reprap","isSiteRtlLocale":false,"pageInheritsPermissions":null,"name":"calibration-of-your-reprap","canChangePath":true,"state":"","properties":{},"bidiEnabled":false,"currentTemplate":{"path":"/system/app/pagetemplates/text","title":"Page classique"}},"canPublishScriptToAnyone":true,"user":{"keyboardShortcuts":true,"sessionIndex":"","onePickToken":"","guest_":true,"displayNameOrEmail":"guest","userName":"guest","uid":"","renderMobile":false,"domain":"","namespace":"","hasWriteAccess":false,"namespaceUser":false,"primaryEmail":"guest","hasAdminAccess":false},"gadgets":{"baseUri":"/site/repraplogphase/system/app/pages/gadgets"}};
+  webspace.page.breadcrumbs = breadcrumbs;
+
+  
+  var JOT_siteRelTimeStrs = ["a minute ago","__duration__ minutes ago","an hour ago","__duration__ hours ago"];
+
+</script>
+<script type="text/javascript">
+                window.jstiming.load.tick('scl');
+              </script>
+<link rel="canonical" href="http://www.stillextruding.com/calibration-of-your-reprap">
+<meta name="title" content="Calibration of your RepRap - StillExtruding">
+<meta itemprop="name" content="Calibration of your RepRap - StillExtruding">
+<meta property="og:title" content="Calibration of your RepRap - StillExtruding">
+<style type="text/css">
+</style>
+<link rel="stylesheet" type="text/css" href="Calibration%20of%20your%20RepRap%20-%20StillExtruding_fichiers/standard-css-simple-ltr-ltr.css">
+<link rel="stylesheet" type="text/css" href="Calibration%20of%20your%20RepRap%20-%20StillExtruding_fichiers/overlay.css">
+<link rel="stylesheet" type="text/css" href="Calibration%20of%20your%20RepRap%20-%20StillExtruding_fichiers/allthemes-view.css">
+<!--[if IE]>
+          <link rel="stylesheet" type="text/css" href="/site/repraplogphase/system/app/css/camelot/allthemes%2die.css" />
+        <![endif]-->
+<title>Calibration of your RepRap - StillExtruding</title>
+<script type="text/javascript">
+                window.jstiming.load.tick('cl');
+              </script>
+<script type="text/javascript" charset="UTF-8" src="Calibration%20of%20your%20RepRap%20-%20StillExtruding_fichiers/platform.js" gapi_processed="true"></script><script src="Calibration%20of%20your%20RepRap%20-%20StillExtruding_fichiers/ga.js"></script><script src="Calibration%20of%20your%20RepRap%20-%20StillExtruding_fichiers/element.js"></script><link type="text/css" rel="stylesheet" charset="UTF-8" href="Calibration%20of%20your%20RepRap%20-%20StillExtruding_fichiers/translateelement.css"><script type="text/javascript" charset="UTF-8" src="Calibration%20of%20your%20RepRap%20-%20StillExtruding_fichiers/main_fr.js"></script><script type="text/javascript" charset="UTF-8" src="Calibration%20of%20your%20RepRap%20-%20StillExtruding_fichiers/element_main.js"></script><style>.goog-te-ftab-float {z-index:9999999; overflow:visible; position:fixed; _position:absolute;top:auto;left:auto;bottom:0px; _top:expression((-0-document.getElementById('\3a 0.floatContainer').offsetHeight+(hack3=document.documentElement.clientHeight||document.body.clientHeight)+(hack4=document.documentElement.scrollTop||document.body.scrollTop))+'px');right:20px; _left:expression((-20-document.getElementById('\3a 0.floatContainer').offsetWidth+(hack5=document.documentElement.clientWidth||document.body.clientWidth)+(hack6=document.documentElement.scrollLeft||document.body.scrollLeft))+'px');}</style></head>
+<body xmlns="http://www.google.com/ns/jotspot" id="body" class=" en            " style="position: relative; min-height: 100%; top: 0px;">
+<div id="sites-page-toolbar" class="sites-header-divider">
+<div xmlns="http://www.w3.org/1999/xhtml" id="sites-status" class="sites-status" style="display:none;"><div id="sites-notice" class="sites-notice" role="status" aria-live="assertive"> </div></div>
+</div>
+<div id="sites-chrome-everything-scrollbar">
+<div id="sites-chrome-everything" class="">
+<div id="sites-chrome-page-wrapper" style="direction: ltr">
+<div id="sites-chrome-page-wrapper-inside">
+<div xmlns="http://www.w3.org/1999/xhtml" id="sites-chrome-header-wrapper" style="">
+<table id="sites-chrome-header" class="sites-layout-hbox" style="" cellspacing="0">
+<tbody><tr class="sites-header-primary-row" id="sites-chrome-userheader">
+<td id="sites-header-title" class="" role="banner" style="height: 75px"><div class="sites-header-cell-buffer-wrapper"><h2><a href="https://sites.google.com/site/repraplogphase/" dir="ltr" id="sites-chrome-userheader-title">StillExtruding</a></h2></div></td><td class="sites-layout-searchbox  "><div class="sites-header-cell-buffer-wrapper"><form id="sites-searchbox-form" action="/site/repraplogphase/system/app/pages/search" role="search"><input type="hidden" id="sites-searchbox-scope" name="scope" value="search-site"><input type="text" id="jot-ui-searchInput" name="q" size="20" aria-label="Search this site"><div id="sites-searchbox-button-set" class="goog-inline-block"><div role="button" id="sites-searchbox-search-button" class="goog-inline-block jfk-button jfk-button-standard" tabindex="0" style="user-select: none;">Search this site</div></div></form></div></td>
+</tr>
+<tr class="sites-header-secondary-row" id="sites-chrome-horizontal-nav">
+<td colspan="2" id="sites-chrome-header-horizontal-nav-container" role="navigation">
+<div class="sites-header-nav"><ul class="sites-header-nav-container-tabs"></ul><div style="clear: both;"></div></div>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div id="sites-chrome-main-wrapper">
+<div id="sites-chrome-main-wrapper-inside">
+<table id="sites-chrome-main" class="sites-layout-hbox" cellspacing="0" cellpadding="{scmCellpadding}" border="0">
+<tbody><tr>
+<td id="sites-chrome-sidebar-left" class="sites-layout-sidebar-left initial" style="width:200px">
+<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_2bd" class="sites-embed" role="navigation"><div class="sites-embed-content sites-sidebar-nav"><ul role="navigation" jotid="navList" class="has-expander"><li class="topLevel nav-first "><div dir="ltr" style="padding-left: 19px;"><a href="https://sites.google.com/site/repraplogphase/home" jotid="wuid:gx:5fd1363ee838924a" class="sites-navigation-link topLevel">Spacexula's Little RepRap Wiki</a></div></li><li class="topLevel "><div dir="ltr" style="padding-left: 19px;"><a href="https://sites.google.com/site/repraplogphase/3d-scan-to-3d-print-work-flow" jotid="wuid:gx:26efb76943947084" class="sites-navigation-link topLevel">3d Scan to 3d Print work flow</a></div></li><li class="topLevel "><div class="current-bg" jotid="wuid:gx:3fc5a2550c1fc7c5" dir="ltr" style="padding-left: 19px;">Calibration of your RepRap</div></li><li class="topLevel parent " wuid="gx:7b564cba564c9d29"><div dir="ltr" style="padding-left: 0px;"><div class="expander"></div><a href="https://sites.google.com/site/repraplogphase/mendelmax-breeder" jotid="wuid:gx:7b564cba564c9d29" class="sites-navigation-link topLevel">Mendelmax-Breeder</a></div><ul role="navigation" class="has-expander"><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="https://sites.google.com/site/repraplogphase/mendelmax-breeder/bom-and-vendors" jotid="wuid:gx:7d1de3c86a34b7b4" class="sites-navigation-link">BOM and Vendors</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="https://sites.google.com/site/repraplogphase/mendelmax-breeder/frame-assembly" jotid="wuid:gx:4a195a6be13a33c8" class="sites-navigation-link">Frame Assembly</a></div></li></ul></li><li class="topLevel "><div dir="ltr" style="padding-left: 19px;"><a href="https://sites.google.com/site/repraplogphase/prusa-i3-breeder" jotid="wuid:gx:433ed4880c4e06ae" class="sites-navigation-link topLevel">Prusa I3-Breeder</a></div></li><li class="topLevel "><div dir="ltr" style="padding-left: 19px;"><a href="https://sites.google.com/site/repraplogphase/reprap-vendors-by-country" jotid="wuid:gx:4ba92be9eb82796" class="sites-navigation-link topLevel">RepRap Vendors by Country</a></div></li><li class="topLevel "><div dir="ltr" style="padding-left: 19px;"><a href="https://sites.google.com/site/repraplogphase/substraits" jotid="wuid:gx:39e65e1fdf53a38b" class="sites-navigation-link topLevel">Substraits</a></div></li><li class="topLevel "><div dir="ltr" style="padding-left: 19px;"><a href="https://sites.google.com/site/repraplogphase/troubleshooting" jotid="wuid:gx:637a36ec08300a56" class="sites-navigation-link topLevel">Troubleshooting</a></div></li><li class="topLevel "><div dir="ltr" style="padding-left: 19px;"><a href="https://sites.google.com/site/repraplogphase/system/app/pages/sitemap/hierarchy" jotid="wuid:gx:658a627e4c84a1a3" class="sites-navigation-link topLevel">Sitemap</a></div></li><li class="topLevel "><div dir="ltr" style="padding-left: 19px;"><a href="https://sites.google.com/site/repraplogphase/system/app/pages/recentChanges" jotid="wuid:gx:af730e43afd7d60" class="sites-navigation-link topLevel">Recent site activity</a></div></li></ul></div></div>
+<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_6253479740116745" class="sites-embed" role="navigation"><h4 class="sites-embed-title">Additional Links</h4><div class="sites-embed-content sites-sidebar-nav"><ul role="navigation" jotid="navList"><li class="nav-first "><div dir="ltr" style="padding-left: 5px;"><a href="https://www.reprap.org/" class="sites-navigation-link">RepRap Wiki</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="http://webchat.freenode.net/?channels=reprap,makergearv2,makerbot,mendelmax,slic3r,lemoncurry,smoothieware,solidoodle,trinitylabs,rostock" class="sites-navigation-link">All RepRap Related IRC Channels</a></div></li><li class=""><div dir="ltr" style="padding-left: 5px;"><a href="https://forums.reprap.org/" class="sites-navigation-link">RepRap Forum</a></div></li></ul></div></div>
+<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_12589853908866644" class="sites-embed" role="complementary"><h4 class="sites-embed-title">Contact Information</h4><div class="sites-embed-content sites-embed-content-sidebar-textbox"><div dir="ltr">Neil D Underwood<div>underwood.neil@gmail.com</div><div><br></div><div>SpaceXULA in IRC, Thingiverse, and Forums</div><div>RepRapLogPhase on Youtube</div><div><br></div><div>Member Fablocker Hackerspace</div><div>Admin for RepRap.org</div><div>Winston-Salem NC<br><div><br></div></div></div></div></div>
+<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_3620874050538987" class="sites-sidebar-plusone-wrapper"><div style="position: absolute; width: 450px; left: -10000px;" id="___plusone_0"><iframe ng-non-bindable="" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" id="I0_1594580340401" name="I0_1594580340401" src="Calibration%20of%20your%20RepRap%20-%20StillExtruding_fichiers/fastbutton.html" data-gapiattached="true" width="100%" frameborder="0"></iframe></div><div class="g-plusone" data-count="true" data-size="standard" data-source="google:sites" data-gapiscan="true" data-onload="true" data-gapistub="true"></div></div>
+</td>
+<td id="sites-canvas-wrapper">
+<div id="sites-canvas" role="main">
+<div id="goog-ws-editor-toolbar-container"> </div>
+<div xmlns="http://www.w3.org/1999/xhtml" id="title-crumbs" style="">
+</div>
+<h3 xmlns="http://www.w3.org/1999/xhtml" id="sites-page-title-header" style="" align="left">
+<span id="sites-page-title" dir="ltr" tabindex="-1" style="outline: none">Calibration of your RepRap</span>
+</h3>
+<div id="sites-canvas-main" class="sites-canvas-main">
+<div id="sites-canvas-main-content">
+<table xmlns="http://www.w3.org/1999/xhtml" class="sites-layout-name-one-column sites-layout-hbox" cellspacing="0"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr">
+<div>
+<div></div>
+<div>
+<div><div class="sites-embed-align-left-wrapping-off"><div class="sites-embed-border-off sites-embed" style="width:250px;"><div class="sites-embed-content sites-embed-type-toc"><div class="goog-toc sites-embed-toc-maxdepth-6"><p>Contents</p><ol class="goog-toc"><li class="goog-toc"><a href="#TOC-Confirm-free-moment-and-levelness-of-all-Axis"><strong>1 </strong>Confirm free&nbsp;moment&nbsp;and levelness of all Axis</a></li><li class="goog-toc"><a href="#TOC-Confirm-Stepper-motors-have-the-ability-to-move-all-axis-the-correct-direction-and-power"><strong>2 </strong>Confirm Stepper motors have the ability to move all axis the correct direction and power</a></li><li class="goog-toc"><a href="#TOC-Calibrate-the-step-mm-on-all-4-axis"><strong>3 </strong>Calibrate the step/mm on all 4 axis</a></li><li class="goog-toc"><a href="#TOC-Confirm-belt-tension-on-X-and-Y-axis"><strong>4 </strong>Confirm belt tension on X and Y axis</a></li><li class="goog-toc"><a href="#TOC-Calibrate-Acceleration-Value-recheck-belt-tension-"><strong>5 </strong>Calibrate Acceleration Value (recheck belt tension)</a></li><li class="goog-toc"><a href="#TOC-Level-Bed-Set-Z-endstop"><strong>6 </strong>Level Bed, Set Z endstop</a></li><li class="goog-toc"><a href="#TOC-Tune-PID-on-Hot-end"><strong>7 </strong>Tune PID on Hot end</a></li><li class="goog-toc"><a href="#TOC-Perform-Temp-check-with-bridging-object"><strong>8 </strong>Perform Temp check with bridging object</a></li><li class="goog-toc"><a href="#TOC-Print-calibration-piece-and-upload-image-in-RepRap-channel-to-have-community-help-you-find-final-issues.-"><strong>9 </strong>Print calibration&nbsp;piece and upload image in #RepRap&nbsp;channel&nbsp;to have community help you find final issues.&nbsp;</a></li></ol></div></div></div></div></div><br></div></div>
+<div><br></div>Calibration of a RepRap is the single most important part
+ of assembly. &nbsp;Once you have the Cartesian bot is completed the 
+next step is calibration. &nbsp;Calibration is a several step process to
+ insure that all axis of your&nbsp;Cartesian&nbsp;bot are working 
+nominally, and the&nbsp;Cartesian&nbsp;bot is 
+properly&nbsp;described&nbsp;to the firmware. &nbsp;Follow these steps 
+and your prints should look great from day one. 
+<div><br></div>
+<div>http://wiki.ultimaker.com/Marlin_firmware_for_the_Ultimaker#Steps_per_unit</div>
+<div><br></div>
+<div><span style="COLOR:rgb(0,0,0);LINE-HEIGHT:normal;FONT-FAMILY:Consolas,Lucida Console,monospace;BACKGROUND-COLOR:rgb(240,247,255)">writing
+ a calibration guide, would you agree the proper order of calibration is
+ confirm free motion of all 4 axis, stepper motors able to strongly move
+ all 4 axis over 100mm without overheating, calibrate step/mm, confirm 
+belt tension with vibration test, confirm acceleration with a high speed
+ movment test (X-100Y100 to X100Y-100), then level bed, tune PID, 
+confirm extrusion temp</span></div>
+<div><br></div>
+<div>
+<h2><a name="TOC-Confirm-free-moment-and-levelness-of-all-Axis"></a><font face="arial" color="#666666">Confirm free&nbsp;moment&nbsp;and levelness of all Axis</font></h2>
+<div><font face="arial" color="#666666">All Axis of your machine should 
+be able to move along their full travel length with almost no 
+resistance.&nbsp; Meaning if you where to lean your machine to 1 side 
+the trolley should glide along to follow the lean.&nbsp; If your Axis 
+does not move this smoothly you likely have one of Several issues:</font></div></div>
+<div><font face="arial" color="#666666">
+<div><span>&nbsp;</span></div>
+<ul>
+<li><b>Your bearings are not Properly aligned with the rods</b>:&nbsp; 
+This is the the most common issue issue with RepRap machines.&nbsp; a 
+slight warping of parts can lead to rods and bearings &nbsp;not lining 
+up perfectly.&nbsp; Higher end linear motion like Igus bushings or Self 
+Centering brass will bind if there if they are even 0.1-0.5mm of out of 
+parallel.&nbsp; LM*UU style bearings are more tolerant of slightly out 
+of parallel rods, but it will lead to thier them failing quicker.&nbsp; 
+The easiest way I have found to fix this issue is to 1st clean out what 
+ever is holding your rods with a drill bit, if that does not work use a 
+hot air gun to soften the plastic enoug that you can move the rod the 
+less than 1mm it takes usually to make the rods true.</li></ul></font><font face="arial" color="#666666"><br></font>
+<li><font face="arial" color="#666666"><b>The Bushing is too tight/broken:</b>
+ Igus and Self centering can be a really tight fit.&nbsp; Before 
+installing your bushings on your machine be sure to slide them up and 
+down your uninstalled rods.&nbsp; There should be almost no reistance to
+ motion when they move.&nbsp;&nbsp;If you can't make them fall down the 
+rods with no effort, the bushing is not ready to be installed.&nbsp; If 
+this is a Igus or brass bushing sometimes you need to place one of your 
+rods in a drill and "burn in" the rod</font></li>
+<div><font face="arial" color="#666666"><br></font></div>
+<div>
+<h2><a name="TOC-Confirm-Stepper-motors-have-the-ability-to-move-all-axis-the-correct-direction-and-power"></a><font face="arial" color="#666666">Confirm Stepper motors have the ability to move all axis the correct direction and power</font></h2><div><span><b>Q: My 
+motor steps in the wrong direction - + moves it toward the endstop, and -moves 
+it away.</b></span></div>
+<div><span>A: Reverse 
+the motor wires - ABCD to DCBA.</span></div><p>
+</p><div><span><b>Q: My 
+motor only steps in one direction - away from the endstop.</b></span></div>
+<div><span>A: Your 
+firmware thinks the endstop is blocked.</span></div>
+<div><span>&nbsp;&nbsp;&nbsp; 1) Block 
+the endstop, and see if you can move toward it.</span></div>
+<div><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yes: 
+Adjust the endstop inversion constant in your firmware.</span></div>
+<div><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No: 
+Insure that the endstop is connected to the proper connecter.&nbsp; You want to 
+connect your endstops to the "Minimum endstop" connectors on your 
+hardware.<br></span><div><span><b>Q: My 
+motor doesn't step in either direction.</b></span></div>
+<div><span>A: There are 
+several possibilities:</span></div>
+<div><span>&nbsp;&nbsp;&nbsp; 1) The 
+firmware isn't configured properly, and is trying to use different pins to 
+control the motor than are required for your hardware.</span></div>
+<div><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span><span><i>Double-check your firmware's 
+configuration.h and pins.h files to insure that they're set up 
+properly.</i></span></div>
+<div><span>&nbsp;&nbsp;&nbsp; 2) The 
+step signal isn't making its way from the processor to the stepper 
+driver.</span></div>
+<div><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span><span><i>Resolder all of the pins 
+between the processor and the stepper card.</i></span></div>
+<div><span>&nbsp;&nbsp;&nbsp; 3) The 
+motor current is way too low.</span></div>
+<div><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span><span><i>Turn the motor current 
+adjustment pot clockwise a bit at a time, until the motor is stepping 
+properly.</i></span></div>
+<div><span>&nbsp;&nbsp;&nbsp; 4) The 
+magic smoke leaked out of the stepper driver.</span></div>
+<div><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span><span><i>First, figure out what it 
+was you did that smoked the driver, so you don't repeat it.&nbsp; Then replace the 
+stepper driver.</i></span></div><br><div><span><b>Q. I 
+can't get my motor into the sweet spot between enough current and too much.&nbsp; If 
+I turn it down enough to stop from overheating, I get skipped 
+steps.</b></span></div>
+<div><span>A. Add a 
+fan, heat-sink or both to the motor and/or driver (depending on which one is 
+overheating).<br><br></span><br><div>&nbsp;</div>
+<div><span><b>Q: In which direction should the 
+Axis move?&nbsp;</b></span></div>
+<div><span>A: Z goes up when going positive, 
+down when going negative</span></div>
+<div><span>&nbsp;&nbsp;&nbsp; X goes left when going negative 
+and right when going positive</span></div>
+<div><span>&nbsp;&nbsp;&nbsp; Y goes forward when going 
+po</span><span>s</span><span>itive and 
+back on the negative</span></div>
+<div><span>&nbsp;&nbsp; You can reverse stepper 
+direction by flipping the stepper plug, or changing settings in firmware.&nbsp; 
+</span><span><b><u>ALWAYS REMOVE POWER BEFORE UNPLUGGING A 
+STEPPER</u></b></span></div><br></div><br></div></div>
+<div>
+<h2><a name="TOC-Calibrate-the-step-mm-on-all-4-axis"></a><span style="COLOR:rgb(102,102,102);FONT-FAMILY:arial">Calibrate the step/mm on all 4 axis</span></h2>
+<h2><a name="TOC-Confirm-belt-tension-on-X-and-Y-axis"></a><font face="arial" color="#666666">Confirm belt tension on X and Y axis</font></h2></div></div>
+<div>
+<h2><a name="TOC-Calibrate-Acceleration-Value-recheck-belt-tension-"></a><span style="COLOR:rgb(102,102,102);FONT-FAMILY:arial">Calibrate Acceleration Value (recheck belt tension)</span></h2></div>
+<div>
+<h2><a name="TOC-Level-Bed-Set-Z-endstop"></a><font face="arial" color="#666666">Level Bed, Set Z endstop</font></h2></div>
+<div>
+<h2><a name="TOC-Tune-PID-on-Hot-end"></a><font face="arial" color="#666666">Tune PID on Hot end</font></h2></div>
+<div>
+<h2><a name="TOC-Perform-Temp-check-with-bridging-object"></a><span style="COLOR:rgb(102,102,102);FONT-FAMILY:arial">Perform Temp check with bridging object</span></h2><br><div><span><b>Q. In 
+some places on my prints, the infill doesn't connect to the perimeter 
+shells.</b></span></div>
+<div><span>A. You have 
+backlash in one or both axis.</span></div>
+<div><span>&nbsp;&nbsp;&nbsp; 1) Check 
+to make sure your belts are tight.&nbsp; You should be able to pluck them like a bass 
+guitar string.</span></div>
+<div><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span><span><i>Adjust your belt 
+tension.</i></span></div>
+<div><span>&nbsp;&nbsp;&nbsp; 2) Check 
+to make sure that your belts actually match your pulleys.&nbsp; Kit manufacturers are 
+notorius for providing XL belts and T5 pulleys.&nbsp; As much as people in forums 
+claim that you can use T5 pulleys with XL belts, it's just asking for 
+backlash.</span></div>
+<div><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span><span><i>Replace the pulleys with 
+ones that match the belts.</i></span></div>
+<div><span>&nbsp;&nbsp;&nbsp; 3) "I 
+have T5 Belts, and aluminum T5 pulleys I bought on ebay"</span></div>
+<div><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span><span><i>Replace the machined pulleys 
+with printed ones. Unless you bought ones that were specifically designed for 
+use on a printer, the teeth on them were designed for a single direction of 
+rotation, and make no attempt to reduce backlash.&nbsp;</i></span></div>
+<div><span>&nbsp;&nbsp;&nbsp; 4) Check 
+to make sure that your belts aren't binding against the guide 
+washers.</span></div>
+<div><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; One 
+way to fix this is to double up the belt guide bearing, and leave off the fender 
+washer.&nbsp; Then carefully adjust your belt's position and angle on the carriage so 
+that it doesn't drift off of the bearing.</span></div>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; An 
+easier fix (that works for me) is to lubricate the belt guides with 
+Teflon/Silicone lubricant.&nbsp; The disadvantage to this method is that the lube 
+will eventually make its way to the pulleys, amplifying any backlash potential 
+that is there.</span><div><span><br></span></div><div><span><b>Q. My 
+print suddenly gets shifted over by Xmm, partway through the 
+print.</b></span></div>
+<div><span>A. This 
+could be caused by a number of problems. The most likley is you need to adjust 
+the current for your stepper motor - find the adjustment pot for the motor, and 
+carefully turn it up (clockwise) a tiny bit.&nbsp; If you still lose steps, turn it 
+up a bit more. It could also be due to your belt tension being too low (and too 
+high of tension can lead to current probelms as above). Belt or bearing binding 
+is another common cause of these problems. Make sure your axes all move 
+smoothly, if you feel any sticky spots that could be the cause.&nbsp; <br></span></div><div><span><b><br>Q. 
+One of my motors just stops turning partway through an otherwise perfect 
+print.</b></span></div>
+<div><span>A. Most 
+likely, the motor is overheating, and losing torque.&nbsp; You need to turn down 
+(counter-clockwise) the adjustment pot for the motor.</span></div></div>
+<div>
+<h2><a name="TOC-Print-calibration-piece-and-upload-image-in-RepRap-channel-to-have-community-help-you-find-final-issues.-"></a><font face="arial" color="#666666">Print calibration&nbsp;piece and upload image in #RepRap&nbsp;channel&nbsp;to have community help you find final issues.&nbsp;</font></h2></div>
+<div><div><span><b>Troubleshooting your axis 
+motion:</b></span></div>
+<div>&nbsp;</div>
+<div><span>First off - 
+If you're using Pololu motor drivers, make sure they're installed facing the 
+right direction.&nbsp; </span><span><b>They're 
+not keyed, and installing them backwards can damage all kinds of 
+things.</b></span></div>
+<div>&nbsp;</div>
+<div><span>Second - if 
+you haven't adjusted your motor current, then turn the printer off, find the 
+trim pots on the motor drivers, turn them all the way counter-clockwise, and 
+then turn them about 1/4 turn clockwise.&nbsp; This will be a good starting point for 
+adjusting them.&nbsp; </span><span><b>Failing to 
+adjust motor current can damage either the motor drivers, or the motors 
+themselves.</b></span></div>
+<div>&nbsp;</div><div><br></div><div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div><br><div><span><b>Q. Which type of plastic should I 
+print with?</b></span></div>
+<div><span>A. PLA and ABS are the two main 
+types.&nbsp; They both have advantages and disadvantages.</span></div>
+<div>&nbsp;</div>
+<div><span>&nbsp; PLA warps less and can be printed 
+on an unheated surface (3M Blue Tape 2090 works well. 2090 only, 2080EL and 
+Edgelock/Advanced types do not stick as well.). It is also a harder plastic, it 
+has less flexibility than ABS and when it breaks it tends to shatter.&nbsp; PLA 
+prints at about 180 degrees C and has a sweet smell (like burned sugar/waffles). 
+PLA also prints wonderfully to either plain glass or Kapton heated to 
+60c.&nbsp;</span></div>
+<div><span>&nbsp;&nbsp;</span></div>
+<div><span>&nbsp; ABS prints best on a heated 
+surface, kapton over aluminum or glass are popular choices.&nbsp; Without heat abs 
+will curl up and ruin the print.&nbsp; ABS has a bit more flexibility than PLA which 
+makes it better suited to parts like the prusa bar clamps.&nbsp; It prints between 
+200 and 230 degrees C and the smell bothers some people.</span></div>
+<div>&nbsp;</div><br><div>&nbsp;</div>
+<div><span><b>Q. What order do the wires in my 
+stepper motors get connected to my Stepper Driver?</b></span></div>
+<div><span>A. Ramps and Sanguinololu 
+Electronics both have motors attached in an AABB pattern meaning </span><span>the </span><span>2 wires </span><span>from one coil are attached to the first two pins 
+and the 2 wires from the second coil are connected to the second 2 pins. The 
+order of the coils is not critical. You can determine which wires go to the same 
+coil because you will be able to measure the resistance of the coil across the 
+wires. Wires from separate coils will read as open-circuit</span><span>. The color </span><span>coding of the 
+stepper motor wires </span><span>is different for each 
+manufacturer.</span></div>
+<div>&nbsp;</div>
+<div><span><b>Q. My print suddenly gets shifted 
+over by Xmm, partway through the print.</b></span></div>
+<div><span>A. This could be caused by a number 
+of problems. The most likley is you need to adjust the current for your stepper 
+motor - find the adjustment pot for the motor, and carefully turn it up 
+(clockwise) a tiny bit.&nbsp; If you still lose steps, turn it up a bit more. It 
+could also be d</span><span>ue</span><span> to your belt tension being too low (and too high of tension can lead 
+to current probl</span><span>e</span><span>ms as above). 
+Belt or bearing binding is another common cause of these problems. Make sure 
+your axes all move smoothly, if you feel any sticky spots that could be the 
+cause. Also maybe due to firmware (such as Marlin).</span></div>
+<div><span>-It also 
+could mean that your motors are getting too hot. Try putting a small PC fan on 
+the axis that is having the shift. (Example: Print shifts in Y-direction, put a 
+fan on the Y motor.)</span></div>
+<div>&nbsp;</div>
+<div><span><b>Q. One of my motors just stops 
+turning partway through an otherwise perfect print.</b></span></div>
+<div><span>A. Most likely, the motor is 
+overheating, and losing torque.&nbsp; You need to turn down (counter-clockwise) the 
+adjustment pot for the motor.</span></div>
+<div>&nbsp;</div>
+<div><span><b>Q. I can't get my motor into the 
+sweet spot between enough current and too much.&nbsp; If I turn it down enough to 
+stop from overheating, I get skipped steps.</b></span></div>
+<div><span>A. Add a fan, heat-sink or both to 
+the motor and/or driver (depending on which one is overheating).</span></div>
+<div>&nbsp;</div>
+<div><span><b>Q. My prints will not stick to 
+the HBP (Heated Build Plate).</b></span></div>
+<div><span>A. Many things can cause a print 
+not to stick, check these things:</span></div>
+<div><span>-Is your HBP hot enough?&nbsp; 70C for 
+PLA 110-120C for ABS</span></div>
+<div><span>-Have you got skin oil or lube from 
+the axises on the plate?&nbsp; It will cause prints not to stick (you can clean them 
+with alcohol, acetone, or ammonia (Windex, tested on glass) )</span></div>
+<div><span>-Are you pressing the 1st layer 
+into the HBP enough? The extrusion should take on a slightly flat appearance 
+without actually squishing it (you should not see the nozzle dragging thought he 
+middle of the print.</span><span> 
+Starting height differences of only 0.05mm can make a big 
+difference.</span></div>
+<div><span>-Are you printing the 1st layer 
+slow enough?&nbsp; All materials like the travel speed to be 15-20mm/s for the 1st 
+layer.</span></div>
+<div>&nbsp;</div>
+<div><span><b>Q: My printer is doing things not 
+covered in this FAQ, how should I ask my question in #reprap (the irc 
+room)?</b></span></div>
+<div><span>A: 1-&nbsp; Collect the basic facts 
+about your machine:</span></div>
+<div><span>Printer Model:</span></div>
+<div><span>Electronics Type:</span></div>
+<div><span>Firmware:</span></div>
+<div><span>Software Toolchain+OS:</span></div>
+<div>&nbsp;</div>
+<div><span>2- Try to include as much detail as 
+possible in your question, every little bit helps.&nbsp;&nbsp;</span></div>
+<div><span>3- Just ask the question, don't 
+worry about asking permission first</span></div>
+<div><span>4- Have some patience, there are a 
+lot of people in the room, someone will answer you but you may have to wait a 
+few minutes.</span></div>
+<div>&nbsp;</div>
+<div><span><b>Q: </b></span><span><b>At the Start of a Print. The Motors 
+begin to print in the top right corner of the HBP Bed. How do I center the 
+motors so they print in the center?&nbsp; Thanks - khaizlett</b></span><span><b>@gmail.com</b></span></div>
+<div>&nbsp;</div>
+<div><span>A: 
+</span><span>This has to be done in two 
+parts. The first part is setting the maximum bed size to be accurate to your 
+actual bed in the configuration.h file of your firmware. The second part is 
+telling your slicer how big the bed is, and where the print should 
+start.</span></div>
+<div>&nbsp;</div>
+<div><span><b>Q: My motor will only move towards 
+the endstop, when I press + and also when I press -. I already checked my 
+endstops, and they're fine.</b></span></div>
+<div>&nbsp;</div>
+<div><span><b>Q: </b></span><span><b>In the middle of my print, my laptop shut 
+down completely, and reboots. I've already tried it with a different laptop, and 
+the same thing happens. Also checked the temperature of my laptop, and it's 
+barely luke-warm, so that's not the problem either. Anyone has any idea what 
+else to try?</b></span></div>
+<div>&nbsp;</div>
+<div><span>Q: How 
+inadequate would a 1 cm thick solid pine board be to build some printers 
+envelope? I'm scared about the warp wood has when humidity changes.</span></div></div><div><span><br></span></div><div><span><div>&nbsp;</div>
+<div><span>General Questions 
+Below</span></div>
+<div><span><b>Q. How do I get the parts to 
+Build a RepRap?</b></span></div>
+<div><span>A. Big Question, it has it's own 
+Pad at </span><span><a href="http://titanpad.com/qaSMu02eJe" rel="nofollow">http://tita</a></span><span><a href="http://titanpad.com/qaSMu02eJe" rel="nofollow">n</a></span><span><a href="http://titanpad.com/qaSMu02eJe" rel="nofollow">pad.com/qaSMu02eJe</a></span><span> More information on vendors is here 
+</span><span><a href="http://titanpad.com/3LVQ9SCoVH" rel="nofollow">http://titanpad.com/3LVQ9SCoVH</a></span></div>
+<div>&nbsp;</div>
+<div><span><b>Q. Where can I buy a completely 
+assembled 3d printer?</b></span></div>
+<div><span>A. Big Question, it has it's own 
+Pad at </span><span><a href="http://titanpad.com/2glYo45OUs" rel="nofollow">http://titanpad.com/2glYo45OUs</a></span></div>
+<div>&nbsp;</div>
+<div><span><b>Q. What software should I use to 
+run my printer?</b></span></div>
+<div><span>A. Currently, the easiest software 
+to work with is:</span></div>
+<div><span>&nbsp;&nbsp;&nbsp; PrintRun (Host software) - 
+</span><span><a href="https://github.com/kliment/Printrun" rel="nofollow">https://github.com/kliment/Printrun</a></span><span>, precompiled for windows (with sfact) at </span><span><a href="http://koti.kapsi.fi/~kliment/printrun/" rel="nofollow">http://koti.kapsi.fi/~kliment/printrun/</a></span></div>
+<div><span>&nbsp;&nbsp;&nbsp; sfact (Slicing software) - 
+https:/​/​github.com/​ahmetcemturan/​SFACT/, or sfact daily - </span><span><a href="https://github.com/ahmetcemturan/SFACT/archives/Daily_Updates" rel="nofollow">https://github.com/ahmetcemturan/SFACT/archives/Daily_Updates</a></span></div>
+<div><span>&nbsp;&nbsp;&nbsp; or 
+alternative Slicing software slic3r </span><span><a href="http://slic3r.org/" rel="nofollow">http://slic3r.org/</a></span></div>
+<div><span>&nbsp;&nbsp;&nbsp; or 
+Repsnapper (all-in-one, fast and 3D) </span><span><a href="http://reprap.org/wiki/RepSnapper_Manual:Introduction" rel="nofollow">http://reprap.org/wiki/RepSnapper_Manual:Introduction</a></span></div>
+<div><span>&nbsp;&nbsp;&nbsp; Sprinter (Printer Firmware) - 
+</span><span><a href="https://github.com/kliment/Sprinter" rel="nofollow">https://github.com/kliment/Sprinter</a></span></div><div><br></div><div><div><span>Main FAQ 
+link: </span><span><a href="http://doiop.com/FAQMain" rel="nofollow">http://doiop.com/FAQMain</a></span></div>
+<div>&nbsp;</div>
+<div><span>Pronterface 
+is </span><span><a href="https://github.com/kliment/Printrun" rel="nofollow">https://github.com/kliment/Printrun</a></span><span> and precompiled for windows (with sfact) at 
+</span><span><a href="http://koti.kapsi.fi/~kliment/printrun/" rel="nofollow">http://koti.kapsi.fi/~kliment/printrun/</a></span></div>
+<div>&nbsp;</div>
+<div><span>Q. How do you 
+print multiple stl's at the same time using pronterface?</span></div>
+<div>&nbsp;</div>
+<div><span>A. First open 
+Plater.py, you'll find it in the same directory as Pronterface.py.&nbsp; Next right 
+click the grided area and open your first stl file.&nbsp; Drag the stl around the 
+grid space (your print bed) and use the scroll-wheel to rotate around the z 
+axis.&nbsp; Right click again to add another file. Export the stl and run it through 
+your slicer.</span></div>
+<div>&nbsp;</div>
+<div><span>If you want 
+to print several of the same stl</span><span>
+</span><span>u</span><span>se the Multiple plugin </span><span>in</span><span> 
+skeinforge.&nbsp;</span></div>
+<div>&nbsp;</div>
+<div><span>Q. How do 
+you move things on the print area?</span></div>
+<div>&nbsp;</div>
+<div><span>Use 
+plater.py included with Pronterface</span><span>, or use the centering part of the skeinforge 
+multiply plugin.</span></div>
+<div>&nbsp;</div>
+<div><span>center is in 
+skeinforge or sfact, activate m</span><span>G</span><span>ultiply, set rows and columns to 1 each, set x 
+and y center to 100 each. This will center the object on your bed</span></div><div><span><br></span></div><div><span><div><span><b>Sfact FAQ</b></span></div>
+<div>&nbsp;</div>
+<div><span>Below answers are based on default 
+SFACT settings.&nbsp; If you have messed them up you can revert to the defaults by 
+closing SFACT and deleting the sfact_profiles</span><span>Click</span><span> directory 
+afterwards.</span></div>
+<div><span>This will delete all profiles and 
+SFACt will recreate one with defaults on restart.</span></div>
+<div>&nbsp;</div>
+<div><span>Plugin Names 
+are Printed CAPS</span></div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp;&nbsp;</b></span><span>&nbsp;&nbsp;&nbsp; </span><span><b>How do you open SFACT? Also, how do you 
+load a .STL file in order to create the .GCode file</b></span><span><b>?</b></span></div>
+<div><span>A:&nbsp;&nbsp;&nbsp;</span></div>
+<div>
+<ul>
+<li><span>3</span><span>O</span><span>pen the file sfact.py inside the SFACT 
+directory.&nbsp; Click the "skeinforge" button to get an open dialog for the stl you 
+want to skein.</span></li></ul></div>
+<div>&nbsp;</div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; 
+Why do my Prints come out crappy.&nbsp; Is something wrong with 
+SFACT?</b></span></div>
+<div><span>A:&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+<div>
+<ul>
+<li><span>First of all please consider that 
+SFACT was created/is maintained by someone who has no Programming background.&nbsp; 
+He sled into this while wanting to write documentation for setting up 
+Skeinforge, found that it would be easier to make a spreadsheet for calculating 
+the </span><span>many</span><span> Skeinforge settings and finally found that it 
+would be wisest to enter thformulas directly into 
+Skeinforge.&nbsp;</span></li></ul></div>
+<div>
+<ul>
+<li><span>&nbsp;That resulted in SF by ACTion68 (ACT 
+being his Initials) &gt;&gt; SFACT.&nbsp; So it is possible that there are faults and 
+we welcome it if you inform us about them.&nbsp; BUT if you have never had a 
+successful print before and are printing with the default settings of SFACT, you 
+can be sure (about 99%...</span><span>&nbsp;</span><span>&nbsp; 
+yeah I measured..:P) that it is some other problem than 
+SFACT.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Too many people had slam-dunk success 
+with their first prints.&nbsp; Just forget&nbsp; everything you know about Skeinforge 
+settings. (feed=flow and things like that).</span></li></ul></div>
+<div>
+<ul>
+<li><span>Make your first print with default 
+settings of SFACT.&nbsp;&nbsp; They will be created when you first run SFACT.&nbsp; Only change 
+Filament diameter to the </span><span>exact 
+</span><span>diameter of your 
+filament</span><span> (3mm filament does NOT 
+equal 3mm, usually it is more like 2.8)</span><span>.</span></li></ul></div>
+<div>
+<ul>
+<li><span>The default settings assume you are 
+printing with a 0.5 nozzle. </span><span>See the 
+calibration section below if you are not running a .5 
+nozzle.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Possible faults for just inconsistent 
+prints are under: Where do I look for possible hardware 
+problems?</span></li></ul></div>
+<div>
+<ul>
+<li><span>Look here for some hints on common 
+print problems:&nbsp;</span></li></ul></div>
+<div>
+<ul>
+<li><span><a href="http://richrap.blogspot.com/2011/10/art-of-failure-when-3d-prints-go-wrong.html" rel="nofollow">http://richrap.blogspot.com/2011/10/art-of-failure-when-3d-prints-go-wrong.html</a></span></li></ul></div>
+<div>
+<ul>
+<li><br></li></ul></div>
+<div>&nbsp;</div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; 
+Where do I look for possible hardware problems?</b></span></div>
+<div><span>A:&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+<div>
+<ul>
+<li><span>Sloppiness of anything. the belts, 
+bolts, smooth-rods, gears, motors.... anything will unavoidably worsen you print 
+quality.&nbsp; And they dont add up but they multiply....</span></li></ul></div>
+<div>
+<ul>
+<li><span>Bad hotend: You might have self 
+sourced most of the parts but stay with the experienced folks for the hot end.&nbsp; 
+For recommendations visit IRC channel or look up in 
+reprap.org.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Bad filament feed</span><span> system.. I could also have said </span><span><b>hobbed bolt</b></span><span> but You could also have some other system.&nbsp; 
+Inconsistent feeding will give you very very bad prints.&nbsp; You will not be able 
+to calibrate.&nbsp; Quick way to test this is when you extrude a long piece say 50mm 
+of filament&nbsp; mark the filament with stripes and then let it slip through your 
+fingers.&nbsp; It should have one continuous move...&nbsp; Other methods are to do the 
+calibration of 100mm several times.&nbsp; The filament should be pulled in the same 
+distance every time.</span><span> While doing 
+this calibration extrude at no more than 100mm/min, anything faster and your 
+hotend might not be able to hold a high enough temperature.</span><span>&nbsp; It is not too bad if its say 98mm, as long as 
+it is 98mm every time.&nbsp; You can correct for that during SFACT calibration 
+later.</span></li></ul></div>
+<div>
+<ul>
+<li><span>A quick check for the</span><span><b>&nbsp;</b></span><span><b>&nbsp; </b></span><span><b>health of the filament feeding 
+system</b></span><span> is to make a reference 
+mark on the filament, extrude a certain distance (not too much as you dont want 
+to come the filament loose from the extruder later)&nbsp; then retract the same 
+amount and see whether the mark arrives at the same point.&nbsp; 20-30mm should be a 
+safe distance for most extruders</span><span>.</span><span>&nbsp;</span><span><b> It is no use trying to calibrate/get 
+good prints if your feed is not consistent.</b></span></li></ul></div>
+<div>
+<ul>
+<li><span>Filament that has soaked up humidity.&nbsp; 
+Most plastics love to soak up the environments humidity.&nbsp;&nbsp; So does your 
+filament.&nbsp; But H20 becomes a gas at 100oC.&nbsp; So the humidity/water in your 
+filament becomes a gas that pushes your filament out&nbsp;</span></li></ul></div>
+<div><span>.</span></div>
+<div>
+<ul>
+<li><span>in&nbsp; bursts or less severe case you 
+have a very runny nozzle..&nbsp;&nbsp; No way You&nbsp; will be able to stop that ooze and 
+still get a decent print.&nbsp;&nbsp; You need&nbsp; to dry that filament.&nbsp; For PLA it is 
+recommended to dry in an oven at&nbsp; 60C.&nbsp; You need to have some fan circulation 
+during the drying process.&nbsp;&nbsp; PLA will start to soften at that temperature so 
+keep that in mind when&nbsp; you put it in the oven.&nbsp; It will get soft and take the 
+shape of the&nbsp; material it sits on.&nbsp; Best is to try small amounts first to make 
+sure&nbsp; the oven shows tha right temperature.&nbsp;&nbsp;&nbsp; About 2-4hrs the drying will&nbsp; 
+take.&nbsp; And reseal the filament after use.&nbsp; It will soak humidity&nbsp; 
+again..</span><span>.</span></li></ul></div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; How do I calibrate 
+Sfact?</b></span></div>
+<div><span>A:&nbsp;</span></div>
+<div>
+<ul>
+<li><span>DIMENSION:</span><span> 
+Measure your filament and enter it (measure across multiple places </span><span>using digital calipers </span><span>and 
+enter the average to 2 sig figs (3.1 or 1.7 respectfully)</span></li></ul></div>
+<div>
+<ul>
+<li><span>Inset: Enter your nozzle diameter (no need to measure, just 
+enter the number you bought it as</span><span>. 
+Nozzle diameter only affects bridging.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Set your Filament Packing Density 
+ratio to 1 before beginning this process</span></li></ul></div>
+<div>
+<ul>
+<li><span>Print the _40x10.STL file included with Sfact. The default 
+extrusion width in SFACT is 0.6</span></li></ul></div>
+<div>
+<ul>
+<li><span>Using Calipers measure the wall </span><span>thickness</span><span> of all 4 sides 
+of the thin wall cube.&nbsp; Throw out the largest value, and average the other 3. 
+(Be sure you measure from the top of the box, not the bottom, the bottom might 
+be flared out because of the 1st layer not being perfectly level.&nbsp; Also if you 
+have big variations it is a good idea to measure the side that is extruded last 
+as the extrusion will have mostly stabilised by then (after the Z-move).&nbsp; Try to 
+measure </span><span>the smallest number 
+of</span><span> layers possible</span><span> from top</span><span> as the slightest 
+vertical misalignment of your layers will increase the measured value.&nbsp; Ideally 
+a single layer would be best but very difficult with regular calipers. 
+(</span><span>Make sure the measuring device is 
+not </span><span>biting into the filament during 
+measurement.)</span></li></ul></div>
+<div>
+<ul>
+<li><span>Go Back in Sfact to DIMENSION and click the "</span><span><b>Calibrating</b></span><span>" radio dial and enter the 
+</span><span>measurement into "Measured Width of 
+Extrusion"</span><span>.&nbsp; Reskein the _40x10.STL 
+file.</span></li></ul></div>
+<div>
+<ul>
+<li><span>At the end of the skeining process you will see (on the 
+command window) a new packing density ratio, it should be somewhere between 1.2 
+and .8 .&nbsp; Enter it into the </span><span>filament </span><span>packing density 
+ratio box</span><span>(called "E-steps 
+Corrector" in later versions of SFACT)</span><span>. (If it's more off 
+than that you very likely have a badly calibrated Estep on 1 of your axis’s.&nbsp; 
+This is not too much of a problem when you want to get to printing rightaway but 
+be aware that bad precision does not add up but multiplies...&nbsp; So go back later 
+and fix it by re-calibrating E-steps)</span></li></ul></div>
+<div>
+<ul>
+<li><span>Do not print the G-code that is output 
+with the "Are You Calibrating" checkbox on.&nbsp;&nbsp; Untick the checkbox and skein 
+again.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Print the created Gcode.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Remeasure.&nbsp;&nbsp;</span></li></ul></div>
+<div>
+<ul>
+<li><span>I</span><span>f the measured 
+wall width is now equal to your extrusion width set in </span><span>the "Carve" tab</span><span>, you're done.</span></li></ul></div>
+<div>
+<ul>
+<li><span>If not</span><span>,</span><span> just enter the newly 
+measured value into the measured width in DIMENSION.&nbsp; repeat until you are happy 
+with the result.</span><span> (</span><span>remember to tick the checkbox "Are You 
+Calibrating" to calculate new values based on the new "Measured With Of 
+Extrusion" value)</span></li></ul></div>
+<div>
+<ul>
+<li><span>Note:&nbsp;</span><span>
+</span><span>You can interrupt and measure the print as soon as you 
+feel the extrusion has stabilised.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Tip:&nbsp; To avoid extruder related 
+inconsistencies it might be a good idea to turn heat up, to a level that really 
+reduces backpressure.&nbsp; I have calibrated with 250c for PLA as my bolt was bad 
+and slipping.&nbsp; BUT BE CAREFUL!!!&nbsp; TOO HIGH EXTRUSION TEMPERATURES CAN DAMAGE 
+YOUR EXTRUDER/PRINTER.</span></li></ul></div>
+<div>&nbsp;</div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; The Thin walled print comes 
+out dead on, but my top and bottom layers are overfilled, how do I correct 
+this?</b></span></div>
+<div><span>A:</span></div>
+<div>
+<ul>
+<li><span>In the FILL plugin in Sfact you can change the distance 
+between the parallel lines as well as the concentric rings (extra perimeters).&nbsp; 
+They are controlled by Extrusion lines extra spacing variable.&nbsp; The default 
+value is 1.&nbsp; It adjusts itself automatically according to your other settings 
+and this varibale is just for tuning.&nbsp; Increasing it will make the spaces 
+between these lines bigger.&nbsp; (with "these" I mean all the layers that have 
+parallel lines as well as the lines in the line fill.&nbsp; If you reduce the number 
+.95 they will move closer and you will have a more "packed layer".&nbsp; So if you 
+need to have say a watertight bottom you might need to decrease the spacing 
+(0.95).</span></li></ul></div>
+<div>
+<ul>
+<li><span>Another way to reduce the full layers density is to turn down 
+the main flow rate.&nbsp; This has the unfortunate drawback of also reducing the 
+density of your infill.&nbsp; Always remember that reducing the flowrate means (as 
+the height is given by the space between the already printed piece and the 
+nozzle) that you are changing the extrusion width. This can fix the issue, but 
+should NOT be a 1st choice.&nbsp;</span></li></ul></div>
+<div>&nbsp;</div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; What Do I need to change to 
+make SFACT work on my specific printer?</b></span></div>
+<div><span>A:</span></div>
+<div>
+<ul>
+<li><span>In SFACT Settings need to be customized only according to 
+your nozzle size (under INSET set nozzle diameter - 0.5mm by default)&nbsp; and 
+filament diameter (under&nbsp; DIMENSION set filament diameter - 2.8mm by 
+default).</span></li></ul></div>
+<div>
+<ul>
+<li><span>The nozzle diameter dictates also your setings in CARVE: it 
+would be very wrong to expect an orifice of 0.5mm diameter to put out extrusion 
+of 0.5x1mm.&nbsp; That would be more than twice the amount it is capable to 
+extrude.&nbsp;</span></li></ul></div>
+<div>
+<ul>
+<li><span>A good rule of thumb is to set layer height slightly lower 
+than the nozzle diameter and extrusion width a bit above the nozzle diameter. ( 
+LayerHeight + ExtrusionWidth = slight bit more than 
+2xNozzleDiameter)</span></li></ul></div>
+<div>
+<ul>
+<li><span>Limitations on speed are only set by the capability of your 
+extruders heater, slippage of the filament, mechanical friction/binding etc., 
+and weight of moving parts (acceleration needs to be set slower resulting in 
+lower topspeeds..)</span></li></ul></div>
+<div>&nbsp;</div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; What does COOL 
+do?</b></span></div>
+<div><span>A:</span></div>
+<div>
+<ul>
+<li><span>Cool will slow down your speed to allow the layer to cool 
+before you move to the next layer.&nbsp;&nbsp;</span></li></ul></div>
+<div>
+<ul>
+<li><span>In cool you define a minimum layer duration and a minimum 
+feedrate.. (It wont go slower than that as otherwise it will also spoil your 
+print.)</span></li></ul></div>
+<div>&nbsp;</div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; Why do I need to calibrate 
+in SFACT.&nbsp; Doesnt calibrating E-steps in FW do that already?</b></span></div>
+<div><span>A:</span></div>
+<div>
+<ul>
+<li><span>In theory yes.&nbsp; If you are 100% sure that you have set the 
+E-steps right you could skip SFACT Calibration.&nbsp;&nbsp;</span></li></ul></div>
+<div>
+<ul>
+<li><span>On the other hand, calibrating the E-steps in Firmware is 
+only one step beyond calculating your E-steps based on Motor step angle, 
+microstepping ratio and gearing. Whereas the SFACT calibration allows you to 
+calibrate b</span><span>a</span><span>sed on actual extruded material, compensating for all possible errors 
+inbetween.</span></li></ul></div>
+<div>&nbsp;</div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; What the he</b></span><span><b>ck</b></span><span><b> is 
+SKIN?</b></span></div>
+<div><span>A:</span></div>
+<div>
+<ul>
+<li><span>When SKIN is enabled SFACT will slice your model regularly 
+with a layer thickness as is set in CARVE.&nbsp;&nbsp;</span></li></ul></div>
+<div>
+<ul>
+<li><span>Then it will split your perimeter extrusion into 4. (e.g, a 
+0.4x0.6 extrusion will become 2x0.2x0.3 extrusions stacked onto each 
+oher.&nbsp;&nbsp;</span></li></ul></div>
+<div>
+<ul>
+<li><span>This will NOT improve resolution but it will effect your 
+finish as instead of having 0.</span><span>4</span><span>mm (half layer height) 
+ridges you will have 0.2mm&nbsp; (quarter layer height) 
+ridges.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Possible problems:</span></li></ul></div>
+<div>
+<ul>
+<li><span>&nbsp;If your layer height and extrusion width is already low, 
+trying to extrude 1/4th of the previous cross-section will probably result in 
+very inconsistent flow.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Another problem is the decimals.&nbsp; You might find that the 
+output code does not increase as the increment is so little that it gets lost 
+during rounding.</span></li></ul></div>
+<div>
+<ul>
+<li><span>The situation is even worse with relative 
+E-steps.</span></li></ul></div>
+<div>&nbsp;</div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; Why are the width setting 
+in SFACT absolute and not a ratio as in SF?</b></span></div>
+<div><span>A:</span></div>
+<div>
+<ul>
+<li><span>The reason the width settings in SF are ratios to the layer 
+height is to decrease the amount of settings that you need to adjust when you 
+change layer height,&nbsp; In SFACT these settings are already interconnected (in the 
+background).&nbsp; So you can set height and width of extrusion 
+freely.</span></li></ul></div>
+<div>&nbsp;</div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; Can I set width and height 
+of extrusion at will or are there any guidelines?</b></span></div>
+<div><span>A:</span></div>
+<div>
+<ul>
+<li><span>Regarding the calculation and the generated G-code the answer 
+is yes. BUT the real world has limitations:</span></li></ul></div>
+<div>
+<ul>
+<li><span>Your hot-end has a limit.&nbsp; It is imposed by the nozzle 
+diameter, shape and internal details, as well as the capacity of your 
+heater/heating system and how good it can transfer the heat to the filament.&nbsp; An 
+upper as well as a lower limit.&nbsp;&nbsp;</span></li></ul></div>
+<div>
+<ul>
+<li><span>If you go below the lower limit, you will have inconsistent 
+extrusion. (Just imagine a water hose that fows only little water. The flow will 
+wander and be inconsistent.)&nbsp; This effect becomes worse when your filament has 
+soaked up humidity as it will create steam pockets that will cause small jets of 
+filament during print.</span></li></ul></div>
+<div>
+<ul>
+<li><span>If you go higher than the limit you will have lots of 
+pressure in the nozzle.</span></li></ul></div>
+<div>
+<ul>
+<li><span>This can cause excessive stringing as plastic will still flow 
+when the extruder motor stops, as it will try to get the pressure down.&nbsp; 
+Retraction helps here a bit but it will never release the pressure instantly.&nbsp; 
+This is the best case...</span></li></ul></div>
+<div>
+<ul>
+<li><span>If all parts of your Extruder are sound and the extruder just 
+cant handle that much flow, you will strip filament.&nbsp; Stripped filament can 
+cause less grip, and therefore even more stripping.&nbsp; It also could cause 
+inconsistent flow if the teeth are partly jammed with plastic as it will alter 
+the "hob diameter".&nbsp;&nbsp;</span></li></ul></div>
+<div>
+<ul>
+<li><span>Worst case You could have leaks in your hotend.&nbsp; In such a 
+case try to d</span><span> </span><span>isassemble the hot-end before letting it cool,&nbsp; otherwise it might 
+become impossible to seperate the parts.</span></li></ul></div>
+<div>
+<ul>
+<li><span><b>UTMOST CARE IS NEEDED AS YOU WILL BURN 
+YOURSELF</b></span><span>. (Not otherwise but be prepared to have 
+burns..)</span><span> I am using Latex covered 
+textile working gloves when working with the hot parts of my 
+printer.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Plastic parts might have become soft,&nbsp; try to reinstate their 
+original shape/state before they cool down.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Filament gets to a rubbery state at some temperature (PLA 
+about 120-130c)&nbsp; Thats the best time to clean it off.&nbsp; (with some experience you 
+can take off the whole contents of the nozzle in one 
+piece)</span></li></ul></div>
+<div>
+<ul>
+<li><span>I found that it is a good value to have the layer height the 
+same or slightly less than the nozzle diameter.</span></li></ul></div>
+<div>
+<ul>
+<li><span>The width of extrusion should be chosen so that you stick to 
+the formula:&nbsp; </span><span><b>Layer height + Extrusion Width&nbsp; is 
+slightly bigger (110-125%) than double the nozzle 
+diameter&nbsp;</b></span></li></ul></div>
+<div>&nbsp;</div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; What exactly does the 
+Infill Extra Spacing in FILL do?</b></span></div>
+<div><span>A:</span></div>
+<div>
+<ul>
+<li><span>The main indicator for wrong settings here is too sparse or 
+too thick top layer.</span></li></ul></div>
+<div>
+<ul>
+<li><span>If this happens you probably have wrong calibaration (as in 
+your extrusion is not coming out the same as the setting in 
+Carve.)</span></li></ul></div>
+<div>
+<ul>
+<li><span>It is the setting that adjusts the spacing of the parallel or 
+concentric extrusion lines (Top and bottom fill, regular line fill and extra 
+perimeters).</span></li></ul></div>
+<div>
+<ul>
+<li><span>A similar setting is also in Inset.&nbsp; That one only will 
+affect bridge layers.</span></li></ul></div>
+<div>&nbsp;</div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; What are bridge/bridge 
+layers?&nbsp;</b></span></div>
+<div><span>A:</span></div>
+<div>
+<ul>
+<li><span>Bridge layers are layers that have areas that have no 
+material underneath.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Bridges that span between two filled 
+areas.</span></li></ul></div>
+<div>
+<ul>
+<li><span>These can be extreme 
+overhang</span><span>s.</span></li></ul></div>
+<div>
+<ul>
+<li><span>SFACT will try to print these areas wit</span><span>h</span><span> a 100%fill and in the 
+direction of the shortest distance of the bridge.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Problem with bridge layers that you 
+dont have a preceding layer to limit the layer height and adjust the extrusion 
+width accordingly.&nbsp; While with normal printing you can virtually achieve any w/h 
+ratio that is not possible for bridges.</span></li></ul></div>
+<div>
+<ul>
+<li><span>You can set the feed/flowrate for bridges under SPEED.&nbsp; It is 
+a relative setting that is calculated by multiplying the perimeter feed/flow 
+values.&nbsp;&nbsp;</span></li></ul></div>
+<div>
+<ul>
+<li><span>Settings under INSET let you adjust the spacing of these 100% 
+fill lines and also the nozzle diameter setting is needed here to be able to 
+calculate a "natural flow" for the nozzle.</span></li></ul></div>
+<div>
+<ul>
+<li><span>The default settings will result in an extrusion that has 
+obviously same layer height as the rest of the print, the extrusion width will 
+be set to a value that I call "natural flow" or "native flow".&nbsp; That is the 
+</span><span><i>extrusion X-section</i></span><span> is the 
+same as the </span><span><i>nozzle diameter 
+X-section.</i></span></li></ul></div>
+<div>
+<ul>
+<li><span>The bridge settings will only kick in 
+if Infill in direction of bridges is checked.&nbsp; This setting will cause for some 
+fully filled layers if you are printing shapes with all-around overhangs 
+(especially organic shapes or statue like things).&nbsp; They might appear random to 
+you but this is the reason for that.</span></li></ul></div>
+<div>&nbsp;</div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; Why is TEMPERATURE 
+disabled by default.&nbsp;&nbsp;</b></span></div>
+<div><span>A:</span></div>
+<div>
+<ul>
+<li><span>The SFACT defaults are set the way that they provide failsafe 
+defaults for beginners.&nbsp;&nbsp;</span></li></ul></div>
+<div>
+<ul>
+<li><span>SFACT is as tuneable as SF.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Setting the temperatures in SFACT would cause the G-code that 
+is generated to include Temperature codes.</span></li></ul></div>
+<div>
+<ul>
+<li><span>They would be issued every time the print type changes. (You 
+dont notice it but it happens more often than you 
+think..)</span></li></ul></div>
+<div>
+<ul>
+<li><span>Temperature settings are very different for every 
+configuration.&nbsp; (plastic type, color, humidity, thermistor, thermistor 
+placement, nozzle diameter, print speed, extrusion 
+diameter)</span></li></ul></div>
+<div>
+<ul>
+<li><span>A wrong setting is ver</span><span>y</span><span> difficult to correct 
+during print as it will try to go back to the G-Code settings every time the 
+print type changes.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Instead of that we advise to set the temperature in the host 
+program and adjust if necessary..</span></li></ul></div>
+<div>
+<ul>
+<li><span>If you are really sure that you are able to choose correct 
+temperatures go ahead and enable it..</span></li></ul></div>
+<div>
+<ul>
+<li><span>You can set a startup temperature 
+seperately in Chamber.&nbsp;&nbsp; This will issue a tempertaure command and wait until 
+the nozzle heats up to that temperature before printing.&nbsp; The command is issued 
+only at the start so you can tune the temperature in the host software 
+later/during print.</span></li></ul></div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; My alterations and start.gmc, 
+end.gmc files are not working.&nbsp;&nbsp; What am I doing wrong?</b></span></div>
+<div><span>A:</span></div>
+<div>
+<ul>
+<li><span>You have to place them into the 
+skeinforge_application\alterations folder.&nbsp; Unfortunately there are other 
+folders with the name alterations around but this would be the correct 
+one!</span></li></ul></div>
+<div>&nbsp;</div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; What is the penultimate gcode file 
+I am getting?</b></span></div>
+<div><span>A:</span></div>
+<div>
+<ul>
+<li><span>It is the G-code file that SFACT uses 
+to carry data from plugin to plugin.&nbsp; It has lots of extra information 
+inside.</span></li></ul></div>
+<div>
+<ul>
+<li><span>At the start of the file there are 
+most of your settings.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Each section is marked whether it is 
+fill, loop, perimeter etc.</span></li></ul></div>
+<div>
+<ul>
+<li><span>You can reopen a penultimate file with 
+skeinforge to have a preview in SKEINLAYER or SKEINISO</span></li></ul></div>
+<div>
+<ul>
+<li><span>It is a great source of information if 
+you need help.</span></li></ul></div>
+<div>&nbsp;</div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; Why are there now two dimension 
+plugins (DIMENSION and OLDDIMENSION)?</b></span></div>
+<div><span>A:</span></div>
+<div>
+<ul>
+<li><span>DIMENSION Plugin has a new method to 
+calculate Retraction.&nbsp; It calculates the duration of the upcoming travel move 
+and retracts accordingly.&nbsp;</span></li></ul></div>
+<div>
+<ul>
+<li><span>OLDDIMENSION is the OLD-DIMENSION 
+Plugin.&nbsp; It behaves the way You probably are used to.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Latest version has only one DIMENSION 
+plugin.&nbsp; It uses old type retraction.</span></li></ul></div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; What happened to the old retraction 
+settings?&nbsp; What the hell is oozerate? (Not relevant from Dec'11 
+onwards)</b></span></div>
+<div><span>A:</span></div>
+<div>
+<ul>
+<li><span>XXXXOozerate is abandoned in recent 
+versions of SFACT(Mid december 2011)XXXX</span></li></ul></div>
+<div>
+<ul>
+<li><span>The old retraction is still available 
+under the OLDDIMENSION tab.</span></li></ul></div>
+<div>
+<ul>
+<li><span>The current DIMENSION calculates 
+retraction differently.</span></li></ul></div>
+<div>
+<ul>
+<li><span>It assumes that you are having either 
+a drippy or very tight nozzle that oozes not at all... (Or anything 
+inbetween).</span></li></ul></div>
+<div>
+<ul>
+<li><span>The oozerate is what you are 
+estimateing when you extrude filament and then stop, it is about the amount of 
+filament that oozes from your nozzle in standby in one minute.(in 
+mm)</span></li></ul></div>
+<div>
+<ul>
+<li><span>SFACT will then calculate how long the 
+travel move in retracted state will take and retract accordingly.&nbsp; So if the 
+next move is very short it will hardly retract (You can boost this with the 
+minimum value..) or if i</span><span>t</span><span> 
+is a long move it will make a big retraction.(the max value is there to avoid 
+any mishaps if somehow you have a very slow travel move or similar, otherwise 
+the filament will pop out of the extruder..)</span></li></ul></div>
+<div>
+<ul>
+<li><br></li></ul></div>
+<div>&nbsp;</div>
+<div><span><b>Q:&nbsp;&nbsp;&nbsp; What is CLIP.&nbsp; What does it 
+do?</b></span></div>
+<div><span>A:</span></div>
+<div>
+<ul>
+<li><span>CLIP adjusts the gap between the start 
+and the end of the perimeter (outermost) extrusion.&nbsp; If there was no clip the 
+halves of the extrusions would overlap, causing overfill at the join.&nbsp; Too much 
+clip will cause open perimeters.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Clip is to create a distance between 
+the start and endpoint of a loop.&nbsp; Be it a perimeter or inner 
+loop..</span></li></ul></div>
+<div>
+<ul>
+<li><span>The default of 1 in sfact will create 
+a space (space is only there fort he extrusion path.) that is just enough apart 
+to have a joined perimeter according to your extrusion settings.&nbsp; It is 
+calculated similarly to how top layer extrusion spacing is 
+calculated..</span></li></ul></div>
+<div>
+<ul>
+<li><span>When using Dwindle You can set this 
+value to almost 0</span></li></ul><div><div><span><b>FAQ 
+for general Extrusion issues</b></span></div>
+<div>&nbsp;</div>
+<div><span>RichRap has 
+posted a great blog entry on troubleshooting bad prints with lots of photos, 
+check it out and see if your problems match:</span></div>
+<div><span><a href="http://richrap.blogspot.com/2011/10/art-of-failure-when-3d-prints-go-wrong.html" rel="nofollow">http://richrap.blogspot.com/2011/10/art-of-failure-when-3d-prints-go-wrong.html</a></span></div>
+<div>&nbsp;</div>
+<div><span><b>Q.&nbsp; 
+Why does my extruder skips steps whenever I am trying to print?</b></span></div>
+<div>&nbsp;</div>
+<div><span>A.Issues to 
+chec</span><span>k</span></div>
+<div>
+<ul>
+<li><span>Is your stepper controller getting 
+hot?&nbsp; If it overheats you will get skips durring 
+extrusion</span></li></ul></div>
+<div>
+<ul>
+<li><span>If using a geared stepper, does the 2 
+gears mesh exactly the same across the full rotation of your larger gear?&nbsp; If 
+you have a part that has higher resistance you</span><span>r</span><span> 
+gear might not be perfectly round / have a defect.&nbsp; Try to use a hand file to 
+clean up the gear meshing, or move the stepper motor gear further from the 
+driven gear to allow more room for the defects.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Is your thermal barrier getting hot?&nbsp; 
+If your thermal barrier gets to hot it can cause increased resistance to motion 
+by your cold end.&nbsp; You might need to put a fan on your thermal 
+barrier.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Your nozzle might have trash in it.&nbsp; 
+If all else fails remove your hot end and clean out all the plastic.&nbsp; Most hot 
+ends this can be done with a blow torch, but some are too fragile for this and 
+you must use a long acetone dip.</span></li></ul></div>
+<div>
+<ul>
+<li><span>Did you overheat the nozzle when 
+printin PLA? PLA decomposes into a crystaline solid when overheated. This cannot 
+be dissolved in acetone so if you block your nozzle like this, the only option 
+is to mechanically remove the blockage.</span></li></ul></div>
+<div>
+<ul>
+<li><span>If you are using old wades 
+extruder then check that you are using right small pully and not using smaller 
+t5 pulley. I did that mistake in past and seen someone doing 
+it.</span></li></ul></div>
+<div>&nbsp;</div>
+<div><span><b>Q. 
+With 1.7 filiment my plastic buckles inside the cold end of the Extruder, what 
+is happening?</b></span></div>
+<div>&nbsp;</div>
+<div><span>A. If you 
+experence buckling of your plastic the cold end might not be properly 
+constrained to hold 1.7 filiment.&nbsp; Try printing a cold end that only has a 2mm 
+wide path for your filiment.&nbsp; Plastic should strip durring a failure, not 
+buckle.</span></div>
+<div>&nbsp;</div>
+<div><span>Print 
+</span><span><a href="http://www.thingiverse.com/thing:10031" rel="nofollow">http://www.thingiverse.com/thing:10031</a></span><span> if your using a geared stepper or </span><span><a href="http://www.thingiverse.com/thing:10573" rel="nofollow">http://www.thingiverse.com/thing:10573</a></span><span> if your using a hobbed bolt/</span></div>
+<div>&nbsp;</div></div></div></span></div></div></span></div></div></td></tr></tbody></table>
+</div> 
+</div> 
+<div id="sites-canvas-bottom-panel">
+<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_page-subpages"> </div>
+<div id="sites-attachments-container">
+</div>
+<a xmlns="http://www.w3.org/1999/xhtml" name="page-comments"></a>
+<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_page-comments"><div class="sites-comment-docos-wrapper"><div class="sites-comment-docos"><div class="sites-comment-docos-background"></div><div class="sites-comment-docos-header"><div class="sites-comment-docos-header-title">Commentaires</div></div><div id="sites-comment-docos-pane" class="sites-comment-docos-pane"></div></div></div></div>
+</div>
+</div> 
+</td> 
+</tr>
+</tbody></table> 
+</div> 
+</div> 
+<div id="sites-chrome-footer-wrapper">
+<div id="sites-chrome-footer-wrapper-inside">
+<div id="sites-chrome-footer">
+<div xmlns="http://www.w3.org/1999/xhtml" class="sites-subfooter"><div class="sites-subfooter-content"><br></div></div>
+</div>
+</div>
+</div>
+</div> 
+</div> 
+<div id="sites-chrome-adminfooter-container">
+<div xmlns="http://www.w3.org/1999/xhtml" class="sites-adminfooter" role="navigation"><p><a class="sites-system-link" href="https://accounts.google.com/ServiceLogin?continue=https://sites.google.com/site/repraplogphase/calibration-of-your-reprap&amp;service=jotspot">Se connecter</a><span aria-hidden="true">|</span><a class="sites-system-link" href="https://sites.google.com/site/repraplogphase/system/app/pages/reportAbuse" target="_blank">Signaler un abus</a><span aria-hidden="true">|</span><a class="sites-system-link" href="javascript:;" onclick="window.open(webspace.printUrl)">Imprimer la page</a><span aria-hidden="true">|</span><span class="sites-system-link">Avec la technologie de</span> <b class="powered-by"><a href="http://sites.google.com/site">Google Sites</a></b></p></div>
+</div>
+</div> 
+</div> 
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    window.jstiming.load.tick('sjl');
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="Calibration%20of%20your%20RepRap%20-%20StillExtruding_fichiers/jot_min_view__en.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    window.jstiming.load.tick('jl');
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml">if (webspace.editorResources['text']) {webspace.editorResources['text'].unshift('\/site\/repraplogphase\/system\/app\/css\/overlay.css?cb\x3dsimple12a100%2575200goog-ws-leftcontent30themedefaultstandard');webspace.editorResources['text'].unshift('\/site\/repraplogphase\/_\/rsrc\/1592465244000\/system\/app\/themes\/simple\/standard-css-simple-ltr-ltr.css');}</script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+                    sites.Searchbox.initialize(
+                        'sites-searchbox-search-button',
+                        {"object":[]}['object'],
+                        'search-site',
+                        {"label":"Configure search options...","url":"/site/repraplogphase/system/app/pages/admin/settings"});
+                  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+      gsites.HoverPopupMenu.createSiteDropdownMenus('sites-header-nav-dropdown', false);
+    </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
+            JOT_setupNav("2bd", "Navigation", true);
+            JOT_addListener('titleChange', 'JOT_NAVIGATION_titleChange', 'COMP_2bd');
+          </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
+            JOT_setupNav("6253479740116745", "Additional Links", false);
+            JOT_addListener('titleChange', 'JOT_NAVIGATION_titleChange', 'COMP_6253479740116745');
+          </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+              new sites.CommentPane('//docs.google.com/comments/d/AAHRpnXuj-DFPFSie3egVkMai3-ZOEMKDYfSqmHwzPxUNoZGqRO3PqG1fQGJqWICNJGLqNhKoMCPa1fo5HdRi-csrBIXhGyrncjBOdJ85ed2AJcdMKxKW1WZ_DL4eR_TzMfCUte9-FXKy/api/js?anon=true',
+                  false, false);
+            </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+  setTimeout(function() {
+    var fingerprint = gsites.date.TimeZone.getFingerprint([1109635200000, 1128902400000, 1130657000000, 1143333000000, 1143806400000, 1145000000000, 1146380000000, 1152489600000, 1159800000000, 1159500000000, 1162095000000, 1162075000000, 1162105500000]);
+    gsites.Xhr.send('https://sites.google.com/site/repraplogphase/_/tz', null, null, 'GET', null, null, { afjstz: fingerprint });
+  }, 500);
+</script>
+<script xmlns="http://www.w3.org/1999/xhtml">
+                    window.onload = function() {
+                      if (false) {
+                        JOT_setMobilePreview();
+                      }
+                      var loadTimer = window.jstiming.load;
+                      loadTimer.tick("ol");
+                      loadTimer["name"] = "load," + webspace.page.type + ",user_page";
+                      window.jstiming.report(loadTimer, {}, 'https://gg.google.com/csi');
+                    }
+                  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+        JOT_insertAnalyticsCode(false,
+            false);
+      </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    var maestroRunner = new gsites.pages.view.SitesMaestroRunner(
+        webspace, "en");
+    maestroRunner.initListeners();
+    maestroRunner.installEditRender();
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml">
+        JOT_insertTranslateCode('fr', 'en');
+      </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
+  //<![CDATA[
+    // Decorate any fastUI buttons on the page with a class of 'goog-button'.
+    if (webspace.user.hasWriteAccess) {
+      JOT_decorateButtons();
+    }
+
+    // Fires delayed events.
+    (function() {
+      JOT_fullyLoaded = true;
+      var delayedEvents = JOT_delayedEvents;
+      for (var x = 0; x < delayedEvents.length; x++) {
+        var event = delayedEvents[x];
+        JOT_postEvent(event.eventName, event.eventSrc, event.payload);
+      }
+      JOT_delayedEvents = null;
+      JOT_postEvent('pageLoaded');
+    })();
+  //]]>
+</script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    JOT_postEvent('decorateGvizCharts');
+  </script>
+<script type="text/javascript">
+          JOT_setupPostRenderingManager();
+        </script>
+<script type="text/javascript">
+          JOT_postEvent('renderPlus', null, 'sites-chrome-main');
+        </script>
+<script type="text/javascript">
+          sites.codeembed.init();
+        </script>
+<div id="server-timer-div" style="display:none"> </div>
+<script type="text/javascript">
+          window.jstiming.load.tick('render');
+          JOT_postEvent('usercontentrendered', this);
+        </script>
+
+
+<div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="Calibration%20of%20your%20RepRap%20-%20StillExtruding_fichiers/translate_24dp.png" alt="Google Traduction" width="20" height="20"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Texte d'origine</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Proposer une meilleure traduction</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div><iframe name="oauth2relay956838203" id="oauth2relay956838203" src="Calibration%20of%20your%20RepRap%20-%20StillExtruding_fichiers/postmessageRelay.html" style="width: 1px; height: 1px; position: absolute; top: -100px;" tabindex="-1" aria-hidden="true"></iframe><div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><div style="box-sizing: content-box; width: 86px; height: 24px;" id=":0.floatContainer" class=" goog-te-ftab-float"><iframe id=":0.container" src="javascript:''" class="goog-te-ftab-frame skiptranslate" style="visibility: visible; box-sizing: content-box; width: 86px; height: 24px;" frameborder="0"></iframe></div></body></html>

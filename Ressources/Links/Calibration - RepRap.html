@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Calibration - RepRap</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Calibration","wgTitle":"Calibration","wgCurRevisionId":187627,"wgRevisionId":187627,"wgArticleId":670,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages to be merged","Calibration","Tutorials"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Calibration","wgRelevantArticleId":670,"wgRequestId":"40603509c27546feadba3584","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@08dmhpw",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="Calibration%20-%20RepRap_fichiers/load.css">
+<script async="" src="Calibration%20-%20RepRap_fichiers/load.php"></script>
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:solid 1px #aaa;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:solid 1px #aaa;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#4c59a6;color:#fff}.suggestions-special .special-label{color:#808080;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c0c0c0}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	#toc.tochidden,.toc.tochidden,.toctoggle{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="Calibration%20-%20RepRap_fichiers/load_002.css">
+<meta name="generator" content="MediaWiki 1.30.0">
+<link rel="shortcut icon" href="https://reprap.org/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://reprap.org/mediawiki/opensearch_desc.php" title="RepRap (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://reprap.org/mediawiki/api.php?action=rsd">
+<link rel="license" href="https://www.gnu.org/copyleft/fdl.html">
+<link rel="alternate" type="application/atom+xml" title="RepRap Atom feed" href="https://reprap.org/mediawiki/index.php?title=Special:RecentChanges&amp;feed=atom">
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js"></script><![endif]-->
+<script src="Calibration%20-%20RepRap_fichiers/load_002.php"></script></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Calibration rootpage-Calibration skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+						<div class="mw-indicators mw-body-content">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Calibration</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub" class="noprint">From RepRap</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><div class="mw-parser-output"><div class="LanguageLinks">
+<table style="clear: both; border-collapse: collapse; padding: 0; margin: 0; font-size: 85%;" width="100%">
+<tbody><tr style="background: #ffffff" valign="top">
+<td style="padding: 1px 1em 0; background: #ffffff;">
+<p><a class="mw-selflink selflink">English</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/ar&amp;action=edit&amp;redlink=1" class="new" title="Calibration/ar (page does not exist)">العربية</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/bg&amp;action=edit&amp;redlink=1" class="new" title="Calibration/bg (page does not exist)">български</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/ca&amp;action=edit&amp;redlink=1" class="new" title="Calibration/ca (page does not exist)">català</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/cs&amp;action=edit&amp;redlink=1" class="new" title="Calibration/cs (page does not exist)">čeština</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/wiki/Calibration/de" title="Calibration/de">Deutsch</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/el&amp;action=edit&amp;redlink=1" class="new" title="Calibration/el (page does not exist)">Ελληνικά</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/wiki/Calibration/es" title="Calibration/es">español</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/fa&amp;action=edit&amp;redlink=1" class="new" title="Calibration/fa (page does not exist)">فارسی</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/wiki/Calibration/fr" title="Calibration/fr">français</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/hr&amp;action=edit&amp;redlink=1" class="new" title="Calibration/hr (page does not exist)">hrvatski</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/hu&amp;action=edit&amp;redlink=1" class="new" title="Calibration/hu (page does not exist)">magyar</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/wiki/Calibration/it" title="Calibration/it">italiano</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/ro&amp;action=edit&amp;redlink=1" class="new" title="Calibration/ro (page does not exist)">română</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/ja&amp;action=edit&amp;redlink=1" class="new" title="Calibration/ja (page does not exist)">日本語</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/kr&amp;action=edit&amp;redlink=1" class="new" title="Calibration/kr (page does not exist)">한국어</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/lt&amp;action=edit&amp;redlink=1" class="new" title="Calibration/lt (page does not exist)">lietuvių</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/nl&amp;action=edit&amp;redlink=1" class="new" title="Calibration/nl (page does not exist)">Nederlands</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/no&amp;action=edit&amp;redlink=1" class="new" title="Calibration/no (page does not exist)">norsk</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/pl&amp;action=edit&amp;redlink=1" class="new" title="Calibration/pl (page does not exist)">polski</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/pt&amp;action=edit&amp;redlink=1" class="new" title="Calibration/pt (page does not exist)">português</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/ru&amp;action=edit&amp;redlink=1" class="new" title="Calibration/ru (page does not exist)">русский</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/tr&amp;action=edit&amp;redlink=1" class="new" title="Calibration/tr (page does not exist)">Türkçe</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/ua&amp;action=edit&amp;redlink=1" class="new" title="Calibration/ua (page does not exist)">українська</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/zh_cn&amp;action=edit&amp;redlink=1" class="new" title="Calibration/zh cn (page does not exist)">中文（中国大陆）‎</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/zh_tw&amp;action=edit&amp;redlink=1" class="new" title="Calibration/zh tw (page does not exist)">中文（台灣）‎</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/wiki/Calibration/he" title="Calibration/he">עברית</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Calibration/az&amp;action=edit&amp;redlink=1" class="new" title="Calibration/az (page does not exist)">azərbaycanca</a>&nbsp;•&nbsp;
+</p>
+</td></tr></tbody></table></div>
+<div style="background: #eeeeee; border: 1px solid #aaaaaa; width: 100%; text-align: center">This page has been flagged as containing duplicate material that <a href="https://reprap.org/wiki/RepRapSoftwareTweakingManual" class="mw-redirect" title="RepRapSoftwareTweakingManual">RepRapSoftwareTweakingManual</a> also attempts to cover.<br>These pages should be merged such that both pages do not attempt to cover the duplicate topics.</div>
+<p><br><b><b>ANNOUNCEMENT:</b> If you search for the latest up-to-date guide please take a look at <a href="https://reprap.org/wiki/Triffid_Hunter%27s_Calibration_Guide" title="Triffid Hunter's Calibration Guide">Triffid's Guide</a>.</b>
+</p><p><b>Calibration</b> is the collection of mechanical "tweaking" processes needed to get exact, quality prints.  While your <a href="https://reprap.org/wiki/RepRap_Machines" title="RepRap Machines">RepRap machine</a> may be working as far as the <a href="https://reprap.org/wiki/List_of_electronics" title="List of electronics">electronics</a> are concerned, calibration is necessary to have well printed parts.
+</p><p>Without calibration, prints may not be the correct dimensions, 
+they may not stick to the build surface, and a variety of other 
+not-so-wanted effects can occur.  A RepRap can be calibrated to be as 
+accurate as the mechanics allow.
+</p><p>Once you have finished the physical build of your RepRap printer,
+ calibration is the next big hurdle.  Trying to print before calibration
+ will likely result in a messy "blob" smeared over the <a href="https://reprap.org/wiki/Heated_Bed" title="Heated Bed">printer bed</a>.
+</p><p>The following set of objects and notes are taken (and edited) from Coasterman who posted them to <a href="https://reprap.org/wiki/Thingiverse" title="Thingiverse">Thingiverse</a>.
+  They have been moved to the RepRap wiki so that they could more easily
+ be edited and contributed to by the broader community. 
+</p><p>Though the specific recommendation made in this article are based on <a href="https://reprap.org/wiki/Skeinforge" title="Skeinforge">Skeinforge</a> (or <a href="https://reprap.org/wiki/Sfact" title="Sfact">sfact</a>),
+ this information should be nearly equivalent for most other software.  
+Regardless of the software used, the techniques described and the set of
+ calibration objects are invaluable.
+</p><p>Note that calibration is an ongoing process that needs to be 
+performed throughout the life of the printer.  There are almost always 
+adjustments and tweaks that can be done to improve print quality.
+</p>
+<div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#PAY_ATTENTION_TO_THIS"><span class="tocnumber">1</span> <span class="toctext">PAY ATTENTION TO THIS</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Prerequisites"><span class="tocnumber">2</span> <span class="toctext">Prerequisites</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Calibration_processes"><span class="tocnumber">3</span> <span class="toctext">Calibration processes</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Motherboard"><span class="tocnumber">3.1</span> <span class="toctext">Motherboard</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Motor_Calibration"><span class="tocnumber">3.2</span> <span class="toctext">Motor Calibration</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Symptoms"><span class="tocnumber">3.2.1</span> <span class="toctext">Symptoms</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Instructions"><span class="tocnumber">3.2.2</span> <span class="toctext">Instructions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="#Thermistor"><span class="tocnumber">3.3</span> <span class="toctext">Thermistor</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#End_Stop"><span class="tocnumber">3.4</span> <span class="toctext">End Stop</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Instructions_2"><span class="tocnumber">3.4.1</span> <span class="toctext">Instructions</span></a>
+<ul>
+<li class="toclevel-4 tocsection-11"><a href="#Hard_Endstops"><span class="tocnumber">3.4.1.1</span> <span class="toctext">Hard Endstops</span></a></li>
+<li class="toclevel-4 tocsection-12"><a href="#Software_endstop"><span class="tocnumber">3.4.1.2</span> <span class="toctext">Software endstop</span></a></li>
+<li class="toclevel-4 tocsection-13"><a href="#Build_Area"><span class="tocnumber">3.4.1.3</span> <span class="toctext">Build Area</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="#Bed_Leveling"><span class="tocnumber">3.5</span> <span class="toctext">Bed Leveling</span></a>
+<ul>
+<li class="toclevel-3 tocsection-15"><a href="#Instructions_3"><span class="tocnumber">3.5.1</span> <span class="toctext">Instructions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-16"><a href="#Bed_surface_preparation"><span class="tocnumber">3.6</span> <span class="toctext">Bed surface preparation</span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="#Instructions_4"><span class="tocnumber">3.6.1</span> <span class="toctext">Instructions</span></a>
+<ul>
+<li class="toclevel-4 tocsection-18"><a href="#Glass"><span class="tocnumber">3.6.1.1</span> <span class="toctext">Glass</span></a></li>
+<li class="toclevel-4 tocsection-19"><a href="#Tapes"><span class="tocnumber">3.6.1.2</span> <span class="toctext">Tapes</span></a>
+<ul>
+<li class="toclevel-5 tocsection-20"><a href="#Blue_Tape"><span class="tocnumber">3.6.1.2.1</span> <span class="toctext">Blue Tape</span></a></li>
+<li class="toclevel-5 tocsection-21"><a href="#Kapton_Tape"><span class="tocnumber">3.6.1.2.2</span> <span class="toctext">Kapton Tape</span></a></li>
+</ul>
+</li>
+<li class="toclevel-4 tocsection-22"><a href="#Other_Materials"><span class="tocnumber">3.6.1.3</span> <span class="toctext">Other Materials</span></a>
+<ul>
+<li class="toclevel-5 tocsection-23"><a href="#Buildtak"><span class="tocnumber">3.6.1.3.1</span> <span class="toctext">Buildtak</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-24"><a href="#Extrusion"><span class="tocnumber">3.7</span> <span class="toctext">Extrusion</span></a>
+<ul>
+<li class="toclevel-3 tocsection-25"><a href="#Extruder_steps"><span class="tocnumber">3.7.1</span> <span class="toctext">Extruder steps</span></a>
+<ul>
+<li class="toclevel-4 tocsection-26"><a href="#Calibration_for_printing"><span class="tocnumber">3.7.1.1</span> <span class="toctext">Calibration for printing</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-27"><a href="#PLA"><span class="tocnumber">3.7.2</span> <span class="toctext">PLA</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-28"><a href="#Layer_height"><span class="tocnumber">3.8</span> <span class="toctext">Layer height</span></a>
+<ul>
+<li class="toclevel-3 tocsection-29"><a href="#Instructions_5"><span class="tocnumber">3.8.1</span> <span class="toctext">Instructions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-30"><a href="#Infill"><span class="tocnumber">3.9</span> <span class="toctext">Infill</span></a>
+<ul>
+<li class="toclevel-3 tocsection-31"><a href="#Instructions_6"><span class="tocnumber">3.9.1</span> <span class="toctext">Instructions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-32"><a href="#Temperature_control"><span class="tocnumber">3.10</span> <span class="toctext">Temperature control</span></a>
+<ul>
+<li class="toclevel-3 tocsection-33"><a href="#Instructions_7"><span class="tocnumber">3.10.1</span> <span class="toctext">Instructions</span></a>
+<ul>
+<li class="toclevel-4 tocsection-34"><a href="#Recommendations"><span class="tocnumber">3.10.1.1</span> <span class="toctext">Recommendations</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-35"><a href="#Perimeter_Width"><span class="tocnumber">3.11</span> <span class="toctext">Perimeter Width</span></a>
+<ul>
+<li class="toclevel-3 tocsection-36"><a href="#Instructions_8"><span class="tocnumber">3.11.1</span> <span class="toctext">Instructions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-37"><a href="#Bridging"><span class="tocnumber">3.12</span> <span class="toctext">Bridging</span></a>
+<ul>
+<li class="toclevel-3 tocsection-38"><a href="#Instructions_9"><span class="tocnumber">3.12.1</span> <span class="toctext">Instructions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-39"><a href="#Print_Precision"><span class="tocnumber">3.13</span> <span class="toctext">Print Precision</span></a>
+<ul>
+<li class="toclevel-3 tocsection-40"><a href="#Instructions_10"><span class="tocnumber">3.13.1</span> <span class="toctext">Instructions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-41"><a href="#Overhang"><span class="tocnumber">3.14</span> <span class="toctext">Overhang</span></a>
+<ul>
+<li class="toclevel-3 tocsection-42"><a href="#Instructions_11"><span class="tocnumber">3.14.1</span> <span class="toctext">Instructions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-43"><a href="#Oozebane"><span class="tocnumber">3.15</span> <span class="toctext">Oozebane</span></a>
+<ul>
+<li class="toclevel-3 tocsection-44"><a href="#Calibration_Object:_oozebane-test.stl"><span class="tocnumber">3.15.1</span> <span class="toctext">Calibration Object: oozebane-test.stl</span></a></li>
+<li class="toclevel-3 tocsection-45"><a href="#Calibration_Object_2_.28Variable_sized_towers_for_testing_ooze.29:_variable_size_ooze_test_nobase.stl"><span class="tocnumber">3.15.2</span> <span class="toctext">Calibration Object 2 (Variable sized towers for testing ooze): variable_size_ooze_test_nobase.stl</span></a></li>
+<li class="toclevel-3 tocsection-46"><a href="#Instructions_12"><span class="tocnumber">3.15.3</span> <span class="toctext">Instructions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-47"><a href="#Overhangs"><span class="tocnumber">3.16</span> <span class="toctext">Overhangs</span></a>
+<ul>
+<li class="toclevel-3 tocsection-48"><a href="#Instructions_13"><span class="tocnumber">3.16.1</span> <span class="toctext">Instructions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-49"><a href="#X_.26_Y_scaling_and_steps.2Fmm_calculations"><span class="tocnumber">3.17</span> <span class="toctext">X &amp; Y scaling and steps/mm calculations</span></a>
+<ul>
+<li class="toclevel-3 tocsection-50"><a href="#tl.3Bdr"><span class="tocnumber">3.17.1</span> <span class="toctext"><b>tl;dr</b></span></a></li>
+<li class="toclevel-3 tocsection-51"><a href="#Track_Offset"><span class="tocnumber">3.17.2</span> <span class="toctext">Track Offset</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-52"><a href="#Theory_and_Maths"><span class="tocnumber">4</span> <span class="toctext">Theory and Maths</span></a>
+<ul>
+<li class="toclevel-2 tocsection-53"><a href="#X_and_Y_Axis"><span class="tocnumber">4.1</span> <span class="toctext">X and Y Axis</span></a>
+<ul>
+<li class="toclevel-3 tocsection-54"><a href="#Calibration_Object"><span class="tocnumber">4.1.1</span> <span class="toctext">Calibration Object</span></a>
+<ul>
+<li class="toclevel-4 tocsection-55"><a href="#OpenSCAD"><span class="tocnumber">4.1.1.1</span> <span class="toctext">OpenSCAD</span></a></li>
+<li class="toclevel-4 tocsection-56"><a href="#STL_file"><span class="tocnumber">4.1.1.2</span> <span class="toctext">STL file</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-57"><a href="#Basic_Equation"><span class="tocnumber">4.1.2</span> <span class="toctext">Basic Equation</span></a></li>
+<li class="toclevel-3 tocsection-58"><a href="#Extending_to_Erroneous_Movements"><span class="tocnumber">4.1.3</span> <span class="toctext">Extending to Erroneous Movements</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-59"><a href="#Z_Axis"><span class="tocnumber">4.2</span> <span class="toctext">Z Axis</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-60"><a href="#Further_reading"><span class="tocnumber">5</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-61"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-62"><a href="#Old_Version_of_this_Page"><span class="tocnumber">7</span> <span class="toctext">Old Version of this Page</span></a></li>
+</ul>
+</div>
+
+<h1><span class="mw-headline" id="PAY_ATTENTION_TO_THIS">PAY ATTENTION TO THIS</span></h1>
+<p>Whilst calibration is a somewhat iterative process; the order of calibration laid out below is quite important. 
+</p><p>It is <b>PARTICULARLY IMPORTANT</b> that the calibration of the motors is done first as <b>poorly calibrated motors</b> can <b>destroy a <a href="https://reprap.org/wiki/Stepper_motor_driver" title="Stepper motor driver">stepper motor driver</a> (e.g. <a href="https://reprap.org/wiki/Pololu_stepper_driver_board" title="Pololu stepper driver board">Pololus</a>)</b> and potentially the motors!
+</p>
+<h1><span class="mw-headline" id="Prerequisites">Prerequisites</span></h1>
+<p>Before attempting calibration, a few things are necessary:
+</p>
+<ul><li> A stable build process should be established. Your machine 
+should be completely built and all of the nuts and bolts tightened down.</li>
+<li> The machine should be on a steady, flat, level surface.</li>
+<li> <a rel="nofollow" class="external text" href="https://metertester.com/how-to-read-digital-caliper/">Calipers</a>, a level, and any necessary wrenches/screwdrivers to adjust the machine should be handy.</li></ul>
+<h1><span class="mw-headline" id="Calibration_processes">Calibration processes</span></h1>
+<h2><span class="mw-headline" id="Motherboard">Motherboard</span></h2>
+<p>Whilst not technically a calibration issue, if you don't set the 
+firmware's motherboard setting correctly then calibration simply won't 
+work.
+</p><p>Basically <a href="https://reprap.org/wiki/List_of_Firmware" title="List of Firmware">each firmware</a> supports a number of <a href="https://reprap.org/wiki/List_of_electronics" title="List of electronics">different motherboards</a>.  As such, one of the first things you need to do is correctly specify the correct motherboard.
+</p><p>For <a href="https://reprap.org/wiki/Marlin" title="Marlin">Marlin</a> edit Configuration.h and find the line:
+</p>
+<ol><li>define MOTHERBOARD XX</li></ol>
+<p>Change the XX to the number which corresponds to your printer's motherboard.
+</p>
+<h2><span class="mw-headline" id="Motor_Calibration">Motor Calibration</span></h2>
+<p>Objective: set the current for the <a href="https://reprap.org/wiki/Stepper_motor" title="Stepper motor">stepper motors</a> to the correct level.
+</p><p>Your motors should be quiet when running and can occasionally 
+make musical sounds, particularly when making circles. If they are 
+making a fair amount of noise then you have a problem. 
+</p><p>Calibration Object: None
+</p><p>NOTE: incorrect current settings can damage your stepper motor driver and/or your motors.
+</p>
+<h3><span class="mw-headline" id="Symptoms">Symptoms</span></h3>
+<p><b>Motor make significant noise.</b>
+</p><p>This generally means you have too much current to the motor.
+</p><p><b>Motor vibrates without turning.</b>
+</p><p>This generally means that you have insufficient current to the 
+motor. You could also have a problem with a part sticking which stops 
+the motor from being able to drive the axis.
+It might also be possible to be way off in your steps/mm (e.g. a typo in
+ your value in the config file): when steps/mm is double the correct 
+value your motor might vibrate on the spot.
+</p><p><b>Axis movement pauses momentarily and then resumes.</b>
+</p><p>You may have too much current going to the motor which is causing
+ the stepper motor driver to over-heat. Reduce the current. This can 
+also be caused by firmware but check your motors first. Another possible
+ cause is the set screw on the gear is not tight enough.
+</p>
+<h3><span class="mw-headline" id="Instructions">Instructions</span></h3>
+<p>Each <a href="https://reprap.org/wiki/Pololu_stepper_driver_board" title="Pololu stepper driver board">Pololu</a>
+ has a trimpot located next to the heatsink. The trimpot controls the 
+current that is sent to each motor. Turning the trimpot 
+counter-clockwise reduces the current to the motor, turning it clockwise
+ increases the current to the motor.
+</p><p>Start by adjusting the trimpot down until your motor vibrates on 
+the spot rather than turning cleanly. Now turn the trimpot in a 
+clockwise direction in small increments (1 eighth of a turn) until the 
+motors just start running. Then give the trim port a final turn of about
+ 1 eighth of a turn and your should be good to go.
+</p>
+<h2><span class="mw-headline" id="Thermistor">Thermistor</span></h2>
+<p>Like your motherboard, most firmware support a variety of <a href="https://reprap.org/wiki/Thermistor" title="Thermistor">thermistors</a>.
+ You need to ensure that the firmware is set to match your thermistor. 
+If it doesn't, then your temperature readings won't match the real 
+world.
+</p><p>For marlin the settings are in Configuration.h under 'Thermal Settings'.
+</p>
+<ol><li>define TEMP_SENSOR_0 5</li>
+<li>define TEMP_SENSOR_1 0</li>
+<li>define TEMP_SENSOR_2 0</li>
+<li>define TEMP_SENSOR_BED 2</li></ol>
+<p><br>
+TEMP_SENSOR_0 is normally your hot end and TEMP_SENSOR_BED is normally your <a href="https://reprap.org/wiki/Heated_bed" class="mw-redirect" title="Heated bed">bed</a>. Set both according to the table of supported thermistors.
+</p>
+<h2><span class="mw-headline" id="End_Stop">End Stop</span></h2>
+<p>Objective: to correctly set the <a href="https://reprap.org/wiki/Endstop" title="Endstop">endstops</a> on each axis.
+</p><p>The results of this step should see each axis correctly home and not run into the opposite end of each axis.
+</p><p>Signs of having mis-calibrated endstops: the bed or extruder physically crash into either end of their axis.
+</p><p>Importance: 
+<br>An head (extruder) crash can damage the extruder, bed, cogs or motors.
+</p><p>Calibration Object: none
+</p>
+<h3><span class="mw-headline" id="Instructions_2">Instructions</span></h3>
+<p>Each axis of your printer has a 'home' position and a maximum feed 
+length. If the firmware attempts to drive the extruder or bed beyond 
+either of the two end points physical damage to your printer is 
+possible.
+</p><p>Most printers have a single 'physical' end stop on each axis whilst some may have a physical end stop at each end of an axis. 
+</p><p>End stops are typically a micro switch which is triggered when the carriage or bed touch the end stop. 
+</p><p>Soft Endstop
+Printers with only a single 'physical' end stop will rely on the 
+firmware implementing a 'soft' end stop. A soft end stop is always at 
+the opposite end of an axis to the physical endstop. Together the 
+physical and soft endstops 'frame' the axis and define the total travel 
+of the axis.
+</p><p>With a software Endstop each time you turn on your printer you 
+MUST perform a 'home' operation. The home operations effectively lets 
+the firmware know where the physical endstops are. Once the firmware has
+ confirmed the location of the physical endstops it is able to calculate
+ the location of the soft endstops as a simple travel distance in 
+millimetres.
+</p><p>A soft endstop is therefore simply a measurement entered into the
+ firmware that tells the firmware how many millimetres of travel the 
+axis has from the physical end stop before physically crashing into the 
+opposite end of the axis.
+</p>
+<h4><span class="mw-headline" id="Hard_Endstops">Hard Endstops</span></h4>
+<p>Work with each axis in turn.
+</p><p>Start with the x end  stop. 
+Position in the Extruder so that it is in the middle of the carriage and well clear of the bed.
+</p><p>Most printer software will let you move each of the axis in small increments in both directions.
+</p><p>Connect your printer software so that you can move the xaxis. 
+Ideally you need to be able to have the software move the axis about 10 
+mm.
+</p><p>Start by testing that your endstop is working.
+</p><p>Manually close x axis endstop (e.g. with your finger&nbsp;:D ).
+</p><p>With the carriage centred instruct the software to move the axis 10 mm towards the physical endstop.
+</p><p>Now instruct the software to move the axis 10 mm away from the physical endstop.
+</p><p>If the carriage moves in neither direction then you may need to invert your axis 'enabled' state. 
+</p><p>But make certain the power is on first&nbsp;;)
+</p><p>Normally an axis is enabled when the endstop is 'Active Low' (end
+ stop switch is open). In your case it appears that this needs to be 
+reversed.
+</p><p>When using Marlin firmware change X_ENABLE_ON from 0 to 1.
+</p><p>After reflashing the firmware, perform the above test again to ensure the endstop is working.
+</p><p>Recentre the carriage.
+</p><p>With the endstop closed instruct the software to move the axis 10 mm 'towards' from the physical end stop.
+</p><p>It should refuse to move.
+</p><p>If the end stop moves then whilst holding the endstop closed 
+instruct the axis to move 10 mm 'away' from the physical endstop. If it 
+refuses to move then you need to 'invert' the 'x' direction for the 
+endstop.
+</p><p>If you are using Marlin this requires both the INVERT_X_DIR and the X_HOME_DIR to be reversed to false and 1 respectively.
+</p><p>Once you have reflashed the firmware with the above settings 
+perform the test again to ensure that the axis refuses to move 'towards'
+ the endstop when it is manually closed.
+</p><p>The next action is to find the limit of the x axis in the 
+direction of the physical endstop. The limit is defined as the most 
+extreme position the x axis can be in without impacting the side of the 
+printer. 
+</p><p>Move the x axis slowly towards the physical endstop. As you approach the end stop reduce the number of mm you move each time. 
+</p><p>Check the carriage before each move to ensure that the next move 
+isn't going to cause the carriage to impact. Once you have the carriage 
+in the most extreme position move the endstop into contact with the 
+carriage so that the carriage triggers the end stop.
+</p><p>Move the carriage away from the end stop and adjust the end stop a
+ little further in towards the centre of the axis to give yourself a 
+little more buffer between the carriage stopping and a possible impact.
+</p><p>Finally you need to do a test 'home' for the axis.
+</p><p>Have you hand near the power switch incase the 'homing' operation moves the axis in the wrong direction.
+</p><p>Start by moving the carriage so that it is 10 mm clear of the physical end stop.
+</p><p>Instruct the printer software to 'home' the single axis. DO NOT tell the software home ALL axis.
+</p><p>The carriage should move towards the endstop, back away from the 
+end stop a couple of mm and then move towards the endstop and on contact
+ stop. 
+</p><p>If the carriage moves in the wrong direction or fails to stop 
+when it contacts the endstop immediately cut power to the printer. Now 
+repeat the above process again to correct the problem!
+</p><p>You have no completed configuration of the x axis physical end stop.
+</p><p>Repeat this process for each physical end stop.
+</p><p>You should now do a test 'home' of ALL axis. 
+</p>
+<h4><span class="mw-headline" id="Software_endstop">Software endstop</span></h4>
+<p>Configuring the software end stop is a simple matter of determining 
+how far the axis can travel away from the physical end stop before it 
+impacts the other side of the printer.
+</p><p>Start by homing the axis. Now move the carriage in 10 mm 
+increments towards the far side of the printer.  Count the number of 
+movements.  As the carriage approaches the far side of the printer, you 
+may want to reduce the travel of each movement.  Once you are within 
+about 5mm of the far side of the printer, add up the total distance 
+traveled.  This is the location of the software end stop for that axis. 
+ Repeat for the other two axes.
+</p><p>Now update your firmware with the location of the software end 
+stops.  For Marlin firmware you need to se the X_MAX_POS, Y_MAX_POS and 
+Z_MAX_POS with each of the above settings.
+</p><p>Once you have reflashed your firmware.  Home the printer on each 
+axis and then with your finger on the power cut off switch send the 
+carriage in the direction of the soft end point, reducing the distance 
+of each move as you approach the soft end stop's logical location.  
+Ensure that the carriage stops moving when it hits the soft and stop 
+(and not the printer side).
+</p><p>Do this for each axis in turn.  Your end stops are now calibrated.
+</p>
+<h4><span class="mw-headline" id="Build_Area">Build Area</span></h4>
+<p>Setting your bed size incorrectly will lead to your prints being off-center on the bed, or in the worst case "cropped".
+</p><p>If after configuring your hard/soft endstops and performing a G28
+ (home all axis) your nozzle is "homed" at the lower left of the 
+build-plate, you do not need to make any adjustments.
+</p><p>However, if after G28 homing your nozzle winds up off the bed 
+(probably below and to the left), you will need to tell the firmware how
+ far away the true origin (0,0) is by setting the X_MIN_POS and 
+Y_MIN_POS to a negative value equivalent to the distances from home to 
+the start of the actual build-area in the respective directions.
+</p><p>Example: My heavily modified RepRapPro Mendel has a 200mmx200mm 
+build area but homes it's nozzle 30mm below the plate and 45mm to the 
+left, by setting my Y_MIN_POS to -30 and X_MIN_POS to -45 the printer 
+knows it can travel 245mm from home to right edge of my bed, but the 
+actual bed is only under the nozzle after 45mm of X travel.
+</p><p>More detail available on the <a href="https://reprap.org/wiki/Configuring_Marlin_Bed_Dimensions" title="Configuring Marlin Bed Dimensions">Configuring Marlin Bed Dimensions</a> page.
+</p>
+<h2><span class="mw-headline" id="Bed_Leveling">Bed Leveling</span></h2>
+<p>Objective: To level the print bed so that your objects will adhere to
+ the surface.  The result of this step should make the extruder nozzle 
+the exact same height above the bed across the entire bed surface.
+</p><p>Signs of having an unlevel bed:  Plastic will adhere to part of 
+the bed but not others.  The extruder nozzle might "dig" into parts of 
+the bed, pulling up or deforming the bed surface.
+</p><p>Importance: The first layer of the print is the foundation of all
+ subsequent layers.  A bad first layer could mean the part might peel 
+off of the print bed during the print, "blobs" of plastic may form, 
+causing problems in following layers, and a variety of other things.
+</p><p>Calibration Object: <a rel="nofollow" class="external text" href="https://www.thingiverse.com/thing:13053">bedleveling.stl</a>
+</p>
+<h3><span class="mw-headline" id="Instructions_3">Instructions</span></h3>
+<p><i>Step 1 - Establish a corner height:</i>
+</p>
+<ul><li> Move the nozzle to a corner of the bed and measure its height at this point.</li>
+<li> Move the nozzle down close to the bed.</li>
+<li> Use a thick piece of paper or plastic as a shim and slide it under 
+the nozzle. You should feel a slight drag from the extruder on the paper
+ as you pull the paper through.  If not, move your nozzle up or down 
+slightly until it does.</li></ul>
+<p><i>Step 2 - Getting the second corner:</i>
+</p>
+<ul><li> Move the Y axis (the bed should move) to the second corner.</li>
+<li> Using the same shim, determine if the bed is too close or too far away from the nozzle at that point.</li>
+<li> Adjust the screws that hold up the bed along that edge so that the height at the corner matches your shim.</li>
+<li> Move back to the first corner and check the height with the shim 
+again.  It should match, if not, repeat step 1 and step 2 until it does.</li></ul>
+<p><i>Step 3 - Getting the third and fourth corners:</i>
+</p>
+<ul><li> There are two ways to adjust this - tweaking the jack screws that hold up your X axis rails and adjusting the bed itself.
+<ul><li> Jack screw method:
+<ul><li> Move the Y axis to the third corner and check it with the shim.
+  If it is too high or too low, turn off the motors and slightly rotate 
+one of the jack screws until the nozzle height matches the shim.</li>
+<li> If this method is used, you MUST return to the second corner and 
+move the nozzle up/down to the shim, and then repeat this method until 
+both sides line up with the shim.</li></ul></li>
+<li> Nut and bolt method:
+<ul><li> Move the Y axis to the third corner and check it with the shim.
+  If it is too high or too low, adjust the bed screws along that edge 
+until they line up.</li>
+<li> Check the height with the second corner and repeat this method until the corners line up</li></ul></li></ul></li></ul>
+<p>Once the bed is level print the <a rel="nofollow" class="external text" href="https://www.thingiverse.com/thing:13053">Bed Leveling Calibration test object</a> and ensure that each square is even, smooth and consistent.
+</p><p>Other methods do exist. Reference <a href="https://reprap.org/wiki/Leveling_the_Print_Bed" title="Leveling the Print Bed">Leveling the Print Bed</a> for more information. You may want to download the original <a href="https://reprap.org/wiki/Scad" class="mw-redirect" title="Scad">scad</a> file so that you can change the dimensions to match your print bed.
+</p>
+<h2><span class="mw-headline" id="Bed_surface_preparation">Bed surface preparation</span></h2>
+<p>Objective: correct preparation of the bed to ensure that objects adhere to it.
+</p><p>Additional troubleshooting info can be found in the <a href="https://reprap.org/wiki/Print_Troubleshooting_Pictorial_Guide#Bed_Adherence" title="Print Troubleshooting Pictorial Guide">Bed Adherence section of the Print Troubleshooting Pictorial Guide</a>.
+</p>
+<h3><span class="mw-headline" id="Instructions_4">Instructions</span></h3>
+<p>An incorrectly prepared bed can result in poor adhesion of the plastic to the bed as well as a 'bubbling' effect.
+</p><p>Even a little bit of finger print grease on some surfaces is enough to ruin a print.
+</p><p>Bed preparation will depend on what material your bed is made out
+ of, what you intend on covering it with, as well as what material you 
+expect to be printing:
+</p>
+<h4><span class="mw-headline" id="Glass">Glass</span></h4>
+<p>Clean the glass with a non-abrasive common household window cleaner 
+using a lint free cloth. Spare no effort in ensuring that the glass is 
+spotless. 
+Alternative recommended cleaners include:
+</p>
+<ul><li> acetone/cheap nail polish remover,</li>
+<li> isopropyl alcohol,</li>
+<li> 5% distilled vinegar.</li></ul>
+<p>With a heated bed and ABS you will probably want something to help the print stick to the bed. Options include:
+</p>
+<ul><li> <a rel="nofollow" class="external text" href="http://forums.reprap.org/read.php?4,156005">Sugar water</a> (Sugar dissolved in Water, approx. 1:10 by weight) -&gt; bed temp approx. 95,</li>
+<li> <a rel="nofollow" class="external text" href="http://forums.reprap.org/read.php?4,121996">ABS juice</a> (ABS dissolved in acetone, e.g. 10mm length of 3mm filament (0.07g) dissolved in 10ml acetone) -&gt; bed temp approx. 90,</li>
+<li> Kapton tape (as below).</li></ul>
+<h4><span class="mw-headline" id="Tapes">Tapes</span></h4>
+<p>When applying any type of tape to print on, it is important to make 
+sure the print surface is still smooth when you are done. Attempt to lay
+ down tape edge-to-edge, with no overlap. If applying multiple layers, 
+it can be beneficial for the layers to alternate directions, so that 
+direction-specific defects do not build up as you add layers.
+</p>
+<h5><span class="mw-headline" id="Blue_Tape">Blue Tape</span></h5>
+<p>For those printing with <a href="https://reprap.org/wiki/PLA" title="PLA">PLA</a> filament, <a href="https://reprap.org/wiki/BlueTape" title="BlueTape">blue tape</a>
+ has been found to adhere well when using 3M's 'Scotch-Blue Painters 
+Tape for Multi-Surfaces #2090'. This tape may be found in two inch 
+rolls, or three inch rolls. The PLA will adhere to multiple layers, so 
+it is advised to place down at least three layers of tape, before 
+printing on a surface, to prevent damage to the print bed.
+</p>
+<h5><span class="mw-headline" id="Kapton_Tape">Kapton Tape</span></h5>
+<p><a href="https://reprap.org/wiki/Kapton" class="mw-redirect" title="Kapton">Kapton</a>
+ tape is a heat resistant tape which is commonly used to cover a variety
+ of material types used in beds. The kapton tape provides good adherence
+ for a variety of plastics. It is important to avoid bubbles while 
+applying the tape. The "wet method" is particularly helpful as explained
+ in this <a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=yVTWXGqNB2I">video</a>.
+</p>
+<h4><span class="mw-headline" id="Other_Materials">Other Materials</span></h4>
+<h5><span class="mw-headline" id="Buildtak">Buildtak</span></h5>
+<p>A semi-permanent adhesive-backed plastic sheet that is installed on 
+the build platform. Does not require prep (e.g. hairspray). Works with 
+ABS and PLA. Not clear what the lifetime is, but it is advertised as 
+longer than tapes. <a rel="nofollow" class="external text" href="http://www.buildtak.com/">Buildtak</a>
+</p><p><i>TODO</i>: need details on other materials.
+</p>
+<h2><span class="mw-headline" id="Extrusion">Extrusion</span></h2>
+<p>Objective: to ensure the hot end temperature is set correctly so that material is extruded cleanly
+</p><p>Calibration Object: None
+</p>
+<h3><span class="mw-headline" id="Extruder_steps">Extruder steps</span></h3>
+<p>Objective: to adjust the extruder steps per unit
+</p><p>To set the extruder steps per distance of filament, (the 3mm or 
+1.75mm filament, NOT the material that comes out of the hot end) send 
+M92 E&lt;new value&gt;. You can check the current value by sending 
+"M503". Your host software is part of the <a href="https://reprap.org/wiki/CAM_Toolchains" title="CAM Toolchains">CAM toolchain</a> that you use to send G-Code to control the printer.
+</p><p>If you received filament driver as a whole unit the first 
+estimate is calculated, however the error margin is possibly too great 
+to leave it as it is. Importantly, write the initial value for M92 down,
+ then raise the hot end and extrude, then measure the length extruded.
+</p><p>Then the value <b>(wanted_length/measured_length)*old_M92</b> is a better value. You might want to do it some more times until it doesn't change much.
+</p>
+<h4><span class="mw-headline" id="Calibration_for_printing">Calibration for printing</span></h4>
+<p>We also want to calibrate based on how it actually prints, basically for this a <a rel="nofollow" class="external text" href="https://www.thingiverse.com/thing:119306">calibration Object</a>
+ is used and the value is increased/decreased, this can be done both by 
+using M92 E again, or setting extrusion multipliers in slicer software.
+</p><p>Basically you do this until it looks good, increasing if it looks like too little, decreasing if too much. Pictures are in the <a href="https://reprap.org/wiki/Print_Troubleshooting_Pictorial_Guide#Material_Feed" title="Print Troubleshooting Pictorial Guide">Print Troubleshooting Pictorial Guide</a>.
+</p><p>Note that this calibration is affected by the xyz calibration, if
+ the part is made larger than intended, it takes more filament to make 
+it, so that calibration should be correct. <i>However</i> calculations from gear ratios should already give values very close to the correct ones.
+</p>
+<h3><span class="mw-headline" id="PLA">PLA</span></h3>
+<h2><span class="mw-headline" id="Layer_height">Layer height</span></h2>
+<p>Objective: to correct the layer height settings to reflect your printer's actual layer height.
+</p><p>Calibration Object: <a rel="nofollow" class="external text" href="https://www.thingiverse.com/download:17273">0.5mm-thin-wall.stl</a>
+</p><p>When your extruder draws a line of plastic, that line has a height and width. You get to choose these values.
+</p><p>Best results are obtained when layer height &lt; 80% of nozzle diameter, and extrusion width &gt;= nozzle diameter.
+</p><p>Eg; with an 0.35 nozzle, your <b>maximum</b> layer height is 0.35*0.8= <b>0.28mm</b> and your extrusion  width should be 0.4mm or greater.
+with an 0.5mm nozzle, your layer height can be up to 0.4mm, and an 0.25mm nozzle will give you 0.2mm max layer height.
+</p><p><b>You can use a lower layer height or larger extrusion width if you wish, it will work fine</b>. The slicing software automatically calculates the appropriate volume to extrude based on the settings you choose. <b>There is no hard lower limit on layer height</b>
+ - it is limited by your ability to keep flow consistent at very low 
+flowrates. Some reprappers have printed layers as small as 5 micron - 
+0.005mm!
+</p><p><a href="https://reprap.org/wiki/User:Triffid_hunter" title="User:Triffid hunter">Triffid Hunter</a> (whose <a href="https://reprap.org/wiki/Triffid_Hunter%27s_Calibration_Guide" title="Triffid Hunter's Calibration Guide">guide</a>
+ this text was stolen from&nbsp;:D ) recommends layer height of 0.2mm, 
+and extrusion width of 0.5mm regardless of which nozzle he's using.
+</p><p><a href="https://reprap.org/wiki/Slic3r" title="Slic3r">Slic3r</a>
+ automatically chooses an extrusion width for you based on your nozzle 
+diameter. If you're determined to choose, you can use the <i>extrusion width</i>
+ advanced setting. It is frequently advantageous to choose as models may
+ have walls of a particular width, and by choosing you can ensure they 
+are entirely filled with perimeter with no gap in the middle and no 
+infill.
+</p>
+<h3><span class="mw-headline" id="Instructions_5">Instructions</span></h3>
+<p>Print the 0.5mm thin wall cube and make sure that the layers adhere well but the nozzle does NOT drag through while printing. 
+</p><p>Adjust the layer height in .01 increments until you get a nice print. In <a href="https://reprap.org/wiki/Pronterface" class="mw-redirect" title="Pronterface">Pronterface</a>/<a href="https://reprap.org/wiki/Skeinforge" title="Skeinforge">Skeinforge</a> settings, this can be found under Craft &gt; Carve.
+</p><p>Depending on other factors you may find it hard to get all four 
+walls to print nicely. For the first pass if you can get just one wall 
+looking good then move on to the next test.
+</p>
+<h2><span class="mw-headline" id="Infill">Infill</span></h2>
+<p>Objective: to correct the infill setting.
+</p><p>Calibration Object: <a rel="nofollow" class="external text" href="https://www.thingiverse.com/download:17274">20mm-box.stl</a>
+</p>
+<h3><span class="mw-headline" id="Instructions_6">Instructions</span></h3>
+<p>Set infill solidity to 1.0 for this, using linear infill. 
+- In Pronterface/Skeinforge settings, this can be found under Craft &gt; Fill.
+- In Slic3r this is under Print Settings &gt; Infill &gt; Fill Density, set to 100%
+</p><p>Print the cube and analyze the top. If there is NOT ENOUGH 
+plastic (a concave top), reduce the Infill Width over Thickness by .05 
+increments. If there is TOO MUCH plastic (convex top), turn that 
+parameter up by .05 increments. In Pronterface/Skeinforge settings, this
+ can be found either in Craft &gt; Inset in some versions, or Craft &gt;
+ Fill in other versions.
+</p><p>Once you're feeling close, start bumping it around in smaller increments. 
+</p><p>You may also need to adjust your feed rate.
+</p><p>Adjust the feed rate by increments of 2 or so until you feel 
+close. If it looks really disgusting and blobby, go by increments of 
+0.5mm. Then go by smaller and smaller increments until you've nailed it.
+ Although you probably just want to decrease Infill Width over Thickness
+ instead of decreasing Feedrate because lowering feedrate will degrade 
+the resolution.
+</p>
+<h2><span class="mw-headline" id="Temperature_control">Temperature control</span></h2>
+<p>Objective: to set the hot end temperature correct for your preferred plastic.
+</p><p>Note: you will find that different types of plastic have vastly 
+different temperatures for both your hotend and your bed. What you might
+ not expect is that different colours for the same material can also 
+required different printing temperatures.
+</p><p>As the tower has quite a small 'top' surface area you may need to
+ cool this object as you print. If your printer doesn't have a built in 
+fan you can use any room fan as a substitute.
+</p><p>Calibration Object: <a rel="nofollow" class="external text" href="https://www.thingiverse.com/download:17276">50mm-tower.stl</a>
+</p><p>Something to be aware of is that there are multiple reasons an 
+extruder can skip during a manual extrude. Take care of those problems 
+first by setting the temp to the high end of the expected range (e.g. 
+235-240 for ABS) and making sure the extruder doesn't skip during a 
+manual extrude.
+</p>
+<h3><span class="mw-headline" id="Instructions_7">Instructions</span></h3>
+<p>Set the 'Infill solidity' to 1.0.  In Pronterface/Skeinforge settings, this can be found under Craft &gt; Fill.
+</p><p>If the plastic comes out as a drip instead of a cylindrical 
+filament, the temperature is too high. Dead link, please correct: -- <a rel="nofollow" class="external free" href="http://wiki.ultimaker.com/Troubleshooting#Plastic_comes_out_of_extruder_head_in_a_flowing_state">http://wiki.ultimaker.com/Troubleshooting#Plastic_comes_out_of_extruder_head_in_a_flowing_state</a>
+</p><p>Start by doing a simple extruder test to determine what the range
+ of temperatures are that you can extrude at.
+Reduce the temperature in 5 degree increments until the extruder starts 
+skipping when you do a manual extrude. Turn the extruder up 5 degrees 
+and note this as your minimum extruder temperature.
+</p><p>Print this block. 
+</p><p>If it looks like a blob, turn down all the temps by 5 degrees 
+until you get something good. Chances are you won't need to do this more
+ than 5 degrees. 
+</p><p>Note: Be careful as going too low can result in the plastic 
+setting making it hard for the motors to drive the plastic, possibly 
+causing wear or damage.
+</p><p>TODO: list temperature ranges for common plastics.
+</p>
+<h4><span class="mw-headline" id="Recommendations">Recommendations</span></h4>
+<p><b>PLA</b>
+</p><p>Hotend: 185&nbsp;°C
+</p><p>Bed: 60&nbsp;°C
+</p><p><b>ABS</b>
+</p><p>Hotend: 230&nbsp;°C
+</p><p>Bed: 110&nbsp;°C
+</p>
+<h2><span class="mw-headline" id="Perimeter_Width">Perimeter Width</span></h2>
+<p>Objective: correct the perimeter width over thickness. In newer versions Edge Width over Height.
+</p><p>When using <a href="https://reprap.org/wiki/Slic3r" title="Slic3r">Slic3r</a>,
+ this is automatically calculated from the layer height. Adventurous 
+sorts can modify this setting through Print 
+Settings-&gt;Advanced-&gt;Extrusion Width-&gt;Perimeters. Slic3r accepts
+ a fixed value (use the layer height and do the math to get Edge Width 
+over Height), or a fixed&nbsp;% of the layer height (which is better, as
+ this would be the exact multiple you would need anyway)
+</p><p>Calibration Object: <a rel="nofollow" class="external text" href="https://www.thingiverse.com/download:481395">Perimeter_Width.stl</a>
+</p>
+<h3><span class="mw-headline" id="Instructions_8">Instructions</span></h3>
+<p>This test prints two objects which are designed to fit together.
+</p><p>Try to insert the smaller block into the larger block. Try inserting it differently a few times, and check your belt tensions. 
+</p><p>TODO: Need notes on calibration of belt tensions
+</p><p><br>
+If you can get it in a few mm, good. If you can get it in all the way, 
+awesome. The fit should be snug. If it is loose and can jitter around 
+inside, decrease the perimeter width over thickness, also called Edge 
+Width over Height. In Pronterface/Skeinforge, "Edge Width over Height" 
+can be found in Craft &gt; Carve in the Slicing Settings. If you CANNOT 
+get it in AT ALL, and you are sure there are no whiskers blocking it, 
+INCREASE perimeter width over thickness or Edge Width over Height. The 
+latter is more likely.
+</p>
+<h2><span class="mw-headline" id="Bridging">Bridging</span></h2>
+<p>Objective: to maximize your printers ability to bridge gaps (i.e. print in thin air).
+</p><p>Calibration Object: <a rel="nofollow" class="external text" href="https://www.thingiverse.com/download:17279">20mm-hollow-box.stl</a>
+</p>
+<h3><span class="mw-headline" id="Instructions_9">Instructions</span></h3>
+<p>Print the calibration object and if the top droops in, increase the 
+BRIDGE FEEDRATE MULTIPLIER in Speed by increments of .1 until the top 
+stops drooping.
+</p><p>In Slic3r, this setting is called "Bridge flow ratio", under 
+Print Settings &gt; Advanced &gt; Flow. If the bridge droops, try 
+increasing or decreasing this in increments of .1.
+</p>
+<h2><span class="mw-headline" id="Print_Precision">Print Precision</span></h2>
+<p>Objective: improve print precision
+</p><p>Calibration Object: <a rel="nofollow" class="external text" href="https://www.thingiverse.com/download:17278">precision-block.stl</a>
+</p>
+<h3><span class="mw-headline" id="Instructions_10">Instructions</span></h3>
+<p>Then there is the precision block. No real huge calibration parameter
+ here. Just play with this and see how well it does on the overhangs and
+ shapes.
+</p><p>TODO: We need to add some recommendations on how to improve this 
+or find more direct methods of calibrating specific aspects of the 
+print. 
+</p>
+<h2><span class="mw-headline" id="Overhang">Overhang</span></h2>
+<p>Objective: fix overhang problems
+</p><p>Calibration Object: <a rel="nofollow" class="external text" href="https://www.thingiverse.com/download:17348">overhang-test.stl</a>
+</p><p><br>
+</p>
+<h3><span class="mw-headline" id="Instructions_11">Instructions</span></h3>
+<p>Then there is a simple overhang test. Print and observe the overhangs. This is up to you to figure how to improve the overhangs.
+</p><p>TODO: We need to add some recommendations on how to improve this 
+or find more direct methods of calibrating specific aspects of the 
+print.
+</p><p>gregor: i get better results when i add a fan to cool the overhang down
+</p><p>this was my test object: <a rel="nofollow" class="external autonumber" href="https://www.thingiverse.com/thing:58218">[1]</a>
+</p>
+<h2><span class="mw-headline" id="Oozebane">Oozebane</span></h2>
+<p>Objective: stop material oozing out of the nozzle during 'non-printing' moves.
+</p><p>Many extruders will emit (ooze) plastic even when the extruder 
+motor is not turning. To overcome this your slicing software needs to 
+'retract' the print medium during head movement when not printing. The 
+retraction creates negative pressure within the hot end heating chamber 
+which effectively sucks the print medium back up through the nozzle, 
+stopping it from oozing.
+</p>
+<h4><span class="mw-headline" id="Calibration_Object:_oozebane-test.stl">Calibration Object: <a rel="nofollow" class="external text" href="https://www.thingiverse.com/download:17661">oozebane-test.stl</a></span></h4>
+<p>The calibration object prints two towers about 30 mm apart. The head 
+must move between each of the towers at each layer. If your printer is 
+not set correctly then you will see many fine filaments (or strings) 
+between the two towers.  You can eliminate these filaments by 
+eliminating ooze.
+</p>
+<h4><span class="mw-headline" id="Calibration_Object_2_.28Variable_sized_towers_for_testing_ooze.29:_variable_size_ooze_test_nobase.stl">Calibration Object 2 (Variable sized towers for testing ooze): <a rel="nofollow" class="external text" href="https://www.thingiverse.com/download:20868">variable_size_ooze_test_nobase.stl</a></span></h4>
+<p>This is a simple model to help tune reversal parameters for a stepper
+ extruder (using much less filament before actually testing the 
+ooziness). 
+It consists of a number of towers with different thicknesses, with 
+different spacing between each tower. 
+A well-tuned bot should be able to produce even the smallest towers.
+</p><p><br>
+Symptoms
+</p>
+<h3><span class="mw-headline" id="Instructions_12">Instructions</span></h3>
+<p>This is to try to control ooze and calibrate it to be useful. 
+</p><p>Start by setting the Early Shutdown distance to 0 and Slowdown Startup Steps to 1. 
+</p><p>Print the piece and measure the length of stringers where the 
+extruder shut off and the line is thick before becoming a thin whisker. 
+Take that length and put it into early shutdown distance. 
+</p><p>Play with Early Startup Distance Constant until the place where 
+the extruder arrives at the other tower is nice and smooth, so that 
+there isn't any empty space where plastic should be, but there isn't 
+excess plastic extruded.
+</p><p>References:
+</p>
+<ul><li><a href="https://reprap.org/wiki/Sfact#Q:_What_happened_to_the_old_retraction_settings.3F_What_the_hell_is_oozerate.3F" title="Sfact">Sfact#Q:____What_happened_to_the_old_retraction_settings.3F__What_the_hell_is_oozerate.3F</a></li></ul>
+<p><br>
+Since <a rel="nofollow" class="external text" href="http://www.soliforum.com/topic/2841/slic3r-0910b-out-features-wipe-and-vase-options/">Slic3r 0.9.10b</a> there is a <a rel="nofollow" class="external text" href="https://github.com/alexrj/Slic3r/issues/186">wipe before retract</a>
+ option (under Printer Settings =&gt; Extruder)
+which seems to make the most difference. Other options to consider: 
+reduce temperature, increase travel speed, retracting more, retract 
+slower, z-lift before travel or lowering extrusion ratios.
+</p>
+<h2><span class="mw-headline" id="Overhangs">Overhangs</span></h2>
+<p>Objective: eliminate droop from overhangs.
+</p><p>Calibration Object: <a rel="nofollow" class="external text" href="https://www.thingiverse.com/download:19658">BridgeTestPart.stl</a>
+</p>
+<h3><span class="mw-headline" id="Instructions_13">Instructions</span></h3>
+<p>If the calibration object droops, you likely need to decrease "Bridge
+ Flowrate over Operating Flowrate." Or increase "Bridge Feedrate over 
+Operating Feedrate."
+</p>
+<h2><span class="mw-headline" id="X_.26_Y_scaling_and_steps.2Fmm_calculations">X &amp; Y scaling and steps/mm calculations</span></h2>
+<p><i>The following information concerning steps/mm adjustments is 
+outdated. It has since been agreed that steps/mm should be set to the 
+exact calculated values since printing with non-ideal steps/mm results 
+in an accurate test piece, but makes the dimensions on every other part 
+even more inaccurate.</i>
+</p><p>Scaling goes into the STEPS_PER_MM of the firmware, track offset goes into the G-code compiler (Skeinforge etc.).
+</p>
+<h3><span class="mw-headline" id="tl.3Bdr"><b>tl;dr</b></span></h3>
+<p>The most simple way to get reasonably accurate parts is to simply 
+ignore the track offset or to set it to some guessed value, then adjust 
+scaling of the axes, only:
+</p>
+<dl><dd> &lt;math&gt;\frac {\mbox {current steps per mm} \cdot \mbox 
+{expected distance movement}} \mbox{actual measured 
+distance}&lt;/math&gt;</dd></dl>
+<p>E.g.:
+</p>
+<pre> (41.8*100)/94.94=~44.02780703602275121129 
+</pre>
+<p>Then repeat: 
+</p>
+<pre> (44.0278*100)/99.95=~44.04982491245622811406 
+</pre>
+<p>Until you get your desired steps per mm.
+</p>
+<ul><li> Useful G-code-commands to use with <a href="https://reprap.org/wiki/Printrun" title="Printrun">Pronterface</a>/<a href="https://reprap.org/wiki/Repetier-Host" title="Repetier-Host">Repetier-Host</a> or whatever eases your RepRap replication.</li></ul>
+<p>(<i>Do note that there is a setting in configuration.h that enable these EEPROM functions.</i>)
+</p>
+<pre> M501 (show current settings (steps per mm etc)
+ M92 X44.04982491245622811406 (change steps per mm to your calculated value, useful for any axis; X,Y,Z and E for Extruder)
+ M500 (save your new settings)
+</pre>
+<ul><li> In Teacup firmware you multiply these values by 1000, to get 
+steps per meter, and put the value left of the decimal into config.h's 
+STEPS_PER_M_X, STEPS_PER_M_Y, ... . Then, re-upload the firmware.</li></ul>
+<h3><span class="mw-headline" id="Track_Offset">Track Offset</span></h3>
+<p>OK, here we get a bit stuck. While the theory section below nicely 
+shows how to calculate the optimum track offset, Skeinforge has no 
+configuration option to adjust this value.
+</p>
+<dl><dd> An excerpt from a chat between Greg Frost and Traumflug, on 2011/22/06 (typos corrected):</dd></dl>
+<dl><dd> [14:30] &lt;GregFrost_&gt; I calibrated the extruded length and
+ then set feed=flow and pw/t and iw/t to 1.5 and immediately got nice 
+looking prints. However, and here is the kicker, the objects are all 
+slightly too big because my single wall box has an actual w/t of 2.1</dd>
+<dd> [14:31] &lt;GregFrost_&gt; I can fix this with p flow but then i 
+get thin perimeters and they don't always bond well to each other (but 
+objects are the right size).</dd>
+<dd> [14:31] &lt;GregFrost_&gt; I would like normal flow on the perim 
+but a wider w/t but if i do that it adjusts all of the flows up and I 
+get far too much plastic.</dd>
+<dd> [14:32] &lt;GregFrost_&gt; what I really need is a way to change 
+the distance inside the object that the perimeter is traced without 
+changing the flow rates.</dd>
+<dd> [14:37] &lt;Traumflug&gt; To be honest, I never used Skeinforge, this adjustable track offset is an assumption.</dd>
+<dd> [14:38] &lt;GregFrost_&gt; Traumflug: it would be a good setting, i agree.</dd>
+<dd> [14:38] &lt;GregFrost_&gt; Traumflug: I think the only way to achieve a track offset is to adjust the perimeter w/t ratio.</dd>
+<dd> [14:38] &lt;Traumflug&gt; So, Skeinforge doesn't compensate for track width?</dd>
+<dd> [14:38] &lt;GregFrost_&gt; Traumflug: it does. but it uses the perimeter width/t and infill w.t settings</dd>
+<dd> [14:39] &lt;GregFrost_&gt; Traumflug: then it uses the layer height</dd>
+<dd> [14:39] &lt;GregFrost_&gt; Traumflug: and using those it works out the track offset.</dd>
+<dd> [14:39] &lt;Traumflug&gt; ok, good to know. </dd>
+<dd> [14:39] &lt;GregFrost_&gt; Traumflug: but the kicker is, changing perimeter w/t also adjusts the flow rate</dd>
+<dd> [14:40] &lt;GregFrost_&gt; Traumflug: so theoretically when you choose a new w/t, it puts out enuf plastic to fill the width.</dd>
+<dd> [14:40] &lt;Traumflug&gt; Yes, theoretically</dd>
+<dd> [14:41] &lt;GregFrost_&gt; Traumflug: but on the perimeter if you 
+use the same volumetric flow as the infill, it bulges past the desired 
+width because there is no containing line.</dd>
+<dd> [14:42] &lt;GregFrost_&gt; but the one setting that allows you to 
+compensate for that adjusts the flow on all other lines (both infill and
+ perimeters)</dd>
+<dd> [14:42] &lt;Traumflug&gt; IMHO, changing the plastic flow to compensate for size errors isn't a good way.</dd>
+<dd> [14:43] &lt;GregFrost_&gt; Traumflug: I agree completely.</dd>
+<dd> [14:43] &lt;Traumflug&gt; Each time you change the flow, a lot of 
+minor parameters change as well, so a prediction is very difficult.</dd>
+<dd> [14:43] &lt;GregFrost_&gt; I want to change the track offset.</dd></dl>
+<h1><span class="mw-headline" id="Theory_and_Maths">Theory and Maths</span></h1>
+<p>By <a href="https://reprap.org/wiki/User:Traumflug" title="User:Traumflug"> Markus "Traumflug" Hitter</a>.
+</p>
+<h2><span class="mw-headline" id="X_and_Y_Axis">X and Y Axis</span></h2>
+<p>Both horizontal axes can be calibrated with two values: track offset 
+and overall scaling. To find out how this is done, let's have a look at a
+ part specially designed to find out those values:
+</p>
+<div class="center"><div class="floatnone"><a href="https://reprap.org/wiki/File:RepRap_Calibration_Frame_Drawing.png" class="image"><img alt="RepRap Calibration Frame Drawing.png" src="Calibration%20-%20RepRap_fichiers/600px-RepRap_Calibration_Frame_Drawing.png" srcset="/mediawiki/images/thumb/0/0f/RepRap_Calibration_Frame_Drawing.png/900px-RepRap_Calibration_Frame_Drawing.png 1.5x, /mediawiki/images/thumb/0/0f/RepRap_Calibration_Frame_Drawing.png/1200px-RepRap_Calibration_Frame_Drawing.png 2x" width="600" height="424"></a></div></div>
+<p>It's a frame, similar to the one you use to put pictures up onto the 
+wall. The essential part here is, it has long and short distances to 
+measure on the same part. We need to measure both, to distinguish 
+between track offset and scaling.
+</p><p>To the right of the drawing, a few tracks laid down by the 
+extruder are sketched in. It shows how the track offset lets the 
+extruder move closer to the inside of the part, so the outer side of the
+ track just ends where the part should end as well.
+</p><p>All the sizes are overlaid by scaling, which is sort of a "gear ratio" between measurement units and stepper motor steps.
+</p>
+<h3><span class="mw-headline" id="Calibration_Object">Calibration Object</span></h3>
+<h4><span class="mw-headline" id="OpenSCAD"><a href="https://reprap.org/wiki/OpenSCAD" title="OpenSCAD">OpenSCAD</a></span></h4>
+<pre>// X-Y Calibration object
+// See http://reprap.org/wiki/Calibration#Theory_and_Maths
+
+difference() {
+	cube([100,100,3], true);
+	cube([80,80,3.1], true);
+}
+</pre>
+<h4><span class="mw-headline" id="STL_file"><a href="https://reprap.org/wiki/STL" class="mw-redirect" title="STL">STL</a> file</span></h4>
+<p><a href="https://reprap.org/wiki/File:XYCalibration.stl" title="File:XYCalibration.stl">File:XYCalibration.stl</a>
+</p>
+<h3><span class="mw-headline" id="Basic_Equation">Basic Equation</span></h3>
+<p>With that knowledge, we can sum up what the extruder moves to get the size T = 10&nbsp;mm exactly 10&nbsp;mm wide:
+</p>
+<dl><dd>&lt;math&gt;\begin{align}</dd></dl>
+<p>\mbox{movement} = ( \mbox{intended size} - 2 * \mbox{track offset} ) * \mbox{scaling} \\
+\end{align}&lt;/math&gt;
+</p><p>This holds true for measurements of any size, i.e. also for the 100&nbsp;mm size of our calibration frame:
+</p>
+<dl><dd>&lt;math&gt;\begin{align}</dd></dl>
+<p>M_{10} &amp; = ( 10\,\mbox{mm} - 2 * TF ) * S \\
+M_{100} &amp; = ( 100\,\mbox{mm} - 2 * TF ) * S \\
+\end{align}&lt;/math&gt;
+</p><p>You see? Two unknowns and two equations, so the set is solvable.
+</p>
+<h3><span class="mw-headline" id="Extending_to_Erroneous_Movements">Extending to Erroneous Movements</span></h3>
+<p>Now, the whole point of this writing is, the extruder movement 
+doesn't match what we need to get accurately sized parts. So we have not
+ only a movement, but also a movement error.
+</p><p>The reason for the movement error is, according to the basic equation, erroneous track offset and/or erroneous scaling.
+</p><p>Get these two into the basic equation, result to the left, reason to the right:
+</p>
+<dl><dd>&lt;math&gt;\begin{align}</dd></dl>
+<p>&amp; \mbox{movement} * \mbox{movement error} = \\
+&amp; ( \mbox{intended size} - 2 * \mbox{track offset} * \mbox{track offset error} * \mbox{scaling} * \mbox{scaling error} \\
+\end{align}&lt;/math&gt;
+</p><p>Again, this holds true for both our measurements:
+</p>
+<dl><dd>&lt;math&gt;\begin{align}</dd></dl>
+<p>M_{10} * E_{M10} &amp; = ( 10\,\mbox{mm} - 2 * TF * E_{TF} ) * S * E_S \\
+M_{100} * E_{M100} &amp; = ( 100\,\mbox{mm} - 2 * TF * E_{TF} ) * S * E_S \\
+\end{align}&lt;/math&gt;
+</p><p><br>
+<i>... to be continued ... about a formula to get scaling and track offset from measuring these 10 mm and 100 mm ...</i>
+</p>
+<h2><span class="mw-headline" id="Z_Axis">Z Axis</span></h2>
+<p>On the Z axis, there is no track offset compensation, so calibration 
+is reduced to scaling of part height. Build any part of 50&nbsp;mm 
+height, let it cool down, measure it. Then adjust your STEPS_PER_MM in 
+your firmware's config.h to reduce the difference between intended and 
+received part.
+</p><p>As most RepRaps use a threaded rod on the Z axis, the theoretical value, which can be generated from <a rel="nofollow" class="external text" href="http://calculator.josefprusa.cz/">the online calculator</a>,
+ should match reality pretty close. However, there's also material 
+shrink as the plastics is printed at a higher temperature than room 
+temperature.
+</p>
+<h1><span class="mw-headline" id="Further_reading">Further reading</span></h1>
+<ul><li> <a href="https://reprap.org/wiki/Printing_quality" title="Printing quality">Printing quality</a>.</li>
+<li> Delta Printer Calibration <a rel="nofollow" class="external free" href="https://minow.blogspot.co.at/index.html#4918805519571907051">http://minow.blogspot.co.at/index.html#4918805519571907051</a></li>
+<li> <a href="https://reprap.org/wiki/Configuring_and_calibrating_a_delta_printer_using_the_dc42_fork_of_RepRapFirmware" title="Configuring and calibrating a delta printer using the dc42 fork of RepRapFirmware">Configuring and calibrating a delta printer using the dc42 fork of RepRapFirmware</a></li></ul>
+<h1><span class="mw-headline" id="References">References</span></h1>
+<ul><li> <a rel="nofollow" class="external text" href="https://hydraraptor.blogspot.com/2011/02/polyholes.html">nopheads blog on undersized holes</a> and how to make then accurate.</li></ul>
+<p><br>
+</p>
+<h1><span class="mw-headline" id="Old_Version_of_this_Page">Old Version of this Page</span></h1>
+<p><i>put here as the new part is still incomplete</i> --<a href="https://reprap.org/wiki/User:Traumflug" title="User:Traumflug">Traumflug</a> 22:55, 21 June 2011 (UTC)
+</p><p><i>Is this part of <a href="https://reprap.org/wiki/Commissioning" title="Commissioning">commissioning</a>?</i>
+<i>Is this part of <a href="https://reprap.org/wiki/Builders/Config/Config_Axes" title="Builders/Config/Config Axes">Builders/Config/Config Axes</a>?</i>
+</p><p>To calibrate, you will need the following: a <a rel="nofollow" class="external text" href="http://www.reprap.org/bin/view/Main/MakeYourOwnRepRap">Rep(st)rap</a>, a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Caliper#Digital_caliper">slide caliper</a>, and printing material (ABS, PLA, HDPE, etc).
+</p><p>You will also need <a rel="nofollow" class="external text" href="https://www.thingiverse.com/thing:477">this</a> object file to print out.
+</p>
+<ol><li>Setup and load your printing material.</li>
+<li>Print the calibration object.</li>
+<li>Allow the object to cool.</li>
+<li>Use the slide caliper to measure each edge and the diagonals.</li>
+<li>Make a note of each measurement and this will allow you to determine where a problem is IF there is a problem.</li></ol>
+<p>With the above measurements, you should be able to determine any 
+alignment issues.  The sides should measure within 0.5mm of 40mm.
+</p><p>if it is off consistently, then it is probably a firmware issue. 
+</p><p>Most inconsistent discrepancies are a sign of <a href="https://reprap.org/wiki/Backlash" title="Backlash">backlash</a>
+ (i.e. slop or play in your mechanical system). Make sure the grub 
+screws on the pulleys are tight; make sure the belts are tensioned so 
+that when you turn the stepper by hand, it immediately produces a 
+movement in the axis; make sure all the bearings turn smoothly, and that
+ the carriages only move along their intended axis. with all of that 
+double checked, try printing your test piece again, and pay very close 
+attention while it is printing. If your stepper motors make strange 
+noises occasionally, it might be that they are skipping steps because 
+they don't have enough torque. Try turning up the trim pot for that 
+axis.
+</p><p>If all this fails, the best place to go to figure out how to fix 
+your issue, once you've identified it, is either to ask someone in the <a rel="nofollow" class="external text" href="http://forums.reprap.org/list.php?4">forums</a>, or on <a rel="nofollow" class="external text" href="irc://chat.freenode.net/#reprap">IRC</a>, if you prefer. Then come back here and make this page better, or complain to the forum users.
+</p><p>Once you get a simple cube printed adequately, you might consider trying a more difficult object such as the <a href="https://reprap.org/wiki/Bearing_clip_01" title="Bearing clip 01">bearing clip 01</a> for more fine-tuning.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20200712185646
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.036 seconds
+Real time usage: 0.039 seconds
+Preprocessor visited node count: 333/1000000
+Preprocessor generated node count: 979/1000000
+Post‐expand include size: 2612/2097152 bytes
+Template argument size: 557/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    5.099      1 -total
+ 63.30%    3.228      1 Template:Languages
+ 34.83%    1.776      1 Template:Merge
+  9.40%    0.479      1 Template:Notice
+-->
+</div>
+<!-- Saved in parser cache with key mediawiki:pcache:idhash:670-0!canonical and timestamp 20200712185646 and revision id 187627
+ -->
+</div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://reprap.org/mediawiki/index.php?title=Calibration&amp;oldid=187627">https://reprap.org/mediawiki/index.php?title=Calibration&amp;oldid=187627</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://reprap.org/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="https://reprap.org/wiki/Category:Pages_to_be_merged" title="Category:Pages to be merged">Pages to be merged</a></li><li><a href="https://reprap.org/wiki/Category:Calibration" title="Category:Calibration">Calibration</a></li><li><a href="https://reprap.org/wiki/Category:Tutorials" title="Category:Tutorials">Tutorials</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-createaccount"><a href="https://reprap.org/mediawiki/index.php?title=Special:CreateAccount&amp;returnto=Calibration" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://reprap.org/mediawiki/index.php?title=Special:UserLogin&amp;returnto=Calibration" title="You are encouraged to log in; however, it is not mandatory [Alt+Maj+o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+														<li id="ca-nstab-main" class="selected"><span><a href="https://reprap.org/wiki/Calibration" title="View the content page [Alt+Maj+c]" accesskey="c">Page</a></span></li>
+							<li id="ca-talk"><span><a href="https://reprap.org/wiki/Talk:Calibration" rel="discussion" title="Discussion about the content page [Alt+Maj+t]" accesskey="t">Discussion</a></span></li>
+						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label" tabindex="0">
+							<span>Variants</span>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+														<li id="ca-view" class="selected"><span><a href="https://reprap.org/wiki/Calibration">Read</a></span></li>
+							<li id="ca-viewsource"><span><a href="https://reprap.org/mediawiki/index.php?title=Calibration&amp;action=edit" title="This page is protected.
+You can view its source [Alt+Maj+e]" accesskey="e">View source</a></span></li>
+							<li id="ca-history" class="collapsible"><span><a href="https://reprap.org/mediawiki/index.php?title=Calibration&amp;action=history" title="Past revisions of this page [Alt+Maj+h]" accesskey="h">View history</a></span></li>
+						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label" style="">
+						<h3 id="p-cactions-label" tabindex="0"><span>More</span></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="/mediawiki/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search RepRap" title="Search RepRap [Alt+Maj+f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Special:Search" name="title"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="https://reprap.org/wiki/Main_Page" title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-Main-Page"><a href="https://reprap.org/wiki/RepRap">Main Page</a></li><li id="n-Build-a-RepRap"><a href="https://reprap.org/wiki/RepRap_Options">Build a RepRap</a></li><li id="n-Glossary"><a href="https://reprap.org/wiki/Glossary">Glossary</a></li><li id="n-Reference"><a href="https://reprap.org/wiki/Reference">Reference</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Participation" aria-labelledby="p-Participation-label">
+			<h3 id="p-Participation-label">Participation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-Recent-Changes"><a href="https://reprap.org/wiki/Special:RecentChanges">Recent Changes</a></li><li id="n-Get-a-Wiki-account"><a href="https://reprap.org/forum/read.php?1,641102" rel="nofollow">Get a Wiki account</a></li><li id="n-Create-a-new-page"><a href="https://reprap.org/wiki/Very_Messy_Example">Create a new page</a></li><li id="n-Donation-Page"><a href="https://sourceforge.net/donate/index.php?group_id=159590" rel="nofollow">Donation Page</a></li><li id="n-Policy"><a href="https://reprap.org/wiki/Policy">Policy</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Community" aria-labelledby="p-Community-label">
+			<h3 id="p-Community-label">Community</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-RepRap-Forum"><a href="https://reprap.org/forum/" rel="nofollow">RepRap Forum</a></li><li id="n-RepRap-IRC"><a href="https://reprap.org/wiki/IRC">RepRap IRC</a></li><li id="n-Development-Index"><a href="https://reprap.org/wiki/Development">Development Index</a></li><li id="n-RepRap-User-Groups"><a href="https://reprap.org/forum/index.php?19" rel="nofollow">RepRap User Groups</a></li><li id="n-Community-Portal"><a href="https://reprap.org/wiki/Community_portal">Community Portal</a></li><li id="n-Licence"><a href="https://reprap.org/wiki/RepRapGPLLicence">Licence</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://reprap.org/wiki/Special:WhatLinksHere/Calibration" title="A list of all wiki pages that link here [Alt+Maj+j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://reprap.org/wiki/Special:RecentChangesLinked/Calibration" rel="nofollow" title="Recent changes in pages linked from this page [Alt+Maj+k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="https://reprap.org/wiki/Special:SpecialPages" title="A list of all special pages [Alt+Maj+q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://reprap.org/mediawiki/index.php?title=Calibration&amp;printable=yes" rel="alternate" title="Printable version of this page [Alt+Maj+p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://reprap.org/mediawiki/index.php?title=Calibration&amp;oldid=187627" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://reprap.org/mediawiki/index.php?title=Calibration&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="https://reprap.org/mediawiki/index.php?title=Special:CiteThisPage&amp;page=Calibration&amp;id=187627" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last edited on 31 March 2020, at 16:15.</li>
+											<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License</a> unless otherwise noted.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://reprap.org/wiki/RepRap:Privacy_policy" title="RepRap:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="https://reprap.org/wiki/RepRap:About" class="mw-redirect" title="RepRap:About">About RepRap</a></li>
+											<li id="footer-places-disclaimer"><a href="https://reprap.org/wiki/RepRap:General_disclaimer" title="RepRap:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://www.gnu.org/copyleft/fdl.html"><img src="Calibration%20-%20RepRap_fichiers/gnu-fdl.png" alt="GNU Free Documentation License" width="88" height="31"></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="https://www.mediawiki.org/"><img src="Calibration%20-%20RepRap_fichiers/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/mediawiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /mediawiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.036","walltime":"0.039","ppvisitednodes":{"value":333,"limit":1000000},"ppgeneratednodes":{"value":979,"limit":1000000},"postexpandincludesize":{"value":2612,"limit":2097152},"templateargumentsize":{"value":557,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%    5.099      1 -total"," 63.30%    3.228      1 Template:Languages"," 34.83%    1.776      1 Template:Merge","  9.40%    0.479      1 Template:Notice"]},"cachereport":{"timestamp":"20200712185646","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":34});});</script>
+	
+
+<div style="display: none; font-size: 13px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body></html>

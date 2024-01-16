@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>A2P assembly hierarchy visualization</title>
+</head>
+<body>
+<div class="mermaid">
+graph TD
+tole_adaptation_extrudeur_tete_mobile_001(tole_adaptation_extrudeur_tete_mobile_001<br>*FIXED*) -- plane --> uide_air_refroidissement_001
+tole_adaptation_extrudeur_tete_mobile_001(tole_adaptation_extrudeur_tete_mobile_001<br>*FIXED*) -- plane --> ventilateur_extrudeur_001
+tole_adaptation_extrudeur_tete_mobile_001(tole_adaptation_extrudeur_tete_mobile_001<br>*FIXED*) -- plane --> piece_centrale_tete_mobile_001
+uide_air_refroidissement_001 -- axial --> extrudeur_001
+uide_air_refroidissement_001 -- plane --> extrudeur_001
+uide_air_refroidissement_001 -- axial --> ventilateur_extrudeur_001
+uide_air_refroidissement_001 -- axisParallel --> ventilateur_extrudeur_001
+extrudeur_001
+ventilateur_extrudeur_001
+piece_centrale_tete_mobile_001
+</div>
+    <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.js"></script>
+    <script>
+        mermaid.initialize({startOnLoad: true});
+    </script>
+</body></html>

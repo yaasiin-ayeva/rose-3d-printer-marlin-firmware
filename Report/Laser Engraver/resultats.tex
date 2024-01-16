@@ -1,0 +1,77 @@
+\part{Travaux effectués et résultats}
+
+\section{Partie 1 - Branchement et Mécanique}
+
+Cette section n'est pas renseignée!
+\section{Partie 2 - Code et configuration de la firmware}
+À partir de la configuration par défaut, il faut dé-commenter le nécessaire et ajouter des paramètre fondamentales ou personnels. Toute section ou paramètre qui ne sera pas cité dans ce document est à sa valeur par défaut selon la configuration de marlin 2.0 .
+Le code est subdivisé en plusieurs sections de paramètres.
+
+\subsection{Hardware Info}
+Il nous revenait dans cette section de : 
+\begin{itemize}
+	\item modifier la valeur du baudrate pour la fixer à 250000
+	\item définir la motherboard convenable (BOARD\_RAMPS\_14\_EFF)
+	\item désigner un nom pour l’imprimante (CUSTOM\_MACHINE\_NAME : rose)
+\end{itemize}
+Pour le deuxième tiret il revient à modifier le fichier \textbf{boards.h} pour choisir le paramétrage convenable.
+
+\subsection{Extruder Info}
+\begin{itemize}
+	\item choix du nombre d'extrudeurs : 1
+	\item diamètre de filament et nozzle\footnotemark (70 et singlenozzle)
+\end{itemize}
+\footnotetext{nozzle désigne la buse de l'extrudeur}
+
+\subsection{Kinematics}
+Le premier paramètre à configurer faisait référence à la cinématique de l'imprimante 3D. C'est à dire le style de mouvement de la tête de laser selon les axes XYZ. les instructions disaient de dé-commenter au moins une option de cinématique entre : COREXY, COREXZ, COREYZ, COREYX, COREZX, COREZY, MARKFORGED\_XY. Mais on se rend compte après que le style de mouvement de chacun de ces sept options ne correspond vraiment pas à nos attentes. Il se trouve qu'on peut laisser commenté toutes les options. Et il y aura un comportement par défaut qui correspondra au style de mouvement désiré. En effet, par défaut marlin fonctionnerait en cartésien (XYZ) (source \footnotemark)
+\footnotetext{\href{https://www.lesimprimantes3d.fr/forum/topic/18036-probl\%C3\%A8me-pilotage-axe/?do=findComment&comment=230701}{Consulter le forum}}
+
+\subsection{Endstops }
+Dans cette rubrique qui concerne exclusivement les capteurs de fins de course (endstop), il fallait :
+\begin{itemize}
+	\item modifier la logique des endstops (true).
+	\item fixer le stepper driver. Pour les pilotes non spécifiés, la valeur par défaut est A4988
+	\item activer les pins (interrups) pour les capteurs de fin de course 
+\end{itemize}
+
+\subsection{Movement}
+Cette section est propre aux paramètres de mouvements de l'imprimante.
+\begin{itemize}
+	\item spécification du microsteping de 1/4 considéré.
+	\item spécification du rythme d'accélération pour ne pas faire souffrir la mécanique
+\end{itemize}
+
+\subsection{Drivers}
+\begin{itemize}
+	\item inversion du sens de rotation des moteurs selon les axes XYZ (false)
+\end{itemize}
+
+\subsection{Homing and Bounds}
+\begin{itemize}
+	\item modification de la taille du bed (X = 300, Y = 318)
+\end{itemize}
+
+\subsection{Additonal Features}
+\begin{itemize}
+	\item activation de l'estimation de temps d'impression : PRINTJOB\_TIMER\_AUTOSTART
+\end{itemize}
+
+\subsection{User Interface Language}
+\begin{itemize}
+	\item définition de la langue du moniteur LCD
+	\item Activation du support de carte SD
+	\item définition de la vitesse de transmission SPI (fixée à HALF\_SPEED)
+\end{itemize}
+
+\subsection{Encoder}
+\begin{itemize}
+	\item inversion du sens de la molette du moniteur
+\end{itemize}
+
+\subsection{LCD Controller}
+\begin{itemize}
+	\item configuration de l'écran (LCD controller with click-wheel.)
+\end{itemize}
+
+\newpage

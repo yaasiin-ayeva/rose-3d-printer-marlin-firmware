@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>RAMPS 1.4 - RepRap</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"RAMPS_1.4","wgTitle":"RAMPS 1.4","wgCurRevisionId":187806,"wgRevisionId":187806,"wgArticleId":11304,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Working developments","RAMPS","8/16-bit board"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"RAMPS_1.4","wgRelevantArticleId":11304,"wgRequestId":"03fe133911c1f59a3196ad87","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.page.gallery.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@08dmhpw",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="RAMPS%201.4%20-%20RepRap_fichiers/load.css">
+<script async="" src="RAMPS%201.4%20-%20RepRap_fichiers/load.php"></script>
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:solid 1px #aaa;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:solid 1px #aaa;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#4c59a6;color:#fff}.suggestions-special .special-label{color:#808080;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c0c0c0}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	#toc.tochidden,.toc.tochidden,.toctoggle{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="RAMPS%201.4%20-%20RepRap_fichiers/load_002.css">
+<meta name="generator" content="MediaWiki 1.30.0">
+<link rel="shortcut icon" href="https://reprap.org/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://reprap.org/mediawiki/opensearch_desc.php" title="RepRap (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://reprap.org/mediawiki/api.php?action=rsd">
+<link rel="license" href="https://www.gnu.org/copyleft/fdl.html">
+<link rel="alternate" type="application/atom+xml" title="RepRap Atom feed" href="https://reprap.org/mediawiki/index.php?title=Special:RecentChanges&amp;feed=atom">
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js"></script><![endif]-->
+<script src="RAMPS%201.4%20-%20RepRap_fichiers/load_002.php"></script></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-RAMPS_1_4 rootpage-RAMPS_1_4 skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+						<div class="mw-indicators mw-body-content">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">RAMPS 1.4</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub" class="noprint">From RepRap</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><div class="mw-parser-output"><div style="border: 1px solid #aaaaaa; width: 100%; text-align: center"><div style="background: #eeeeee; border-bottom: 1px solid #aaaaaa; font-size: 105%; line-height: 120%; font-weight: bold; padding: 0px; margin:0px;padding: 0.4em;"><a href="https://reprap.org/wiki/RAMPS" class="mw-redirect" title="RAMPS">RAMPS</a></div><div style="padding:0px 10px 10px;height:auto;">Version specific info<center><a href="https://reprap.org/wiki/RAMPS_1.7" title="RAMPS 1.7">RAMPS 1.7</a> | <a href="https://reprap.org/wiki/RAMPS_1.6" title="RAMPS 1.6">RAMPS 1.6</a> | <a href="https://reprap.org/wiki/RAMPS_1.5" title="RAMPS 1.5">RAMPS 1.5</a> | <a href="https://reprap.org/wiki/RAMPS_1.4.4" title="RAMPS 1.4.4">RAMPS 1.4.4</a> | <a class="mw-selflink selflink">RAMPS 1.4</a> | <a href="https://reprap.org/wiki/RAMPS_1.3" title="RAMPS 1.3">RAMPS 1.3</a> | <a href="https://reprap.org/wiki/RAMPS_1.2" title="RAMPS 1.2">RAMPS 1.2</a> (<a href="https://reprap.org/wiki/RAMPS_1.2_old" title="RAMPS 1.2 old">RAMPS 1.2 old</a>) and older</center></div></div>
+<div class="LanguageLinks">
+<table style="clear: both; border-collapse: collapse; padding: 0; margin: 0; font-size: 85%;" width="100%">
+<tbody><tr style="background: #ffffff" valign="top">
+<td style="padding: 1px 1em 0; background: #ffffff;">
+<p><a class="mw-selflink selflink">English</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/ar&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/ar (page does not exist)">العربية</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/bg&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/bg (page does not exist)">български</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/ca&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/ca (page does not exist)">català</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/cs&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/cs (page does not exist)">čeština</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/de&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/de (page does not exist)">Deutsch</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/el&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/el (page does not exist)">Ελληνικά</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/wiki/RAMPS_1.4/es" title="RAMPS 1.4/es">español</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/wiki/RAMPS_1.4/fa" title="RAMPS 1.4/fa">فارسی</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/wiki/RAMPS_1.4/fr" title="RAMPS 1.4/fr">français</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/hr&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/hr (page does not exist)">hrvatski</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/hu&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/hu (page does not exist)">magyar</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/it&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/it (page does not exist)">italiano</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/ro&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/ro (page does not exist)">română</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/ja&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/ja (page does not exist)">日本語</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/wiki/RAMPS_1.4/kr" title="RAMPS 1.4/kr">한국어</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/lt&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/lt (page does not exist)">lietuvių</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/nl&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/nl (page does not exist)">Nederlands</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/no&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/no (page does not exist)">norsk</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/pl&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/pl (page does not exist)">polski</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/pt&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/pt (page does not exist)">português</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/wiki/RAMPS_1.4/ru" title="RAMPS 1.4/ru">русский</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/tr&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/tr (page does not exist)">Türkçe</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/wiki/RAMPS_1.4/ua" title="RAMPS 1.4/ua">українська</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/wiki/RAMPS_1.4/zh_cn" title="RAMPS 1.4/zh cn">中文（中国大陆）‎</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/wiki/RAMPS_1.4/zh_tw" title="RAMPS 1.4/zh tw">中文（台灣）‎</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/he&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/he (page does not exist)">עברית</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4/az&amp;action=edit&amp;redlink=1" class="new" title="RAMPS 1.4/az (page does not exist)">azərbaycanca</a>&nbsp;•&nbsp;
+</p>
+</td></tr></tbody></table></div>
+<div class="devBox" style="background-color: #009200;; float: right; width: 260px; color: white; padding: 5px; margin-left: 15px; border-radius: 15px; font-weight: bold;">
+<div class="floatleft"><a href="https://reprap.org/wiki/File:Crystal_Clear_action_run.png" class="image"><img alt="Crystal Clear action run.png" src="RAMPS%201.4%20-%20RepRap_fichiers/40px-Crystal_Clear_action_run.png" srcset="/mediawiki/images/thumb/5/5d/Crystal_Clear_action_run.png/60px-Crystal_Clear_action_run.png 1.5x, /mediawiki/images/thumb/5/5d/Crystal_Clear_action_run.png/80px-Crystal_Clear_action_run.png 2x" width="40" height="40"></a></div> <span style="font-size: 130%;">RAMPS 1.4</span><br>
+<p>Release status: Working
+</p>
+<div style="background-color: white; padding: 5px; border-radius: 0 0 10px 10px; color: black; font-weight: normal;">
+<div class="center"><div class="floatnone"><a href="https://reprap.org/wiki/File:RAMPS1-3_fin.JPG" class="image"><img alt="RAMPS1-3 fin.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/190px-RAMPS1-3_fin.JPG" srcset="/mediawiki/images/thumb/8/8c/RAMPS1-3_fin.JPG/285px-RAMPS1-3_fin.JPG 1.5x, /mediawiki/images/thumb/8/8c/RAMPS1-3_fin.JPG/380px-RAMPS1-3_fin.JPG 2x" width="190" height="136"></a></div></div>
+<table>
+<tbody><tr>
+<td style="vertical-align: top"> <b>Description</b> </td>
+<td> <div style="word-break: break-word;">RepRap Arduino Mega Pololu Shield
+Arduino MEGA based modular RepRap electronics.</div>
+</td></tr>
+<tr>
+<td style="vertical-align: top"> <b>License</b> </td>
+<td> <div style="word-break: break-word;"><a href="https://reprap.org/wiki/GPL" title="GPL">GPL</a></div>
+</td></tr>
+<tr>
+<td style="vertical-align: top"> <b>Author</b> </td>
+<td> <div style="word-break: break-word;"><a href="https://reprap.org/wiki/User:Johnnyr" title="User:Johnnyr">User:johnnyr</a></div>
+</td></tr>
+<tr>
+<td style="vertical-align: top"> <b>Contributors</b> </td>
+<td> <div style="word-break: break-word;"></div>
+</td></tr>
+<tr>
+<td style="vertical-align: top"> <b>Based-on</b> </td>
+<td> <div style="word-break: break-word;"><a href="https://reprap.org/wiki/Pololu_Electronics" title="Pololu Electronics">Pololu Electronics</a></div>
+</td></tr>
+<tr>
+<td style="vertical-align: top"> <b>Categories</b> </td>
+<td> <div style="word-break: break-word;"> <a href="https://reprap.org/wiki/Category:RAMPS" title="Category:RAMPS"><span title="&quot;This">RAMPS</span></a> <a href="https://reprap.org/wiki/Category:8/16-bit_board" title="Category:8/16-bit board"><span title="&quot;This">8/16-bit board</span></a></div>
+</td></tr>
+<tr>
+<td style="vertical-align: top"> <b>CAD Models</b> </td>
+<td> <div style="word-break: break-word;"></div>
+</td></tr>
+<tr>
+<td style="vertical-align: top"> <b>External Link</b> </td>
+<td> <div style="word-break: break-word;"></div>
+</td></tr></tbody></table>
+</div>
+</div>
+<p><br>
+<br>
+</p>
+<div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Summary"><span class="tocnumber">1</span> <span class="toctext">Summary</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Safety_Tip"><span class="tocnumber">2</span> <span class="toctext">Safety Tip</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#THERMAL_DESIGN_FLAWS.21.3F"><span class="tocnumber">3</span> <span class="toctext">THERMAL DESIGN FLAWS!?</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#The_Heat_Bed_Mosfet_gets_TOO_HOT.21.21.21"><span class="tocnumber">3.1</span> <span class="toctext">The Heat Bed Mosfet gets TOO HOT!!!</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#The_poly_fuse_gets_too_hot"><span class="tocnumber">3.2</span> <span class="toctext">The poly fuse gets too hot</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#PCB_Thermal_design_flaw.21.3F"><span class="tocnumber">3.3</span> <span class="toctext">PCB Thermal design flaw!?</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#WARNING_-_THERMAL-isolation-related_DESIGN_FLAW_IN_Power_handling_capacity_of_PRODUCTION_RAMPS_1.4_boards"><span class="tocnumber">3.3.1</span> <span class="toctext"><b>WARNING</b> - THERMAL-isolation-related DESIGN FLAW IN Power handling capacity of <b>PRODUCTION</b> RAMPS 1.4 boards</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Other_production_boards_found_in_the_wild"><span class="tocnumber">3.3.2</span> <span class="toctext">Other production boards found in the wild</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Assembly"><span class="tocnumber">4</span> <span class="toctext">Assembly</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Component_Soldering"><span class="tocnumber">4.1</span> <span class="toctext">Component Soldering</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Required_Tools"><span class="tocnumber">4.2</span> <span class="toctext">Required Tools</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#Shield_Assembly"><span class="tocnumber">4.2.1</span> <span class="toctext">Shield Assembly</span></a>
+<ul>
+<li class="toclevel-4 tocsection-13"><a href="#C2_-_100nF_capacitor"><span class="tocnumber">4.2.1.1</span> <span class="toctext">C2 - 100nF capacitor</span></a></li>
+<li class="toclevel-4 tocsection-14"><a href="#LED1_-_Green_LED"><span class="tocnumber">4.2.1.2</span> <span class="toctext">LED1 - Green LED</span></a></li>
+<li class="toclevel-4 tocsection-15"><a href="#LED2.2C_LED3.2C_LED4_-_Red_LED"><span class="tocnumber">4.2.1.3</span> <span class="toctext">LED2, LED3, LED4 - Red LED</span></a></li>
+<li class="toclevel-4 tocsection-16"><a href="#R13.2C_R14.2C_R15_-_10_Ohm_resistor"><span class="tocnumber">4.2.1.4</span> <span class="toctext">R13, R14, R15 - 10 Ohm resistor</span></a></li>
+<li class="toclevel-4 tocsection-17"><a href="#R12_-_1K_resistor"><span class="tocnumber">4.2.1.5</span> <span class="toctext">R12 - 1K resistor</span></a></li>
+<li class="toclevel-4 tocsection-18"><a href="#R23.2C_R24.2C_R25_-_1.8K_resistor"><span class="tocnumber">4.2.1.6</span> <span class="toctext">R23, R24, R25 - 1.8K resistor</span></a></li>
+<li class="toclevel-4 tocsection-19"><a href="#R1.2C_R7.2C_R11.2C_R21.2C_R22_-_4.7K_resistor"><span class="tocnumber">4.2.1.7</span> <span class="toctext">R1, R7, R11, R21, R22 - 4.7K resistor</span></a></li>
+<li class="toclevel-4 tocsection-20"><a href="#R16.2C_R17.2C_R18.2C_R19.2C_R20_-_10K_resistor"><span class="tocnumber">4.2.1.8</span> <span class="toctext">R16, R17, R18, R19, R20 - 10K resistor</span></a></li>
+<li class="toclevel-4 tocsection-21"><a href="#R2.2C_R3.2C_R4.2C_R5.2C_R6.2C_R8.2C_R9.2C_R10_-_100K_resistor"><span class="tocnumber">4.2.1.9</span> <span class="toctext">R2, R3, R4, R5, R6, R8, R9, R10 - 100K resistor</span></a></li>
+<li class="toclevel-4 tocsection-22"><a href="#C1.2C_C5.2C_C8_-_10uF_capacitor"><span class="tocnumber">4.2.1.10</span> <span class="toctext">C1, C5, C8 - 10uF capacitor</span></a></li>
+<li class="toclevel-4 tocsection-23"><a href="#C3.2C_C4.2C_C6.2C_C7.2C_C9.2C_C10_-_100uF_capacitor"><span class="tocnumber">4.2.1.11</span> <span class="toctext">C3, C4, C6, C7, C9, C10 - 100uF capacitor</span></a></li>
+<li class="toclevel-4 tocsection-24"><a href="#Reflow_SMT_soldering"><span class="tocnumber">4.2.1.12</span> <span class="toctext">Reflow SMT soldering</span></a></li>
+<li class="toclevel-4 tocsection-25"><a href="#Top_pins"><span class="tocnumber">4.2.1.13</span> <span class="toctext">Top pins</span></a></li>
+<li class="toclevel-4 tocsection-26"><a href="#Driver_sockets"><span class="tocnumber">4.2.1.14</span> <span class="toctext">Driver sockets</span></a></li>
+<li class="toclevel-4 tocsection-27"><a href="#D1.2C_D2_-_Diodes"><span class="tocnumber">4.2.1.15</span> <span class="toctext">D1, D2 - Diodes</span></a></li>
+<li class="toclevel-4 tocsection-28"><a href="#F1_-_MFR500_Fuse"><span class="tocnumber">4.2.1.16</span> <span class="toctext">F1 - MFR500 Fuse</span></a></li>
+<li class="toclevel-4 tocsection-29"><a href="#Bottom_pins"><span class="tocnumber">4.2.1.17</span> <span class="toctext">Bottom pins</span></a></li>
+<li class="toclevel-4 tocsection-30"><a href="#Reset_switch"><span class="tocnumber">4.2.1.18</span> <span class="toctext">Reset switch</span></a></li>
+<li class="toclevel-4 tocsection-31"><a href="#Mosfet_Terminal"><span class="tocnumber">4.2.1.19</span> <span class="toctext">Mosfet Terminal</span></a></li>
+<li class="toclevel-4 tocsection-32"><a href="#Power_Terminal"><span class="tocnumber">4.2.1.20</span> <span class="toctext">Power Terminal</span></a></li>
+<li class="toclevel-4 tocsection-33"><a href="#Q1.2C_Q2.2C_Q3_-_Mosfets"><span class="tocnumber">4.2.1.21</span> <span class="toctext">Q1, Q2, Q3 - Mosfets</span></a></li>
+<li class="toclevel-4 tocsection-34"><a href="#F2_-_MFR1100_Fuse"><span class="tocnumber">4.2.1.22</span> <span class="toctext">F2 - MFR1100 Fuse</span></a></li>
+<li class="toclevel-4 tocsection-35"><a href="#Inspection"><span class="tocnumber">4.2.1.23</span> <span class="toctext">Inspection</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-36"><a href="#Stepper_Driver_Boards"><span class="tocnumber">4.2.2</span> <span class="toctext">Stepper Driver Boards</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="#Opto_Endstops"><span class="tocnumber">4.2.3</span> <span class="toctext">Opto Endstops</span></a></li>
+<li class="toclevel-3 tocsection-38"><a href="#Mechanical_Endstops"><span class="tocnumber">4.2.4</span> <span class="toctext">Mechanical Endstops</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="#Put_the_connectors_on_the_motor_wires"><span class="tocnumber">4.2.5</span> <span class="toctext">Put the connectors on the motor wires</span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="#Thermistor_Wires"><span class="tocnumber">4.2.6</span> <span class="toctext">Thermistor Wires</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="#Pololu_carriage"><span class="tocnumber">4.2.7</span> <span class="toctext">Pololu carriage</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-42"><a href="#Final_Setup"><span class="tocnumber">5</span> <span class="toctext">Final Setup</span></a>
+<ul>
+<li class="toclevel-2 tocsection-43"><a href="#Pre-Flight_Check"><span class="tocnumber">5.1</span> <span class="toctext">Pre-Flight Check</span></a></li>
+<li class="toclevel-2 tocsection-44"><a href="#Wiring"><span class="tocnumber">5.2</span> <span class="toctext">Wiring</span></a>
+<ul>
+<li class="toclevel-3 tocsection-45"><a href="#Warnings"><span class="tocnumber">5.2.1</span> <span class="toctext">Warnings</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-46"><a href="#Connecting_Power"><span class="tocnumber">5.3</span> <span class="toctext">Connecting Power</span></a></li>
+<li class="toclevel-2 tocsection-47"><a href="#Power_Supply"><span class="tocnumber">5.4</span> <span class="toctext">Power Supply</span></a>
+<ul>
+<li class="toclevel-3 tocsection-48"><a href="#Maximum_Input_Voltage"><span class="tocnumber">5.4.1</span> <span class="toctext">Maximum Input Voltage</span></a>
+<ul>
+<li class="toclevel-4 tocsection-49"><a href="#Power_Supply_without_diode"><span class="tocnumber">5.4.1.1</span> <span class="toctext">Power Supply without diode</span></a></li>
+<li class="toclevel-4 tocsection-50"><a href="#Power_Supply_with_diode"><span class="tocnumber">5.4.1.2</span> <span class="toctext">Power Supply with diode</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-51"><a href="#Firmware_and_Pin_Assignments"><span class="tocnumber">6</span> <span class="toctext">Firmware and Pin Assignments</span></a>
+<ul>
+<li class="toclevel-2 tocsection-52"><a href="#Source"><span class="tocnumber">6.1</span> <span class="toctext">Source</span></a></li>
+<li class="toclevel-2 tocsection-53"><a href="#Bill_of_Materials"><span class="tocnumber">6.2</span> <span class="toctext">Bill of Materials</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-54"><a href="#BT_Extension"><span class="tocnumber">7</span> <span class="toctext">BT Extension</span></a>
+<ul>
+<li class="toclevel-2 tocsection-55"><a href="#Change_module_setting"><span class="tocnumber">7.1</span> <span class="toctext">Change module setting</span></a></li>
+<li class="toclevel-2 tocsection-56"><a href="#Wiring_2"><span class="tocnumber">7.2</span> <span class="toctext">Wiring</span></a></li>
+<li class="toclevel-2 tocsection-57"><a href="#Connect_via_Bluetooth"><span class="tocnumber">7.3</span> <span class="toctext">Connect via Bluetooth</span></a></li>
+<li class="toclevel-2 tocsection-58"><a href="#RAMPS_1.4_test_code"><span class="tocnumber">7.4</span> <span class="toctext">RAMPS 1.4 test code</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-59"><a href="#Where_to_get"><span class="tocnumber">8</span> <span class="toctext">Where to get</span></a></li>
+<li class="toclevel-1 tocsection-60"><a href="#RAMPS_1.4.2"><span class="tocnumber">9</span> <span class="toctext">RAMPS 1.4.2</span></a>
+<ul>
+<li class="toclevel-2 tocsection-61"><a href="#Where_to_buy_RAMPS_1.4.2"><span class="tocnumber">9.1</span> <span class="toctext">Where to buy RAMPS 1.4.2</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-62"><a href="#Modifications.2C_hacks_and_add-ons"><span class="tocnumber">10</span> <span class="toctext">Modifications, hacks and add-ons</span></a>
+<ul>
+<li class="toclevel-2 tocsection-63"><a href="#Using_24v_on_RAMPS"><span class="tocnumber">10.1</span> <span class="toctext">Using 24v on RAMPS</span></a></li>
+<li class="toclevel-2 tocsection-64"><a href="#Adding_LEDS_to_RAMPS"><span class="tocnumber">10.2</span> <span class="toctext">Adding LEDS to RAMPS</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h1><span class="mw-headline" id="Summary">Summary</span></h1>
+<p>In RAMPS 1.4,  the resistors and capacitors are now surface mount to 
+fit more passive components. This does add another set of steps to 
+assembly, but we stuck with larger sizes to make it fairly painless.
+</p>
+<ul class="gallery mw-gallery-traditional">
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:32px auto;"><a href="https://reprap.org/wiki/File:RAMPS1-3_fin.JPG" class="image"><img alt="RAMPS1-3 fin.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/120px-RAMPS1-3_fin.JPG" srcset="/mediawiki/images/thumb/8/8c/RAMPS1-3_fin.JPG/180px-RAMPS1-3_fin.JPG 1.5x, /mediawiki/images/thumb/8/8c/RAMPS1-3_fin.JPG/240px-RAMPS1-3_fin.JPG 2x" width="120" height="86"></a></div></div>
+			<div class="gallerytext">
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:32px auto;"><a href="https://reprap.org/wiki/File:Arduinomega1-4connectors.png" class="image"><img alt="Arduinomega1-4connectors.png" src="RAMPS%201.4%20-%20RepRap_fichiers/120px-Arduinomega1-4connectors.png" srcset="/mediawiki/images/thumb/c/ca/Arduinomega1-4connectors.png/180px-Arduinomega1-4connectors.png 1.5x, /mediawiki/images/thumb/c/ca/Arduinomega1-4connectors.png/240px-Arduinomega1-4connectors.png 2x" width="120" height="86"></a></div></div>
+			<div class="gallerytext">
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:30px auto;"><a href="https://reprap.org/wiki/File:RAMPS1.4schematic.png" class="image"><img alt="RAMPS1.4schematic.png" src="RAMPS%201.4%20-%20RepRap_fichiers/120px-RAMPS1.png" srcset="/mediawiki/images/thumb/f/f6/RAMPS1.4schematic.png/180px-RAMPS1.4schematic.png 1.5x, /mediawiki/images/thumb/f/f6/RAMPS1.4schematic.png/240px-RAMPS1.4schematic.png 2x" width="120" height="90"></a></div></div>
+			<div class="gallerytext">
+			</div>
+		</div></li>
+		<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+			<div class="thumb" style="width: 150px;"><div style="margin:39.5px auto;"><a href="https://reprap.org/wiki/File:Ramps_v1.4_shield_bothsides.png" class="image"><img alt="Ramps v1.4 shield bothsides.png" src="RAMPS%201.4%20-%20RepRap_fichiers/120px-Ramps_v1.png" srcset="/mediawiki/images/thumb/4/49/Ramps_v1.4_shield_bothsides.png/180px-Ramps_v1.4_shield_bothsides.png 1.5x, /mediawiki/images/thumb/4/49/Ramps_v1.4_shield_bothsides.png/240px-Ramps_v1.4_shield_bothsides.png 2x" width="120" height="71"></a></div></div>
+			<div class="gallerytext">
+			</div>
+		</div></li>
+</ul>
+<p>Reference board orientation is component side up, power inputs to the left.
+</p>
+<h1><span class="mw-headline" id="Safety_Tip">Safety Tip</span></h1>
+<div class="floatleft"><a href="https://reprap.org/wiki/File:Generation3Electronics-achtung.gif" class="image"><img alt="Generation3Electronics-achtung.gif" src="RAMPS%201.4%20-%20RepRap_fichiers/Generation3Electronics-achtung.gif" width="53" height="47"></a></div>
+<p>Once you start putting electricity into your RepRap - even at just 12
+ volts - you have to take basic, common sense precautions to avoid 
+fires. Just in case these fail, test your workshop <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Smoke_detector">smoke detector</a>. Got no smoke detector? Get one!
+</p><p><br clear="all">
+</p>
+<h1><span class="mw-headline" id="THERMAL_DESIGN_FLAWS.21.3F">THERMAL DESIGN FLAWS!?</span></h1>
+<p>The issues are: 
+</p>
+<ul><li> The Bed mosfet gets too hot!!!</li>
+<li> If your heatbed draws close to or just above 11A, then the polyfuse will get very hot</li>
+<li> There are very thin connections around key solder-pads</li></ul>
+<h2><span class="mw-headline" id="The_Heat_Bed_Mosfet_gets_TOO_HOT.21.21.21">The Heat Bed Mosfet gets TOO HOT!!!</span></h2>
+<p>Solution A: Change the mosfet to something with a lower Rds-ON 
+resistance. And is better suited to be used with 5V Gate voltages. 
+</p><p>Solution B: Use an external power mosfet module
+</p>
+<h2><span class="mw-headline" id="The_poly_fuse_gets_too_hot">The poly fuse gets too hot</span></h2>
+<p>Solution A: Get a different Heat Bed. All Heat Bed's have a slightly 
+different resistance, so some draw 8A some draw close to or just above 
+11A 
+</p><p>Solution B: Change the polyfuse to a (car) blade fuse. 
+</p><p>Solution C: Use an external power mosfet module
+</p>
+<h2><span class="mw-headline" id="PCB_Thermal_design_flaw.21.3F">PCB Thermal design flaw!?</span></h2>
+<p>As there are (by 2019) many different producers of the RAMPS 1.4 
+board, some who have made their own changes to the design files, thus 
+some boards have some close to critical issues. See examples below. 
+</p><p><br>
+</p>
+<h3><span class="mw-headline" id="WARNING_-_THERMAL-isolation-related_DESIGN_FLAW_IN_Power_handling_capacity_of_PRODUCTION_RAMPS_1.4_boards"><b>WARNING</b> - THERMAL-isolation-related DESIGN FLAW IN Power handling capacity of <b>PRODUCTION</b> RAMPS 1.4 boards</span></h3>
+<p>A "thermals" design flaw has been noted in the RAMPS 1.4 Eagle CAD 
+files.  This has been confirmed by visual inspection of production 
+boards, which consistently shows only between two and three (almost 
+never four) thermal-isolating traces per side of the PCB, to 
+power-carrying pins, of under a 0.5 amp carrying-capacity per trace, 
+assuming a 1oz copper thickness.
+</p><p><a href="https://reprap.org/wiki/File:RAMPS_1_4_THERMAL_DESIGN_FLAW.jpg" class="image"><img alt="RAMPS 1 4 THERMAL DESIGN FLAW.jpg" src="RAMPS%201.4%20-%20RepRap_fichiers/400px-RAMPS_1_4_THERMAL_DESIGN_FLAW.jpg" srcset="/mediawiki/images/thumb/8/80/RAMPS_1_4_THERMAL_DESIGN_FLAW.jpg/600px-RAMPS_1_4_THERMAL_DESIGN_FLAW.jpg 1.5x, /mediawiki/images/thumb/8/80/RAMPS_1_4_THERMAL_DESIGN_FLAW.jpg/800px-RAMPS_1_4_THERMAL_DESIGN_FLAW.jpg 2x" width="400" height="254"></a>
+</p>
+<ul><li><ul><li> This image is also in error (it isn't: it's a 
+photograph of an existing production RAMPS 1.4 board), the left two 
+unpopulated pins on the image are for the always on fan and use very 
+little current. So are not an issue (actually it is)</li></ul></li></ul>
+<p>The problem may be fixed in the Eagle CAD files - for a future version of RAMPS <i>only</i>
+ - by disabling "thermals" on the GND, +12V and the +12V2 Copper pour.  
+However on existing (mass-produced) RAMPS 1.4 boards, estimating the 
+total widths (including all thermals from all tracks on both sides of 
+the PCB) checking with an online copper width calculator and adding up 
+the total current, assuming a 1oz copper PCB the maximum safe current on
+ the fuses (giving only a 10C rise in temperature of the 
+thermal-isolation tracks) is only around 6 (six) amps and in other areas
+ the maximum safe current (assuming the same 10C rise in temperature) is
+ around 8 (eight) amps.
+</p><p>This problem may potentially be fixed on existing RAMPS 1.4 
+boards by augmenting the power traces with suitably-thick insulated 
+wires with sufficient current-carrying capacity, soldering them to <b>all</b> the relevant pins.
+</p><p>A video with a full walkthrough including calculating the total 
+track width and inputting it into a trace width current calculator is 
+here:
+<a rel="nofollow" class="external free" href="https://youtu.be/4Ff_XG1OPIM">https://youtu.be/4Ff_XG1OPIM</a>
+</p>
+<h3><span class="mw-headline" id="Other_production_boards_found_in_the_wild">Other production boards found in the wild</span></h3>
+<p>Top and bottom view of production 1.4 board sourced from China with power components removed. 
+</p><p><a href="https://reprap.org/wiki/File:Ramps_thermals_isolation_3.jpg" class="image"><img alt="Ramps thermals isolation 3.jpg" src="RAMPS%201.4%20-%20RepRap_fichiers/400px-Ramps_thermals_isolation_3.jpg" srcset="/mediawiki/images/thumb/f/fc/Ramps_thermals_isolation_3.jpg/600px-Ramps_thermals_isolation_3.jpg 1.5x, /mediawiki/images/thumb/f/fc/Ramps_thermals_isolation_3.jpg/800px-Ramps_thermals_isolation_3.jpg 2x" width="400" height="225"></a> <a href="https://reprap.org/wiki/File:Ramps_thermals_isolation_2.jpg" class="image"><img alt="Ramps thermals isolation 2.jpg" src="RAMPS%201.4%20-%20RepRap_fichiers/400px-Ramps_thermals_isolation_2.jpg" srcset="/mediawiki/images/thumb/8/8a/Ramps_thermals_isolation_2.jpg/600px-Ramps_thermals_isolation_2.jpg 1.5x, /mediawiki/images/thumb/8/8a/Ramps_thermals_isolation_2.jpg/800px-Ramps_thermals_isolation_2.jpg 2x" width="400" height="225"></a>
+</p><p>Minimum total parallel trace with measured on the bed power rail 
+was about 80mil, which would equate to a 4 amp safe limit using the 
+above considerations. Board is marked with "www.bigtee-tech.com" where 
+the "UltiMachine" and "reprap.org/wiki/RAMPS_1.4" markings are in the 
+original 1.4 design.
+</p><p><br>
+Another production 1.4 board, also sourced from China.
+</p><p><a href="https://reprap.org/wiki/File:Ramps_thermals_isolation_1.jpg" class="image"><img alt="Ramps thermals isolation 1.jpg" src="RAMPS%201.4%20-%20RepRap_fichiers/400px-Ramps_thermals_isolation_1.jpg" srcset="/mediawiki/images/thumb/e/e0/Ramps_thermals_isolation_1.jpg/600px-Ramps_thermals_isolation_1.jpg 1.5x, /mediawiki/images/thumb/e/e0/Ramps_thermals_isolation_1.jpg/800px-Ramps_thermals_isolation_1.jpg 2x" width="400" height="225"></a>
+</p><p>Note the decreased isolation of the copper pours. Slikscren has 
+the "reprap.org/wiki/RAMPS_1.4" marking but not the "UltiMachine" found 
+on the original design.
+</p><p><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=itvRCn9qLt4">A video quickly looking over both of the above boards.</a>
+</p><p><br clear="all">
+</p>
+<h1><span class="mw-headline" id="Assembly">Assembly</span></h1>
+<h2><span class="mw-headline" id="Component_Soldering">Component Soldering</span></h2>
+<h2><span class="mw-headline" id="Required_Tools">Required Tools</span></h2>
+<p>You must have:
+Solder iron, solder wire, good tweezers
+You really need:
+Solder wick, solder sucker, flux pen
+Optional methods use:
+Solder paste, hot plate or oven 
+</p>
+<h3><span class="mw-headline" id="Shield_Assembly">Shield Assembly</span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3pasteapplied.JPG" class="image"><img alt="RAMPS1-3pasteapplied.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3pasteapplied.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/2/2d/RAMPS1-3pasteapplied.JPG/450px-RAMPS1-3pasteapplied.JPG 1.5x, /mediawiki/images/thumb/2/2d/RAMPS1-3pasteapplied.JPG/600px-RAMPS1-3pasteapplied.JPG 2x" width="300" height="177"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3pasteapplied.JPG" class="internal" title="Enlarge"></a></div></div></div></div> 
+<p>Soldering RAMPS 1.4 includes both surface mount and through hole soldering.
+</p><p>The surface mount can be done a few ways. Since all the SMT 
+components on this board are large 2 pad parts you can do pin by pin 
+soldering pretty easy with normal soldering equipment. Start by putting a
+ small amount of solder on one pad. If you have flux, coat the soldered 
+pad. Use the tweezers to hold the component down in position and heat 
+the solder to tack the component into place (make sure the entire solder
+ blob flows so you don't get a cold solder). Then solder the other pad. 
+Also popular is using solder paste for pad by pad soldering, Oven Reflow
+ (need link), and <a href="https://reprap.org/wiki/HotplateReflowTechnique" title="HotplateReflowTechnique">HotplateReflowTechnique</a>
+</p><p>Solder the SMT components first. Then the PTH on top of the board. Finally solder the pin headers on the bottom.
+</p>
+<h4><span class="mw-headline" id="C2_-_100nF_capacitor">C2 - 100nF capacitor</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_100nF.JPG" class="image"><img alt="RAMPS1-3 100nF.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_100nF.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/8/8e/RAMPS1-3_100nF.JPG/450px-RAMPS1-3_100nF.JPG 1.5x, /mediawiki/images/thumb/8/8e/RAMPS1-3_100nF.JPG/600px-RAMPS1-3_100nF.JPG 2x" width="300" height="189"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_100nF.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>This can be placed in any orientation.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="LED1_-_Green_LED">LED1 - Green LED</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_GrLED.JPG" class="image"><img alt="RAMPS1-3 GrLED.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_GrLED.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/5/53/RAMPS1-3_GrLED.JPG/450px-RAMPS1-3_GrLED.JPG 1.5x, /mediawiki/images/thumb/5/53/RAMPS1-3_GrLED.JPG/600px-RAMPS1-3_GrLED.JPG 2x" width="300" height="218"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_GrLED.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>Place these with the end having green dots away from the + mark on the PCB.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="LED2.2C_LED3.2C_LED4_-_Red_LED">LED2, LED3, LED4 - Red LED</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_redLEDs.JPG" class="image"><img alt="RAMPS1-3 redLEDs.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_redLEDs.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/1/19/RAMPS1-3_redLEDs.JPG/450px-RAMPS1-3_redLEDs.JPG 1.5x, /mediawiki/images/thumb/1/19/RAMPS1-3_redLEDs.JPG/600px-RAMPS1-3_redLEDs.JPG 2x" width="300" height="228"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_redLEDs.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>Place these with the end having green dots away from the + mark on the PCB.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="R13.2C_R14.2C_R15_-_10_Ohm_resistor">R13, R14, R15 - 10 Ohm resistor</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_10r.JPG" class="image"><img alt="RAMPS1-3 10r.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_10r.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/1/1f/RAMPS1-3_10r.JPG/450px-RAMPS1-3_10r.JPG 1.5x, /mediawiki/images/thumb/1/1f/RAMPS1-3_10r.JPG/600px-RAMPS1-3_10r.JPG 2x" width="300" height="222"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_10r.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>These can be placed in any orientation.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="R12_-_1K_resistor">R12 - 1K resistor</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_1k.JPG" class="image"><img alt="RAMPS1-3 1k.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_1k.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/6/65/RAMPS1-3_1k.JPG/450px-RAMPS1-3_1k.JPG 1.5x, /mediawiki/images/thumb/6/65/RAMPS1-3_1k.JPG/600px-RAMPS1-3_1k.JPG 2x" width="300" height="200"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_1k.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>These can be placed in any orientation.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="R23.2C_R24.2C_R25_-_1.8K_resistor">R23, R24, R25 - 1.8K resistor</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_1-8k.JPG" class="image"><img alt="RAMPS1-3 1-8k.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_1-8k.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/d/d4/RAMPS1-3_1-8k.JPG/450px-RAMPS1-3_1-8k.JPG 1.5x, /mediawiki/images/thumb/d/d4/RAMPS1-3_1-8k.JPG/600px-RAMPS1-3_1-8k.JPG 2x" width="300" height="200"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_1-8k.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>These are marked 1K on the PCB, but we are using larger ones to 
+accommodate higher voltages. These can be placed in any orientation.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="R1.2C_R7.2C_R11.2C_R21.2C_R22_-_4.7K_resistor">R1, R7, R11, R21, R22 - 4.7K resistor</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_4-7k.JPG" class="image"><img alt="RAMPS1-3 4-7k.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_4-7k.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/3/36/RAMPS1-3_4-7k.JPG/450px-RAMPS1-3_4-7k.JPG 1.5x, /mediawiki/images/thumb/3/36/RAMPS1-3_4-7k.JPG/600px-RAMPS1-3_4-7k.JPG 2x" width="300" height="200"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_4-7k.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>These can be placed in any orientation.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="R16.2C_R17.2C_R18.2C_R19.2C_R20_-_10K_resistor">R16, R17, R18, R19, R20 - 10K resistor</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_10k.JPG" class="image"><img alt="RAMPS1-3 10k.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_10k.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/a/a3/RAMPS1-3_10k.JPG/450px-RAMPS1-3_10k.JPG 1.5x, /mediawiki/images/thumb/a/a3/RAMPS1-3_10k.JPG/600px-RAMPS1-3_10k.JPG 2x" width="300" height="200"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_10k.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>These can be placed in any orientation.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="R2.2C_R3.2C_R4.2C_R5.2C_R6.2C_R8.2C_R9.2C_R10_-_100K_resistor">R2, R3, R4, R5, R6, R8, R9, R10 - 100K resistor</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_100k.JPG" class="image"><img alt="RAMPS1-3 100k.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_100k.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/4/43/RAMPS1-3_100k.JPG/450px-RAMPS1-3_100k.JPG 1.5x, /mediawiki/images/thumb/4/43/RAMPS1-3_100k.JPG/600px-RAMPS1-3_100k.JPG 2x" width="300" height="303"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_100k.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>These can be placed in any orientation.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="C1.2C_C5.2C_C8_-_10uF_capacitor">C1, C5, C8 - 10uF capacitor</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_10uF.JPG" class="image"><img alt="RAMPS1-3 10uF.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_10uF.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/d/da/RAMPS1-3_10uF.JPG/450px-RAMPS1-3_10uF.JPG 1.5x, /mediawiki/images/thumb/d/da/RAMPS1-3_10uF.JPG/600px-RAMPS1-3_10uF.JPG 2x" width="300" height="200"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_10uF.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>These must be placed in the proper orientation. The board has the 
+foot print of the components printed on it. The rounded corners on the 
+base of the capacitor must line up with the white print on the PCB.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="C3.2C_C4.2C_C6.2C_C7.2C_C9.2C_C10_-_100uF_capacitor">C3, C4, C6, C7, C9, C10 - 100uF capacitor</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_100uF.JPG" class="image"><img alt="RAMPS1-3 100uF.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_100uF.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/8/87/RAMPS1-3_100uF.JPG/450px-RAMPS1-3_100uF.JPG 1.5x, /mediawiki/images/thumb/8/87/RAMPS1-3_100uF.JPG/600px-RAMPS1-3_100uF.JPG 2x" width="300" height="200"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_100uF.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>These must be placed in the proper orientation. The board has the 
+foot print of the components printed on it. The rounded corners on the 
+base of the capacitor must line up with the white print on the PCB. 
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="Reflow_SMT_soldering">Reflow SMT soldering</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_placed.JPG" class="image"><img alt="RAMPS1-3 placed.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/200px-RAMPS1-3_placed.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/3/38/RAMPS1-3_placed.JPG/300px-RAMPS1-3_placed.JPG 1.5x, /mediawiki/images/thumb/3/38/RAMPS1-3_placed.JPG/400px-RAMPS1-3_placed.JPG 2x" width="200" height="133"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_placed.JPG" class="internal" title="Enlarge"></a></div></div></div></div> <div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_smtSoldered.JPG" class="image"><img alt="RAMPS1-3 smtSoldered.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_smtSoldered.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/3/37/RAMPS1-3_smtSoldered.JPG/450px-RAMPS1-3_smtSoldered.JPG 1.5x, /mediawiki/images/thumb/3/37/RAMPS1-3_smtSoldered.JPG/600px-RAMPS1-3_smtSoldered.JPG 2x" width="300" height="200"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_smtSoldered.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>If you are doing oven or hot plate method, now is the time apply heat
+ (add links here). If you used a solder iron, you have probably already 
+soldered all these components.
+</p><p>Make sure to inspect the SMT soldering at this point since it will be harder to rework after the headers are on top.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="Top_pins">Top pins</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_tpins.JPG" class="image"><img alt="RAMPS1-3 tpins.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_tpins.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/6/62/RAMPS1-3_tpins.JPG/450px-RAMPS1-3_tpins.JPG 1.5x, /mediawiki/images/thumb/6/62/RAMPS1-3_tpins.JPG/600px-RAMPS1-3_tpins.JPG 2x" width="300" height="200"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_tpins.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>Solder 1 1x6, 6 1x4, and 7 2x3 pin headers on top of the board. The 
+long post should be standing up to take a connector. Solder one leg on 
+each one to tack them into place. Then re-heat the joint and push on the
+ component until it is perfectly situated. Then you'll want to solder 
+the rest of the leads. You will get burnt if you touch the other side of
+ the pin you are soldering.
+</p><p>If you want to use the extra pin outputs, now is the time to solder on the rest of the headers.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="Driver_sockets">Driver sockets</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_DrSockets.JPG" class="image"><img alt="RAMPS1-3 DrSockets.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_DrSockets.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/5/5f/RAMPS1-3_DrSockets.JPG/450px-RAMPS1-3_DrSockets.JPG 1.5x, /mediawiki/images/thumb/5/5f/RAMPS1-3_DrSockets.JPG/600px-RAMPS1-3_DrSockets.JPG 2x" width="300" height="200"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_DrSockets.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>Place the female headers for the stepper drivers on top of the board.
+ You can use the 1x8 and 1x6 pin headers to jig them straight. Turn the 
+board over and solder these pins.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="D1.2C_D2_-_Diodes">D1, D2 - Diodes</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_DnF.JPG" class="image"><img alt="RAMPS1-3 DnF.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_DnF.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/7/7c/RAMPS1-3_DnF.JPG/450px-RAMPS1-3_DnF.JPG 1.5x, /mediawiki/images/thumb/7/7c/RAMPS1-3_DnF.JPG/600px-RAMPS1-3_DnF.JPG 2x" width="300" height="200"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_DnF.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:D1D2.jpg" class="image"><img alt="" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-D1D2.jpg" class="thumbimage" srcset="/mediawiki/images/thumb/e/e0/D1D2.jpg/450px-D1D2.jpg 1.5x, /mediawiki/images/thumb/e/e0/D1D2.jpg/600px-D1D2.jpg 2x" width="300" height="229"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:D1D2.jpg" class="internal" title="Enlarge"></a></div>Where to find the D1 and D2 diodes</div></div></div>
+<p>These must be placed in the proper orientation. The band on the diode must be turned the same way as the mark on the board.
+</p><p>Definitely solder D2 in. D2, F1, and F2 are shown installed here.
+</p><p>D1 should only be installed if the 5A rail is powered by 12V. It 
+can be omitted and the Arduino will be powered from USB. You will want 
+D1 installed if you add components to print without a PC. To reiterate, 
+D1 MUST be omitted if you are powering the 5A rail by more than 12V, or 
+the power is not absolutely clean, otherwise you may damage your ramps.
+<br style="clear: both">
+</p>
+<h4><span class="mw-headline" id="F1_-_MFR500_Fuse">F1 - MFR500 Fuse</span></h4>
+<p>This is the smaller yellow fuse. This can be placed in any 
+orientation. When soldering the fuses it is best to use a piece of 3mm 
+filament or something similar to keep the ceramic coating on the pins 
+from blocking proper solder along the through hole.
+</p><p>Since the fuses are the tallest parts, it is simpler and more 
+convenient to solder them last. From this point on, solder the rest of 
+the RAMPS in order of bottom pins, reset switch, terminals, mosfets and 
+then fuses.
+</p>
+<h4><span class="mw-headline" id="Bottom_pins">Bottom pins</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_bpins.JPG" class="image"><img alt="RAMPS1-3 bpins.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_bpins.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/2/29/RAMPS1-3_bpins.JPG/450px-RAMPS1-3_bpins.JPG 1.5x, /mediawiki/images/thumb/2/29/RAMPS1-3_bpins.JPG/600px-RAMPS1-3_bpins.JPG 2x" width="300" height="200"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_bpins.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:DSC_0148.JPG" class="image"><img alt="DSC 0148.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-DSC_0148.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/f/f4/DSC_0148.JPG/450px-DSC_0148.JPG 1.5x, /mediawiki/images/thumb/f/f4/DSC_0148.JPG/600px-DSC_0148.JPG 2x" width="300" height="199"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:DSC_0148.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>Place these on the bottom of the board with the long post out to plug
+ into the Arduino MEGA. You can plug them into the MEGA to hold them in 
+place while you solder. Do not overheat the pins while in Arduino or you
+ may damage its connectors.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="Reset_switch">Reset switch</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_rst.JPG" class="image"><img alt="RAMPS1-3 rst.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_rst.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/f/f6/RAMPS1-3_rst.JPG/450px-RAMPS1-3_rst.JPG 1.5x, /mediawiki/images/f/f6/RAMPS1-3_rst.JPG 2x" width="300" height="230"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_rst.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>This can only be oriented in one direction.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="Mosfet_Terminal">Mosfet Terminal</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_6pos.JPG" class="image"><img alt="" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_6pos.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/c/c3/RAMPS1-3_6pos.JPG/450px-RAMPS1-3_6pos.JPG 1.5x, /mediawiki/images/c/c3/RAMPS1-3_6pos.JPG 2x" width="300" height="366"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_6pos.JPG" class="internal" title="Enlarge"></a></div>Standard RAMPS 1.4 D8-10 Terminal Block</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-4_6pos_alt.png" class="image"><img alt="" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-4_6pos_alt.png" class="thumbimage" srcset="/mediawiki/images/8/82/RAMPS1-4_6pos_alt.png 1.5x" width="300" height="253"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-4_6pos_alt.png" class="internal" title="Enlarge"></a></div>Alternative Plug/Jack Connectors</div></div></div>
+<p>This must be oriented where the wire holes are turned towards the 
+edge of the board. Solder a pin on each end and make sure the component 
+is flat on the board and solder the middle pins.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="Power_Terminal">Power Terminal</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_4pos.JPG" class="image"><img alt="RAMPS1-3 4pos.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_4pos.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/a/aa/RAMPS1-3_4pos.JPG/450px-RAMPS1-3_4pos.JPG 1.5x, /mediawiki/images/a/aa/RAMPS1-3_4pos.JPG 2x" width="300" height="241"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_4pos.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>This can only be oriented in one direction.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="Q1.2C_Q2.2C_Q3_-_Mosfets">Q1, Q2, Q3 - Mosfets</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_mosfet.JPG" class="image"><img alt="RAMPS1-3 mosfet.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-RAMPS1-3_mosfet.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/5/50/RAMPS1-3_mosfet.JPG/450px-RAMPS1-3_mosfet.JPG 1.5x, /mediawiki/images/thumb/5/50/RAMPS1-3_mosfet.JPG/600px-RAMPS1-3_mosfet.JPG 2x" width="300" height="200"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_mosfet.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>These must be orientated as in the picture. The tall heat sink part 
+of the mosfet needs to be turned the same as the mark on the board.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="F2_-_MFR1100_Fuse">F2 - MFR1100 Fuse</span></h4>
+<p>This is the larger yellow fuse. This can be placed in any orientation.
+<br clear="all">
+</p>
+<h4><span class="mw-headline" id="Inspection">Inspection</span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="https://reprap.org/wiki/File:RAMPS1-3_fin.JPG" class="image"><img alt="RAMPS1-3 fin.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/200px-RAMPS1-3_fin.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/8/8c/RAMPS1-3_fin.JPG/300px-RAMPS1-3_fin.JPG 1.5x, /mediawiki/images/thumb/8/8c/RAMPS1-3_fin.JPG/400px-RAMPS1-3_fin.JPG 2x" width="200" height="143"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:RAMPS1-3_fin.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>Inspect your work. Clean any solder bridges and suspect solders.
+</p>
+<h3><span class="mw-headline" id="Stepper_Driver_Boards">Stepper Driver Boards</span></h3>
+<ol><li><ul><li>Jumpers need to be installed under each stepper driver. 
+Jumper configuration depends on which stepper driver you are using, you 
+can find information about it, in their datasheets. These are 
+configurations for A4988(<a rel="nofollow" class="external text" href="http://https//www.alldatasheet.com/datasheet-pdf/pdf/455036/ALLEGRO/A4988.html">datasheet</a>) and DRV8825(<a rel="nofollow" class="external text" href="https://www.alldatasheet.com/datasheet-pdf/pdf/432263/TI/DRV8825.html">datasheet</a>):</li></ul></li></ol>
+<pre>Configuration for A4988
+     jumper        step size
+ MS1   MS2   MS3
+ no    no    no    full step
+ yes   no    no    half step
+ no    yes   no    1/4 step
+ yes   yes   no    1/8 step
+ yes   yes   yes   1/16 step
+</pre>
+<pre>Configuration for DRV8825
+     jumper        step size
+ MS1   MS2   MS3
+ no    no    no    full step
+ yes   no    no    half step
+ no    yes   no    1/4 step
+ yes   yes   no    1/8 step
+ no    no    yes   1/16 step
+ yes   no    yes   1/32 step
+ no    yes   yes   1/32 step
+ yes   yes   yes   1/32 step
+</pre>
+<p>For now the default is maximum micro stepping (all jumpers installed 
+under drivers), which results in 1/16 micro stepping for A4988 drivers 
+and 1/32 for DRV8825. Although for efficiency and accuracy you should 
+opt for the biggest steps that will yield sufficient resolution. Eg. you
+ don't need 5000 steps per millimeter and <a rel="nofollow" class="external text" href="http://www.micromo.com/microstepping-myths-and-realities">micro-steps</a> less than 1/16 have reduced torque per step, reduced accuracy and higher driver load].
+</p><p>Note: This can vary for different drivers.
+</p>
+<ol><li>Cut the pin headers to 8 pins long so that they fit each side of the stepper driver.</li>
+<li>Insert the pin headers into the sockets on RAMPS</li>
+<li>Fit the stepper drivers onto the pin headers and solder. Only heat 
+each pin for a few seconds at time to avoid damage to the socket. 
+<ul><li>Glue the heatsink (if used) to the top of the <a href="https://reprap.org/wiki/A4988" title="A4988">A4988</a>/<a href="https://reprap.org/wiki/A4983" class="mw-redirect" title="A4983">A4983</a> chip using the provided pad of double-sided adhesive.</li></ul></li></ol>
+<h3><span class="mw-headline" id="Opto_Endstops">Opto Endstops</span></h3>
+<p>Opto endstop build instructions can be found at <a href="https://reprap.org/wiki/Gen7_Endstop_1.3.1" title="Gen7 Endstop 1.3.1">Gen7_Endstop_1.3.1</a>, and also <a rel="nofollow" class="external text" href="http://reprapsource.com/oe-r1">here</a> for reprapsource.com's instructions.
+</p>
+<ol><li><ul><li> Cut the 26awg 3 conductor cable into 3 length.<div class="floatright"><a href="https://reprap.org/wiki/File:RAMPSendstopConnector.JPG" class="image" title="Close up of endstop connector on endstop."><img alt="Close up of endstop connector on endstop." src="RAMPS%201.4%20-%20RepRap_fichiers/200px-RAMPSendstopConnector.JPG" srcset="/mediawiki/images/thumb/1/16/RAMPSendstopConnector.JPG/300px-RAMPSendstopConnector.JPG 1.5x, /mediawiki/images/thumb/1/16/RAMPSendstopConnector.JPG/400px-RAMPSendstopConnector.JPG 2x" width="200" height="276"></a></div></li>
+<li> Note: you may want to wait until you've built your machine to cut the cables to the perfect length.<div class="floatright"><a href="https://reprap.org/wiki/File:RAMPSendstopConboard.JPG" class="image" title="Close up of endstop connection on RAMPS"><img alt="Close up of endstop connection on RAMPS" src="RAMPS%201.4%20-%20RepRap_fichiers/200px-RAMPSendstopConboard.JPG" srcset="/mediawiki/images/thumb/3/3e/RAMPSendstopConboard.JPG/300px-RAMPSendstopConboard.JPG 1.5x, /mediawiki/images/thumb/3/3e/RAMPSendstopConboard.JPG/400px-RAMPSendstopConboard.JPG 2x" width="200" height="121"></a></div></li></ul>
+<ol><li><ul><li> crimp and solder a female connector to the ends of each wire. (solder not necessary with proper crimp tools) </li></ul></li></ol>
+<ul><li> use the 2.54mm 1x3 housing.</li>
+<li> Connect at least the minimum endstops. </li></ul></li></ol>
+<table border="1">
+<tbody><tr>
+<td> RAMPS End
+</td></tr>
+<tr>
+<td> SIG (S)
+</td>
+<td> White
+</td>
+<td> Top pin
+</td></tr>
+<tr>
+<td> GND (-)
+</td>
+<td> Black
+</td>
+<td> Center pin
+</td></tr>
+<tr>
+<td> VCC (+)
+</td>
+<td> Red
+</td>
+<td> Lower pin
+</td></tr></tbody></table>
+<table border="1">
+<tbody><tr>
+<td> Endstop End
+</td>
+<td>
+</td></tr>
+<tr>
+<td> VCC (+)
+</td>
+<td> Red
+</td></tr>
+<tr>
+<td> SIG (S)
+</td>
+<td> White
+</td></tr>
+<tr>
+<td> GND (-)
+</td>
+<td> Black
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Mechanical_Endstops">Mechanical Endstops</span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:MechSwitches_2Wire.JPG" class="image"><img alt="MechSwitches 2Wire.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-MechSwitches_2Wire.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/c/c9/MechSwitches_2Wire.JPG/450px-MechSwitches_2Wire.JPG 1.5x, /mediawiki/images/thumb/c/c9/MechSwitches_2Wire.JPG/600px-MechSwitches_2Wire.JPG 2x" width="300" height="199"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:MechSwitches_2Wire.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>The recommended firmware will provide a configuration to use mechanical endstops with just two wires. 
+</p><p>Find the area labelled "endstops" in the upper right corner of 
+the board and for each of the X, Y, and Z pairs of pins (label should be
+ below each set) do the following: 
+</p>
+<ol><li> Connect S (top row, labelled to the left) on RAMPS to NC on the switch.</li>
+<li> Connect GND on RAMPS to C on the switch.</li></ol>
+<p><b>Note:</b> The latest firmware such as Marlin seems to use NO as 
+the default pin on the switch. Otherwise you may need to invert the 
+endstops in the firmware. You can use M119 to check your endstops 
+status.
+</p>
+<h3><span class="mw-headline" id="Put_the_connectors_on_the_motor_wires">Put the connectors on the motor wires</span></h3>
+<ol><li><ul><li> solder a female connector to the ends of each wire.</li>
+<li> use the 2.54mm 1x3 housing. </li>
+<li> Shown is the type used for servos in RC projects. See <a href="https://reprap.org/wiki/Stepper_Motors" class="mw-redirect" title="Stepper Motors">Stepper Motors</a> for info on motors.</li></ul></li></ol>
+<h3><span class="mw-headline" id="Thermistor_Wires">Thermistor Wires</span></h3>
+<p>Use a 2 pin 0.1" connector to terminate the thermistor wires.
+</p>
+<ol><li><ul><li> Connect the cable so the 2 wires go to T0</li></ul></li>
+<li>Connect the 2 heater wires to D10 (E0H on older boards) and the + connection above it.
+<ul><li> If changing to an unverified firmware it is best to verify 
+heater circuit function with a meter before connecting heater to prevent
+ damage to the extruder.</li></ul></li></ol>
+<h3><span class="mw-headline" id="Pololu_carriage">Pololu carriage</span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:PololuExample.JPG" class="image"><img alt="PololuExample.JPG" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-PololuExample.JPG" class="thumbimage" srcset="/mediawiki/images/thumb/7/71/PololuExample.JPG/450px-PololuExample.JPG 1.5x, /mediawiki/images/thumb/7/71/PololuExample.JPG/600px-PololuExample.JPG 2x" width="300" height="199"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:PololuExample.JPG" class="internal" title="Enlarge"></a></div></div></div></div>
+<p>This section assumes you are using Pololu, but there are other 
+options. Insert two 1x8 pin headers into the board. If you bought a kit 
+with one 16 pin header, simply cut it so that you have two 1x8. Make 
+sure that the side with the labels has the long ends of the posts, and 
+the side you want to solder is the side with the heat sink. Doing this 
+backwards will cause you not to see the labels and will most likely not 
+fit. Remember to apply a heat-sink to the largest chip on the back.
+</p><p>Insert the motor boards with the potentiometer to the right side (furthest from the power connectors).
+</p>
+<h1><span class="mw-headline" id="Final_Setup">Final Setup</span></h1>
+<h2><span class="mw-headline" id="Pre-Flight_Check">Pre-Flight Check</span></h2>
+<p>If you think you may have mistakes you can install only one stepper 
+driver during initial testing and risk only one stepper driver.
+</p><p>The trimpot on the stepper drivers controls the current limit. 
+Turn it all the way down (counter clock wise) and back up 25%. Be 
+careful to not force the trimpot, it is delicate. You will need to fine 
+tune the current limit later. Note that it is allways giving the motors 
+that much power, even when not moving, so if your stepper motor drivers 
+are getting hot, you may want to turn it down slightly.
+</p><p><a rel="nofollow" class="external text" href="https://reprap.org/mediawiki/index.php?title=Arduino_Mega_Pololu_Shield#Make_the_cables_up_for_the_opto_endstops">Connect the minimum endstops</a> for X,Y, and Z
+</p><p>Connect Motors (Do not disconnect or connect motors while 
+powered; if the connection is loose, this will cause the motors to 
+misbehave and possibly kill your stepper driver.)
+</p><p>You may want to use this <a rel="nofollow" class="external text" href="https://reprap.org/wiki/File:RAMPSTestCode.pde">code</a> to test all the electronics before installing any of the suggested firmwares.
+</p><p>Install firmware (More info below). Firmware flashing can be done without 12V power supply connected.
+</p>
+<h2><span class="mw-headline" id="Wiring">Wiring</span></h2>
+<p>It is relatively simple to wire up the RAMPS. Just add the extruder 
+heating coil wire to D10, the thermistor to the two T0 pins on middle 
+right right, and wire up the steppers and endstops. From left to right, 
+wire all of the stepper motor's wires as red, blue, green, and black or 
+red, green, yellow, blue into the pins next to the Pololus. When you 
+connect the wires to the endstops (if you are using 3 endstops, plug 
+them into the MIN (-) slots), make sure you match the labels. 
+</p><p><a href="https://reprap.org/wiki/File:Rampswire14.svg" class="image"><img alt="Rampswire14.svg" src="RAMPS%201.4%20-%20RepRap_fichiers/500px-Rampswire14.png" srcset="/mediawiki/images/thumb/6/6d/Rampswire14.svg/750px-Rampswire14.svg.png 1.5x, /mediawiki/images/thumb/6/6d/Rampswire14.svg/1000px-Rampswire14.svg.png 2x" width="500" height="707"></a>
+</p><p>Note that Tesla &amp; Tonok firmware use D9 and Sprinter, Marlin, and Johnny/Tonok use D10 for the extruder hot end.
+</p>
+<h3><span class="mw-headline" id="Warnings">Warnings</span></h3>
+<p><font color="red">Reversing +/- or otherwise incorrectly connecting power can destroy your electronics and cause fire hazard.
+</font></p><p><font color="red">Incorrectly inserting stepper drivers 
+will destroy your electronics and cause a fire risk. Always make sure 
+power and USB is disconnected when removing or adjusting stepper 
+drivers. Always make sure to insert drivers in correct orientation and 
+in the socket correctly.
+</font></p><p><font color="red">The endstop pins are Signal - GND - VCC,
+ instead of the VCC - Sig - GND like the rest of RepRaps boards. Make 
+sure to wire them correctly. This is done to allow squeezing fatter 
+traces on the printable board.
+</font></p><p><font color="red">DON'T secure Arduino/RAMPS with 
+conductive screws through both mounting holes.  The screw may cut into 
+the positive trace creating a HIGH current short.</font>
+</p>
+<h2><span class="mw-headline" id="Connecting_Power">Connecting Power</span></h2>
+<p>Connect your 12V power supply to the RAMPS shield. <font color="red">Reversing +/- or otherwise incorrectly connecting power can destroy your electronics and cause fire hazard</font>.
+</p><p>The bottom pair of connectors marked 5A power the stepper drivers
+ and Extruder heater/fan (D9, D10). The source should be rated a minimum
+ of 5A.
+</p><p>The pair of connectors above marked 11A power a Heated Bed, or 
+other output (D8). The source should be rated a minimum 11A (if both 
+power rails are connected to the same supply it should have a minimum 
+rating of 16A).
+</p><p>The barrel connector, on the Arduino MEGA, will NOT power RAMPS 
+and will not provide power to the stepper motors, heated bed, etc.
+</p><p>The power connector plug may not be obviously labeled, looking at
+ the power connection the positive is on the left and the negative is on
+ the right of the plug.
+</p>
+<h2><span class="mw-headline" id="Power_Supply">Power Supply</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:D1D2.jpg" class="image"><img alt="" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-D1D2.jpg" class="thumbimage" srcset="/mediawiki/images/thumb/e/e0/D1D2.jpg/450px-D1D2.jpg 1.5x, /mediawiki/images/thumb/e/e0/D1D2.jpg/600px-D1D2.jpg 2x" width="300" height="229"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:D1D2.jpg" class="internal" title="Enlarge"></a></div>Where to find the D1 diode (note that D2 is shown at the left, not D1)</div></div></div>
+<p>RAMPS is quite happy with the 12 V line from <a href="https://reprap.org/wiki/PCPowerSupply" class="mw-redirect" title="PCPowerSupply">PCPowerSupply</a>.
+Or you can hack up a 12V laptop power supply, or other 12 V "wall wart" power supply. <font color="red"> Make sure that the power supply can output 5A or greater.</font> Additional 11A may be needed for heated bed support.
+</p><p>See Connecting power above.
+</p><p>The 3 pins next to the reset switch are meant to optionally connect to your PSU.
+</p><p>The PS_ON pin is intended to switch your power supply on and off.
+ Many firmwares support pulling this pin low with M80 command to turn 
+the power supply on, and M81 to turn it off. This behavior is desired 
+for ATX power supplies and can be modified in firmware to support 5V 
+high power supplies like those borrowed from an Xbox.
+</p><p>Without D1 installed, or when the 12VIN is not connected, the 
+Arduino gets its power from USB. If you want your kit powered without 
+USB connected you need to solder in D1 OR connect VCC to your PSU.
+</p><p>The VCC pin can be connected to your ATX's 5Vsb to continuously 
+power the Arduino from your ATX power supply. You will want to make sure
+ that D1 is not installed or cut out. The Arduino is not designed to be 
+powered directly on the VCC rail and the VIN pin at the same time.
+</p><p>If you want to use PS_ON to turn on your power supply then don't 
+use diode D1, you need your Arduino to be powered from 5Vsb otherwise 
+when no USB is connected the PS_ON pin floats (and your power supply 
+pulses on and off).
+</p><p>The 5V pin in that connector on RAMPS only supplies the 5V to the
+ auxiliary servo connectors. It is designed so that you can jumper it to
+ the VCC pin and use the Arduino's power supply to supply 5V for extra 
+servos if you are only powered from USB or 5V. Since there is not a lot 
+of extra power from the Arduino's power supply you can connect it
+directly to your 5V power supply if you have one. You can also leave 
+this pin not connected if you have no plan to add extra servos.
+</p>
+<h3><span class="mw-headline" id="Maximum_Input_Voltage">Maximum Input Voltage</span></h3>
+<h4><span class="mw-headline" id="Power_Supply_without_diode">Power Supply without diode</span></h4>
+<p>There are three limiting factors to the maximum voltage that you can put into the RAMPS:
+</p>
+<ol><li> The Arduino Mega maximum input voltage</li>
+<li> Filtering capacitor maximum voltages</li>
+<li> PTC fuse maximum voltages</li></ol>
+<p>First, the 1N4004 diode connects the RAMPS input voltage to the 
+Arduino Mega which has a recommended maximum input voltage of 12 volts. 
+ If your board does not have this diode soldered in (or if you cut it), 
+ you will need to power the Mega through the USB connector or through a 
+separate 5v line, but this allows a higher RAMPS voltage.
+</p><p>Second, most boards use 25v or 35v aluminum electrolytic 
+capactors (C2, C3, C4, C6, C7, C9, and C10). To be safe, you should only
+ go to half of your rated maximum voltage -- thus if your board has 35v 
+capacitors (code VZA) then you should use a maximum input of 17.5v.   
+The absolute maximum voltage is determined by the pololu servo drivers, 
+which themselves are limited to 35V.
+</p><p>Third, the MF-R500 (5A) PTC fuse is rated to 30V and the MF-R1100
+ (11A) PTC fuse is rated to 16V. They will need to be replaced with real
+ fuses.
+</p>
+<h4><span class="mw-headline" id="Power_Supply_with_diode">Power Supply with diode</span></h4>
+<p>If your board has a 1N4004 diode soldered in, do not apply more than 
+12 V to it. Original flavor Arduino Mega are rated to 12 V input. While 
+Arduino Mega 2560 can take 20 V, it is not recommended.
+</p>
+<h1><span class="mw-headline" id="Firmware_and_Pin_Assignments">Firmware and Pin Assignments</span></h1>
+<p><font color="red">RAMPS 1.4 uses the same pin definitions as 1.3.</font>
+</p><p>You will need the Arduino software at <a rel="nofollow" class="external free" href="https://www.arduino.cc/en/Main/Software">http://www.arduino.cc/en/Main/Software</a>
+ to upload the firmware to Arduino Mega. The version of Arduino you need
+ may be determined by the firmware you want to use. The current (as of 
+2014-01-22)  <a href="https://reprap.org/wiki/List_of_Firmware#Marlin" title="List of Firmware">Marlin</a>
+ firmware is compatible with Arduino version 1.0.5. Some other firmwares
+ may require Arduino software version 0023, NOT the most recent version.
+ Please see your firmware documentations if you need assistance.
+</p><p>Troubleshooting: You may need to make sure that the driver is 
+installed for the Arduino MEGA by going to Control Panel -&gt; Hardware 
+and Sound -&gt; Device Manager. If the device that appears/disappears 
+when you plug in and unplug the board USB is "Unknown Device" under 
+"Other devices", then you need to right click on the device and click 
+the update driver button. Find where on your computer you 
+saved/installed the Arduino software, and tell the wizard to search in 
+the driver folder there. Windows 8 will give this error: "The third 
+party INF does not contain digital signature". If so, save the zip for 
+the latest version of Arduino on your PC, and repeat the steps above 
+with the driver folder in there. It should contain the digital signature
+ Windows needs.
+</p><p><a href="https://reprap.org/wiki/Sprinter" title="Sprinter">Sprinter</a> and <a href="https://reprap.org/wiki/Marlin" title="Marlin">Marlin</a> are popular and stable firmwares for RAMPS as of 3/28/2012. <a href="https://reprap.org/wiki/Pronterface" class="mw-redirect" title="Pronterface">Pronterface</a> is a cross platform printer control program that can be used for testing/printing.
+</p><p>Working preconfigured <b>Sprinter</b> firmware can be downloaded here: <a href="https://reprap.org/wiki/File:UltiMachineRAMPS1-4Sprinter.zip" title="File:UltiMachineRAMPS1-4Sprinter.zip">File:UltiMachineRAMPS1-4Sprinter.zip</a>. Mechanical is in the folder ending with ME, optical endstop firmware is in the folder ending in OE.
+</p><p>Working preconfigured <b>Marlin</b> firmware can be downloaded at
+<a rel="nofollow" class="external free" href="https://adf.ly/1RKUfV">http://adf.ly/1RKUfV</a>
+ . is for mechanical endstops. For optical, you will need to reverse the
+ endstop logic in configuration.h. The language of display is in 
+italian, but can easy be changed in language.h. It is preconfigured for 
+the RepRap Discount Smart Controller and similar LCD module. You will 
+need to disable LCD in configuration.h if not using it.
+</p><p>Others (Need pins set in Firmware as below):
+</p>
+<ul><li>mechanical endstops (now the default ultimachine.com option) require <b>#define OPTO_PULLUPS_INTERNAL 1</b> to be added to configuration.h if not there by default.</li></ul>
+<p>Here are the pin definitions for this board.
+</p>
+<pre>// For RAMPS 1.4
+#define X_STEP_PIN         54
+#define X_DIR_PIN          55
+#define X_ENABLE_PIN       38
+#define X_MIN_PIN           3
+#define X_MAX_PIN           2
+
+#define Y_STEP_PIN         60
+#define Y_DIR_PIN          61
+#define Y_ENABLE_PIN       56
+#define Y_MIN_PIN          14
+#define Y_MAX_PIN          15
+
+#define Z_STEP_PIN         46
+#define Z_DIR_PIN          48
+#define Z_ENABLE_PIN       62
+#define Z_MIN_PIN          18
+#define Z_MAX_PIN          19
+
+#define E_STEP_PIN         26
+#define E_DIR_PIN          28
+#define E_ENABLE_PIN       24
+
+#define SDPOWER            -1
+#define SDSS               53
+#define LED_PIN            13
+
+#define FAN_PIN            9
+
+#define PS_ON_PIN          12
+#define KILL_PIN           -1
+
+#define HEATER_0_PIN       10
+#define HEATER_1_PIN       8
+#define TEMP_0_PIN          13   // ANALOG NUMBERING
+#define TEMP_1_PIN          14   // ANALOG NUMBERING
+</pre>
+<h2><span class="mw-headline" id="Source">Source</span></h2>
+<table class="wikitable" style="margin: 1em auto 1em auto;">
+
+<tbody><tr style="background-color:#999999;">
+<th> FILE ID#
+</th>
+<th> TYPE
+</th>
+<th> DESCRIPTION
+</th>
+<th> DOWNLOAD
+</th></tr>
+<tr>
+<td> <a href="https://reprap.org/wiki/File:ArduinoMegaPololuShield.zip" title="File:ArduinoMegaPololuShield.zip">File:ArduinoMegaPololuShield.zip</a>
+</td>
+<td> Eagle Files
+</td>
+<td> These are the files you need to make the board.(Use the File: link to the left to access older versions of the file.)
+</td>
+<td> <a href="https://reprap.org/mediawiki/images/b/b0/ArduinoMegaPololuShield.zip" class="internal" title="ArduinoMegaPololuShield.zip">media:ArduinoMegaPololuShield.zip</a>
+</td></tr>
+
+<tr>
+<td> <a href="https://reprap.org/wiki/File:RepRapjr.lbr" title="File:RepRapjr.lbr">File:RepRapjr.lbr</a>
+</td>
+<td> Eagle Libraries
+</td>
+<td> The components used in this board are here. see <a href="https://reprap.org/wiki/Eagle_Library" title="Eagle Library">Eagle_Library</a>
+</td>
+<td> <a href="https://reprap.org/mediawiki/images/9/92/RepRapjr.lbr" class="internal" title="RepRapjr.lbr">media:RepRapjr.lbr</a>
+</td></tr>
+</tbody></table>
+<h2><span class="mw-headline" id="Bill_of_Materials">Bill of Materials</span></h2>
+<table border="1">
+
+<tbody><tr>
+<th> ID
+</th>
+<th> Description
+</th>
+<th> Quantity
+</th>
+<th> Part Number
+</th>
+<th> Reichelt Order Number
+</th>
+<th> Digikey Part Number (Description)
+</th></tr>
+<tr>
+<td> U1
+</td>
+<td> Arduino Mega or clone
+</td>
+<td> 1
+</td>
+<td>2560 or 1280
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.digikey.com/product-detail/en/A000067/1050-1018-ND/2639006">1050-1018-ND</a>(BOARD MCU MEGA2560)
+</td></tr>
+<tr>
+<td> U2,U3,U4,U5
+</td>
+<td> <a href="https://reprap.org/wiki/Pololu_stepper_driver_board" title="Pololu stepper driver board">Pololu stepper driver boards</a> or clones
+</td>
+<td> 4
+</td>
+<td> A fifth one can be used for a 2nd extruder or extra axis
+</td>
+<td>
+</td>
+<td>N/A
+</td></tr>
+<tr>
+<td> C2
+</td>
+<td> 100nF capacitor (0805)(&gt; highest planned voltage)
+</td>
+<td> 1
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.digikey.com/product-detail/en/CC0805KRX7R8BB104/311-1141-1-ND/303051">311-1141-1-ND</a>(CAP CER 0.1UF 25V 10% X7R 0805)
+</td></tr>
+<tr>
+<td> C1,C5,C8
+</td>
+<td> 10uF capacitor (153CLV-0405)(&gt;5V)
+</td>
+<td> 3
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.digikey.com/product-detail/en/EXV106M025A9BAA/399-6724-1-ND/3082855">399-6724-1-ND</a>(CAP ALUM 10UF 25V 20% SMD)
+</td></tr>
+<tr>
+<td> C3,C4,C6,C7,C9,C10
+</td>
+<td> 100uF capacitor (153CLV-0605)(&gt; highest planned voltage)
+</td>
+<td> 6
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.digikey.com/product-detail/en/EXV107M016A9GAA/399-6726-1-ND/3082857">399-6726-1-ND</a>(CAP ALUM 100UF 16V 20% SMD)
+</td></tr>
+<tr>
+<td> R1,R7,R11,R21,R22
+</td>
+<td> 4.7K resistor (0805)(1%)
+</td>
+<td> 5
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.digikey.com/scripts/dksearch/dksus.dll?vendor=0&amp;keywords=RHM4.70KAECT-ND+">RHM4.70KAECT-ND</a>(RES 4.70K OHM .4W 1% 0805)
+</td></tr>
+<tr>
+<td> R2,R3,R4,R5,R6,R8,R9,R10
+</td>
+<td> 100K resistor (0805)
+</td>
+<td> 8
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.digikey.com/product-detail/en/ESR10EZPF1003/RHM100KAECT-ND/1983806">RHM100KAECT-ND</a>(RES 100K OHM .4W 1% 0805)
+</td></tr>
+<tr>
+<td> R12
+</td>
+<td> 1K resistor (0805)
+</td>
+<td> 1
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.digikey.com/product-detail/en/ESR10EZPF1001/RHM1.00KAECT-ND/1983804">RHM1.00KAECT-ND</a>(RES 1.00K OHM .4W 1% 0805)
+</td></tr>
+<tr>
+<td> R23,R24,R25
+</td>
+<td> 1.8K resistor (0805)
+</td>
+<td> 3
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.digikey.com/product-detail/en/RC0805FR-071K8L/311-1.80KCRCT-ND/730467">311-1.80KCRCT-ND</a>(RES 1.80K OHM 1/8W 1% 0805)
+</td></tr>
+<tr>
+<td> R16,R17,R18,R19,R20
+</td>
+<td> 10K resistor (0805)
+</td>
+<td> 5
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.digikey.com/product-detail/en/ERJ-6ENF1002V/P10.0KCCT-ND/119248">P10.0KCCT-ND</a>(RES 10.0K OHM 1/8W 1% 0805)
+</td></tr>
+<tr>
+<td> R13,R14,R15
+</td>
+<td> 10 ohm resistor (0805)
+</td>
+<td> 3
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.digikey.com/product-detail/en/CRCW080510R0FKEAHP/541-10.0TCT-ND/2222835">541-10.0TCT-ND</a>(RES 10.0 OHM .33W 1% 0805)
+</td></tr>
+<tr>
+<td> Q1,Q2,Q3
+</td>
+<td> N-channel Mosfet
+</td>
+<td> 3
+</td>
+<td>
+<p>-STP55NF06L<br>
+(R<sub>DS</sub>-On = 18 mΩ)
+</p><p>Upgrade particularly for the bed:
+</p><p>- <b>IRLB8743PBF</b><br>(R<sub>DS</sub>-On= 3.2 mΩ)
+</p><p>or for even more current<br>
+- <b>IRLB3034PBF</b><br>
+(R<sub>DS</sub>-On = 1.7 mΩ)
+</p>
+</td>
+<td>
+<p>STP 55NF06L STM
+</p><p>IRLB 3034
+</p>
+</td>
+<td> <a rel="nofollow" class="external text" href="http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&amp;site=CA&amp;KeyWords=497-6742-5-ND">STP55NF06L</a> (MOSFET N-CH 60V 55A 18mΩ TO-220 @11A=+135*C )
+<p><a rel="nofollow" class="external text" href="https://www.digikey.com/products/en?keywords=IRLB8743PBF">IRLB8743PBF</a> (MOSFET N-CH 30V 78A 3.2mΩ TO-220 @11A=+24*C)
+</p><p><a rel="nofollow" class="external text" href="https://www.digikey.com/products/en?keywords=IRLB3034PBF">IRLB3034PBF</a> (MOSFET N-CH 40V 195A 1.7mΩ TO-220 @11A=+13*C)
+</p>
+</td></tr>
+<tr>
+<td> D1,D2
+</td>
+<td> Diode
+</td>
+<td> 2
+</td>
+<td> 1N4004
+</td>
+<td> 1N 4004
+</td>
+<td> <a rel="nofollow" class="external text" href="http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&amp;site=CA&amp;KeyWords=1N4004FSCT-ND">1N4004FSCT-ND</a> (DIODE GEN PURPOSE 400V 1A DO41)
+</td></tr>
+<tr>
+<td> F1
+</td>
+<td> PTC resettable fuse (30V, Hold5A, Trip10A)
+</td>
+<td> 1
+</td>
+<td> MF-R500
+</td>
+<td> PFRA 500
+</td>
+<td> <a rel="nofollow" class="external text" href="http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&amp;site=CA&amp;KeyWords=MF-R500-ND">MF-R500-ND</a> (FUSE PTC RESETTABLE 5A HOLD)
+</td></tr>
+<tr>
+<td> F2
+</td>
+<td> PTC resettable fuse (Hold11A)
+</td>
+<td> 1
+</td>
+<td> MF-R1100
+</td>
+<td>
+</td>
+<td> <a rel="nofollow" class="external text" href="http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&amp;site=CA&amp;KeyWords=RGEF1100-ND">RGEF1100-ND</a> (POLYSWITCH RGE SERIES 11.0A HOLD)
+</td></tr>
+<tr>
+<td> J2
+</td>
+<td> D8-D10 Outputs // 6 position screw terminal (min 11A per contact) OR Jack/Plug connector pair
+</td>
+<td> 1
+</td>
+<td> 282837-6
+</td>
+<td> AKL 101-06
+</td>
+<td> <a rel="nofollow" class="external text" href="http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&amp;site=CA&amp;KeyWords=WM7857-ND">WM7857-ND</a> (CONN TERMINAL BLOCK 6POS 5.08MM)
+<p>OR 
+</p><p><a rel="nofollow" class="external text" href="http://www.digikey.com/product-detail/en/phoenix-contact/1935200/277-1581-ND/568618">1935200</a> (TERM BLOCK PCB 6POS 5.0MM)
+</p><p>OR 
+</p><p>1x <a rel="nofollow" class="external text" href="http://www.digikey.com/product-detail/en/20020109-H061A01LF/609-4284-ND/2509130">609-4284-ND</a> &amp; 1x <a rel="nofollow" class="external text" href="http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&amp;lang=en&amp;keywords=609-4218-ND&amp;x=0&amp;y=0&amp;cur=USD">609-4218-ND</a>.  <a rel="nofollow" class="external text" href="https://lh6.googleusercontent.com/--1nJttlNQDs/UNfmaLXKiTI/AAAAAAAADxQ/Z6CSD4V8r6I/s617/20121223_194819.jpg">May prevent overtemp events</a> 
+</p>
+</td></tr>
+<tr>
+<td> LED1
+</td>
+<td> Green LED (0805)
+</td>
+<td> 1
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.digikey.com/product-detail/en/CMD17-21VGD%2FTR8/L62505CT-ND/254936">L62505CT-ND</a>(LED GREEN DIFF 0805 SMD)
+</td></tr>
+<tr>
+<td>LED2,LED3,LED4
+</td>
+<td> Red LED (0805)
+</td>
+<td> 3
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a rel="nofollow" class="external text" href="http://www.digikey.com/product-detail/en/CMD17-21VRD%2FTR8/L62501CT-ND/254934">L62501CT-ND</a>(LED HI EFF RED DIFF 0805)
+</td></tr>
+<tr>
+<td> S1
+</td>
+<td> Push button switch
+</td>
+<td> 1
+</td>
+<td> B3F-3100
+</td>
+<td> TASTER 3305B (should fit footprint also, but button will overhang board edge)
+</td>
+<td> <a rel="nofollow" class="external text" href="http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&amp;site=CA&amp;KeyWords=450-1648-ND">450-1648-ND</a> (SWITCH TACT RA H=6.35MM)
+</td></tr>
+<tr>
+<td> X1
+</td>
+<td> Power jack (Plug and fixed receptacle)(Min 11A per position more is better)
+</td>
+<td> 1
+</td>
+<td> MSTBA 2,5 and MSTBT 2,5 (5.04mm spacing 4 connector)
+</td>
+<td>
+</td>
+<td> <a rel="nofollow" class="external text" href="http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&amp;site=CA&amp;KeyWords=WM7847-ND">WM7847-ND</a> (CONN HEADER 4POS 5.08MM R/A TIN) &amp; <a rel="nofollow" class="external text" href="http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&amp;site=CA&amp;KeyWords=WM7953-ND">WM7953-ND</a> (CONN TERM BLOCK 4POS 5.08MM R/A)
+<p>OR
+</p><p><a rel="nofollow" class="external text" href="http://www.digikey.com/product-detail/en/phoenix-contact/1935187/277-1579-ND/568616">1935187</a> (TERM BLOCK PCB 4POS 5.0MM)
+</p>
+</td></tr>
+<tr>
+<td>
+</td>
+<td> 2 x 3 pin header
+</td>
+<td> 8
+</td>
+<td> 961206-6404-AR
+</td>
+<td>
+</td>
+<td> <a rel="nofollow" class="external text" href="http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&amp;site=CA&amp;KeyWords=3M9459-ND">3M9459-ND</a> (CONN HEADER VERT DUAL 6POS GOLD)
+</td></tr>
+<tr>
+<td>
+</td>
+<td> 4 pin header
+</td>
+<td> 5
+</td>
+<td> 961104-6404-AR
+</td>
+<td> SL 1X36G 2,54 (3 of these)
+</td>
+<td> <a rel="nofollow" class="external text" href="http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&amp;site=CA&amp;KeyWords=3M9449-ND">3M9449-ND</a> (CONN HEADER VERT SGL 4POS GOLD)
+</td></tr>
+<tr>
+<td>
+</td>
+<td> 6 pin header
+</td>
+<td> 2 (<a rel="nofollow" class="external text" href="http://gala-automation.com/index.php/component/content/article/26-reprap-tutorials/42-ramps-14-bom">? see this</a>)
+</td>
+<td>
+</td>
+<td> <a rel="nofollow" class="external text" href="http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&amp;site=CA&amp;KeyWords=3M9451-ND">3M9451-ND</a> (CONN HEADER VERT SGL 6POS GOLD)
+</td></tr>
+<tr>
+<td>
+</td>
+<td> 2 x 18 Pin Stackable Female Header (non stackables can be used with plated through holes)
+</td>
+<td> 1
+</td>
+<td>
+</td>
+<td> MALE: SL 2X25G 2,54 (2 of them, shortened with a saw or pliers)
+</td>
+<td> <a rel="nofollow" class="external text" href="http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&amp;site=CA&amp;KeyWords=S7121-ND">S7121-ND</a> (CONN HEADER FMAL 36PS.1" DL GOLD) - Not Stackable
+</td></tr>
+<tr>
+<td>
+</td>
+<td> 8 Pin Stackable Female Header (non stackables can be used with plated through holes)
+</td>
+<td> 5
+</td>
+<td>
+</td>
+<td>
+</td>
+<td> <a rel="nofollow" class="external text" href="http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&amp;site=CA&amp;KeyWords=S7041-ND">S7041-ND</a> (CONN HEADER FEMALE 8POS .1" GOLD) - Not Stackable
+</td></tr>
+<tr>
+<td>
+</td>
+<td> 6 Pin Stackable Female Header (non stackables can be used with plated through holes)
+</td>
+<td> 1
+</td>
+<td>
+</td>
+<td>
+</td>
+<td> <a rel="nofollow" class="external text" href="http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&amp;site=CA&amp;KeyWords=S7039-ND">S7039-ND</a> (CONN HEADER FEMALE 6POS .1" GOLD) - Not Stackable
+</td></tr>
+<tr>
+<td>
+</td>
+<td> 24 Pin Female Header * Note *
+</td>
+<td> 2
+</td>
+<td> Required to carry enough current for motors
+</td>
+<td>
+</td>
+<td> <a rel="nofollow" class="external text" href="http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&amp;site=CA&amp;KeyWords=S7057-ND">S7057-ND</a> (CONN HEADER FMALE 24POS .1" GOLD) - Rated @ 3A / Pin
+</td></tr>
+<tr>
+<td>
+</td>
+<td> 8 Pin Female Header * Note *
+</td>
+<td> 4
+</td>
+<td> Required to carry enough current for motors
+</td>
+<td>
+</td>
+<td> <a rel="nofollow" class="external text" href="http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&amp;site=CA&amp;KeyWords=S7041-ND">S7041-ND</a> (CONN HEADER FEMALE 8POS .1" GOLD) - Rated @ 3A / Pin
+</td></tr>
+<tr>
+<td>
+</td>
+<td> 0.1" Jumpers
+</td>
+<td> 15
+</td>
+<td>
+</td>
+<td>
+</td>
+<td> <a rel="nofollow" class="external text" href="http://search.digikey.com/scripts/DkSearch/dksus.dll?lang=en&amp;site=CA&amp;KeyWords=A26242-ND">A26242-ND</a> (SHUNT LP W/HANDLE 2 POS 30AU)
+</td></tr>
+<tr>
+<td>
+</td>
+<td> Circuit Board
+</td>
+<td>1
+</td>
+<td>v1.4
+</td>
+<td>
+</td>
+<td>N/A
+</td></tr></tbody></table>
+<p>Note * You can use Female Headers which are not the exact size, but 
+they are hard to break/cut so in this case buy some extra! (one wasted 
+header per cut)
+</p><p>A BOM for sourcing the RAMPS components from Mouser is also available in <a rel="nofollow" class="external text" href="https://docs.google.com/spreadsheet/ccc?key=0Auf-66FPv0JidHhtRVB0VVplOURwWklrX0tIeXhsS3c&amp;hl=en_US#gid=0">this google spreadsheet</a> (This list is incomplete and has missing or incorrect quantities.)
+</p><p>Shopping lists for v1.4 <a rel="nofollow" class="external autonumber" href="http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=d126a71257">[1]</a> .
+</p>
+<h1><span class="mw-headline" id="BT_Extension">BT Extension</span></h1>
+<dl><dd> <i>main article: <a href="https://reprap.org/wiki/Jy-mcu" title="Jy-mcu">jy-mcu</a></i></dd></dl>
+<p>In order to get rid of the USB connection between RAMPS and the PC, 
+you may like to use Bluetooth. There is a cheap module available in the 
+market called 'JY-MCU' (vendor Shenzhen Jiayuan Electronic Co.,Ltd.).
+</p><p><a href="https://reprap.org/wiki/File:Jy-mcu_f.jpg" class="image"><img alt="Jy-mcu f.jpg" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-Jy-mcu_f.jpg" srcset="/mediawiki/images/thumb/5/54/Jy-mcu_f.jpg/450px-Jy-mcu_f.jpg 1.5x, /mediawiki/images/thumb/5/54/Jy-mcu_f.jpg/600px-Jy-mcu_f.jpg 2x" width="300" height="124"></a> <a href="https://reprap.org/wiki/File:Jy-mcu_b.jpg" class="image"><img alt="Jy-mcu b.jpg" src="RAMPS%201.4%20-%20RepRap_fichiers/300px-Jy-mcu_b.jpg" srcset="/mediawiki/images/thumb/d/d0/Jy-mcu_b.jpg/450px-Jy-mcu_b.jpg 1.5x, /mediawiki/images/thumb/d/d0/Jy-mcu_b.jpg/600px-Jy-mcu_b.jpg 2x" width="300" height="123"></a>
+</p>
+<h2><span class="mw-headline" id="Change_module_setting">Change module setting</span></h2>
+<p>Before the module can be used, the default setting has to be changed.
+ You can connect to and modify the BT JY-MCU module settings via the 
+Arduino mega 2560 using the pin 10 and pin 9 as Rx and Tx terminals, 
+respectively. Make sure you connect Rx on the BT module to the Tx on the
+ arduino and vice versa, in other words Rx goes to Tx and vice versa. 
+Upload the simple code to arduino located on an instructable entitled 
+"Success-Using-the-JY-MCU-linvor-Bluetooth-Module". Use the serial 
+monitor within arduino IDE or another terminal program, with baudrate 
+set to 9600 and 'No Line Ending' selected, enter the following commands:
+  
+</p><p>AT   - the response should be OK (If you see weird characters, the baudrate is wrong--&gt; try a different one
+</p><p>AT+NAMExxxx - Where xxxx is the friendly name of the module
+</p><p>AT+BAUDx - Where x sets the baud rate (values &amp; baud rates below)
+</p><p>AT+VERSION - Returns the firmware version
+</p><p>AT+PINxxxx - Sets a new pairing code (default: 1234)
+</p><p>1——1200   
+2——2400   
+3——4800   
+4——9600 
+5——19200 
+6——38400 
+7——57600 
+8——115200
+</p><p>Alternatively, you can connect to the module from PC via 
+USB&lt;-&gt;RS232 (RxD/TxD) interface with default settings (9600, N, 8,
+ 1). The module shouldn't be paired at that moment. Use the same AT 
+commands as above.
+</p><p>More details about the configuration you will find here [<a rel="nofollow" class="external autonumber" href="https://reprap.org/wiki/Melzi#Connect_via_Bluetooth">[2]</a>]
+</p><p>Troubleshooting:
+If you see weird characters, the baudrate is wrong--&gt; try a different one
+Make sure your Tx and Rx are not mixed up
+Make sure you have the proper resistors installed
+</p>
+<h2><span class="mw-headline" id="Wiring_2">Wiring</span></h2>
+<p>On RAMPS/Arduino Mega the UART level are 5V but the BT module 
+supports only 3.3V input. Therefore the TxD level has to be divided by 
+resistor. This passive solution is fast enough for 115kBaud. Overall 
+only 4 wires have to be soldered. 
+</p><p><a href="https://reprap.org/wiki/File:BT_Connection_RAMPS1.4.png" class="image"><img alt="BT Connection RAMPS1.4.png" src="RAMPS%201.4%20-%20RepRap_fichiers/400px-BT_Connection_RAMPS1.png" srcset="/mediawiki/images/thumb/a/ac/BT_Connection_RAMPS1.4.png/600px-BT_Connection_RAMPS1.4.png 1.5x, /mediawiki/images/thumb/a/ac/BT_Connection_RAMPS1.4.png/800px-BT_Connection_RAMPS1.4.png 2x" width="400" height="405"></a>
+</p>
+<h2><span class="mw-headline" id="Connect_via_Bluetooth">Connect via Bluetooth</span></h2>
+<p>Once you have setup your BT devices you can select from drop down list and control your RepRap as usual.
+</p>
+<h2><span class="mw-headline" id="RAMPS_1.4_test_code">RAMPS 1.4 test code</span></h2>
+<pre>#define X_STEP_PIN         54
+#define X_DIR_PIN          55
+#define X_ENABLE_PIN       38
+#define X_MIN_PIN           3
+#define X_MAX_PIN           2
+
+#define Y_STEP_PIN         60
+#define Y_DIR_PIN          61
+#define Y_ENABLE_PIN       56
+#define Y_MIN_PIN          14
+#define Y_MAX_PIN          15
+
+#define Z_STEP_PIN         46
+#define Z_DIR_PIN          48
+#define Z_ENABLE_PIN       62
+#define Z_MIN_PIN          18
+#define Z_MAX_PIN          19
+
+#define E_STEP_PIN         26
+#define E_DIR_PIN          28
+#define E_ENABLE_PIN       24
+
+#define Q_STEP_PIN         36
+#define Q_DIR_PIN          34
+#define Q_ENABLE_PIN       30
+
+#define SDPOWER            -1
+#define SDSS               53
+#define LED_PIN            13
+
+#define FAN_PIN            9
+
+#define PS_ON_PIN          12
+#define KILL_PIN           -1
+
+#define HEATER_0_PIN       10
+#define HEATER_1_PIN       8
+#define TEMP_0_PIN          13   // ANALOG NUMBERING
+#define TEMP_1_PIN          14   // ANALOG NUMBERING
+
+void setup() {
+  pinMode(FAN_PIN , OUTPUT);
+  pinMode(HEATER_0_PIN , OUTPUT);
+  pinMode(HEATER_1_PIN , OUTPUT);
+  pinMode(LED_PIN  , OUTPUT);
+  
+  pinMode(X_STEP_PIN  , OUTPUT);
+  pinMode(X_DIR_PIN    , OUTPUT);
+  pinMode(X_ENABLE_PIN    , OUTPUT);
+  
+  pinMode(Y_STEP_PIN  , OUTPUT);
+  pinMode(Y_DIR_PIN    , OUTPUT);
+  pinMode(Y_ENABLE_PIN    , OUTPUT);
+  
+  pinMode(Z_STEP_PIN  , OUTPUT);
+  pinMode(Z_DIR_PIN    , OUTPUT);
+  pinMode(Z_ENABLE_PIN    , OUTPUT);
+  
+  pinMode(E_STEP_PIN  , OUTPUT);
+  pinMode(E_DIR_PIN    , OUTPUT);
+  pinMode(E_ENABLE_PIN    , OUTPUT);
+  
+  pinMode(Q_STEP_PIN  , OUTPUT);
+  pinMode(Q_DIR_PIN    , OUTPUT);
+  pinMode(Q_ENABLE_PIN    , OUTPUT);
+  
+   digitalWrite(X_ENABLE_PIN    , LOW);
+   digitalWrite(Y_ENABLE_PIN    , LOW);
+   digitalWrite(Z_ENABLE_PIN    , LOW);
+   digitalWrite(E_ENABLE_PIN    , LOW);
+   digitalWrite(Q_ENABLE_PIN    , LOW);
+}
+
+void loop () {
+  
+  if (millis()&nbsp;%1000 &lt;500) 
+    digitalWrite(LED_PIN, HIGH);
+  else
+    digitalWrite(LED_PIN, LOW);
+  
+  if (millis()&nbsp;%1000 &lt;300) {
+    digitalWrite(HEATER_0_PIN, HIGH);
+    digitalWrite(HEATER_1_PIN, LOW);
+    digitalWrite(FAN_PIN, LOW);
+  } else if (millis()&nbsp;%1000 &lt;600) {
+    digitalWrite(HEATER_0_PIN, LOW);
+    digitalWrite(HEATER_1_PIN, HIGH);
+    digitalWrite(FAN_PIN, LOW);
+  } else  {
+    digitalWrite(HEATER_0_PIN, LOW);
+    digitalWrite(HEATER_1_PIN, LOW);
+    digitalWrite(FAN_PIN, HIGH);
+  }
+ 
+  if (millis()&nbsp;%10000 &lt;5000) {
+    digitalWrite(X_DIR_PIN    , HIGH);
+    digitalWrite(Y_DIR_PIN    , HIGH);
+    digitalWrite(Z_DIR_PIN    , HIGH);
+    digitalWrite(E_DIR_PIN    , HIGH);
+    digitalWrite(Q_DIR_PIN    , HIGH);
+  }
+  else {
+    digitalWrite(X_DIR_PIN    , LOW);
+    digitalWrite(Y_DIR_PIN    , LOW);
+    digitalWrite(Z_DIR_PIN    , LOW);
+    digitalWrite(E_DIR_PIN    , LOW);
+    digitalWrite(Q_DIR_PIN    , LOW);
+  } 
+ 
+  digitalWrite(X_STEP_PIN    , HIGH);
+  digitalWrite(Y_STEP_PIN    , HIGH);
+  digitalWrite(Z_STEP_PIN    , HIGH);
+  digitalWrite(E_STEP_PIN    , HIGH);
+  digitalWrite(Q_STEP_PIN    , HIGH); 
+  delay(1);
+  
+  digitalWrite(X_STEP_PIN    , LOW);
+  digitalWrite(Y_STEP_PIN    , LOW);
+  digitalWrite(Z_STEP_PIN    , LOW);
+  digitalWrite(E_STEP_PIN    , LOW);
+  digitalWrite(Q_STEP_PIN    , LOW);  
+}
+</pre>
+<h1><span class="mw-headline" id="Where_to_get">Where to get</span></h1>
+<ul><li> <a rel="nofollow" class="external text" href="http://www.reprap.cc/shop/de/content/ramps-14">Reprap Austria</a> (worldwide free shipping)</li>
+<li> <a rel="nofollow" class="external text" href="http://www.makerfarm.com/index.php/printer-electronics/ramps.html">Maker Farm Inc</a> USA - (worldwide shipping)</li>
+<li> <a rel="nofollow" class="external text" href="http://store.thingibox.com/es/electricidad/38-ramps_14.html">Thingibox</a> Spain - (worldwide shipping)</li>
+<li> <a rel="nofollow" class="external text" href="https://reprap.pt/pecas/eletronica/ramps-1-4">RepRap.PT</a> Portugal</li>
+<li> <a rel="nofollow" class="external text" href="http://www.reprap.me/electronic/ramps.html">RepRap.me Denmark</a> (worldwide shipping)</li>
+<li> <a rel="nofollow" class="external text" href="https://www.tindie.com/products/staticboards/ramps-14-sb-premium/">RAMPS 1.4 Manufactured in Europe with high quality parts for long printing hours</a> - (worldwide shipping)</li>
+<li> <a rel="nofollow" class="external text" href="https://taotac.com/sanpham/ramps/">TaoTac.com</a></li>
+<li> <a rel="nofollow" class="external text" href="http://www.reprap.cn/">HE3D</a></li>
+<li> <a rel="nofollow" class="external text" href="http://twelvepro.com/index.php?route=product/product&amp;path=67&amp;product_id=83">Twelvepro</a></li>
+<li> <a rel="nofollow" class="external text" href="https://www.fabberworld.com/ramps-1-4">Fabberworld</a></li>
+<li> <a rel="nofollow" class="external text" href="http://aus3d.com.au/ramps-14">Aus3D</a></li>
+<li> <a rel="nofollow" class="external text" href="https://www.diy-india.com/">DIY-India.com</a> (India)</li></ul>
+<h1><span class="mw-headline" id="RAMPS_1.4.2">RAMPS 1.4.2</span></h1>
+<p><a href="https://reprap.org/wiki/File:RAMPS_1.4.2.jpg" class="image" title="RAMPS 1.4.2"><img alt="RAMPS 1.4.2" src="RAMPS%201.4%20-%20RepRap_fichiers/800px-RAMPS_1.jpg" srcset="/mediawiki/images/thumb/8/81/RAMPS_1.4.2.jpg/1200px-RAMPS_1.4.2.jpg 1.5x, /mediawiki/images/thumb/8/81/RAMPS_1.4.2.jpg/1600px-RAMPS_1.4.2.jpg 2x" width="800" height="513"></a>
+</p><p>RAMPS 1.4.2 has minor changes over RAMPS 1.4. The RAMPS 1.4.2 has below enhancements over 1.4
+</p>
+<ul><li> Standard blade fuses instead of thermal fuses increasing the heat resilience.</li>
+<li> Current carrying improved by increasing the thickness of the cooper at the PCB from 35 to 70 micro meters.</li>
+<li> Suppression caps added to each end-stop to avoid spurious signals.</li>
+<li> Added an additional connector to XY, E1 and E2 to connect a second stepper motor.</li>
+<li> Connector for external reset added.</li>
+<li> Labeled D8, D9,D10 with Heatbed, Extruder 1 Fan and Extruder 2.</li></ul>
+<p>Eagle CAD files: <a rel="nofollow" class="external free" href="https://github.com/GermanRepRap/Ramps-1.4.2">https://github.com/GermanRepRap/Ramps-1.4.2</a>
+</p>
+<h2><span class="mw-headline" id="Where_to_buy_RAMPS_1.4.2">Where to buy RAMPS 1.4.2</span></h2>
+<p>Fully assembled available from <a rel="nofollow" class="external text" href="http://www.germanreprap.com/">German RepRap</a>
+</p><p><a rel="nofollow" class="external text" href="http://store.thingibox.com/en/electrical/38-ramps_14.html">Full assembled and RAMPS-FD</a> from Thingibox.
+</p>
+<h1><span class="mw-headline" id="Modifications.2C_hacks_and_add-ons">Modifications, hacks and add-ons</span></h1>
+<h2><span class="mw-headline" id="Using_24v_on_RAMPS">Using 24v on RAMPS</span></h2>
+<p>Details can be found on this page <a rel="nofollow" class="external free" href="https://reprap.org/wiki/RAMPS_24v">http://reprap.org/wiki/RAMPS_24v</a>
+</p>
+<h2><span class="mw-headline" id="Adding_LEDS_to_RAMPS">Adding LEDS to RAMPS</span></h2>
+<p>Details can be found on this page <a rel="nofollow" class="external free" href="https://reprap.org/wiki/RAMPS_LEDs">http://reprap.org/wiki/RAMPS_LEDs</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20200712185424
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.093 seconds
+Real time usage: 0.098 seconds
+Preprocessor visited node count: 463/1000000
+Preprocessor generated node count: 1519/1000000
+Post‐expand include size: 4891/2097152 bytes
+Template argument size: 975/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    7.068      1 -total
+ 44.42%    3.140      1 Template:Languages
+ 34.48%    2.437      1 Template:Development
+ 18.48%    1.306      1 Template:RAMPS
+ 10.82%    0.765      1 Template:Notice2
+  8.42%    0.595      2 Template:Tag
+-->
+</div>
+<!-- Saved in parser cache with key mediawiki:pcache:idhash:11304-0!canonical and timestamp 20200712185423 and revision id 187806
+ -->
+</div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4&amp;oldid=187806">https://reprap.org/mediawiki/index.php?title=RAMPS_1.4&amp;oldid=187806</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://reprap.org/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="https://reprap.org/wiki/Category:Working_developments" title="Category:Working developments">Working developments</a></li><li><a href="https://reprap.org/wiki/Category:RAMPS" title="Category:RAMPS">RAMPS</a></li><li><a href="https://reprap.org/wiki/Category:8/16-bit_board" title="Category:8/16-bit board">8/16-bit board</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-createaccount"><a href="https://reprap.org/mediawiki/index.php?title=Special:CreateAccount&amp;returnto=RAMPS+1.4" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://reprap.org/mediawiki/index.php?title=Special:UserLogin&amp;returnto=RAMPS+1.4" title="You are encouraged to log in; however, it is not mandatory [Alt+Maj+o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+														<li id="ca-nstab-main" class="selected"><span><a href="https://reprap.org/wiki/RAMPS_1.4" title="View the content page [Alt+Maj+c]" accesskey="c">Page</a></span></li>
+							<li id="ca-talk"><span><a href="https://reprap.org/wiki/Talk:RAMPS_1.4" rel="discussion" title="Discussion about the content page [Alt+Maj+t]" accesskey="t">Discussion</a></span></li>
+						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label" tabindex="0">
+							<span>Variants</span>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+														<li id="ca-view" class="selected"><span><a href="https://reprap.org/wiki/RAMPS_1.4">Read</a></span></li>
+							<li id="ca-viewsource"><span><a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4&amp;action=edit" title="This page is protected.
+You can view its source [Alt+Maj+e]" accesskey="e">View source</a></span></li>
+							<li id="ca-history" class="collapsible"><span><a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4&amp;action=history" title="Past revisions of this page [Alt+Maj+h]" accesskey="h">View history</a></span></li>
+						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label" style="">
+						<h3 id="p-cactions-label" tabindex="0"><span>More</span></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="/mediawiki/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search RepRap" title="Search RepRap [Alt+Maj+f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Special:Search" name="title"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="https://reprap.org/wiki/Main_Page" title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-Main-Page"><a href="https://reprap.org/wiki/RepRap">Main Page</a></li><li id="n-Build-a-RepRap"><a href="https://reprap.org/wiki/RepRap_Options">Build a RepRap</a></li><li id="n-Glossary"><a href="https://reprap.org/wiki/Glossary">Glossary</a></li><li id="n-Reference"><a href="https://reprap.org/wiki/Reference">Reference</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Participation" aria-labelledby="p-Participation-label">
+			<h3 id="p-Participation-label">Participation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-Recent-Changes"><a href="https://reprap.org/wiki/Special:RecentChanges">Recent Changes</a></li><li id="n-Get-a-Wiki-account"><a href="https://reprap.org/forum/read.php?1,641102" rel="nofollow">Get a Wiki account</a></li><li id="n-Create-a-new-page"><a href="https://reprap.org/wiki/Very_Messy_Example">Create a new page</a></li><li id="n-Donation-Page"><a href="https://sourceforge.net/donate/index.php?group_id=159590" rel="nofollow">Donation Page</a></li><li id="n-Policy"><a href="https://reprap.org/wiki/Policy">Policy</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Community" aria-labelledby="p-Community-label">
+			<h3 id="p-Community-label">Community</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-RepRap-Forum"><a href="https://reprap.org/forum/" rel="nofollow">RepRap Forum</a></li><li id="n-RepRap-IRC"><a href="https://reprap.org/wiki/IRC">RepRap IRC</a></li><li id="n-Development-Index"><a href="https://reprap.org/wiki/Development">Development Index</a></li><li id="n-RepRap-User-Groups"><a href="https://reprap.org/forum/index.php?19" rel="nofollow">RepRap User Groups</a></li><li id="n-Community-Portal"><a href="https://reprap.org/wiki/Community_portal">Community Portal</a></li><li id="n-Licence"><a href="https://reprap.org/wiki/RepRapGPLLicence">Licence</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://reprap.org/wiki/Special:WhatLinksHere/RAMPS_1.4" title="A list of all wiki pages that link here [Alt+Maj+j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://reprap.org/wiki/Special:RecentChangesLinked/RAMPS_1.4" rel="nofollow" title="Recent changes in pages linked from this page [Alt+Maj+k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="https://reprap.org/wiki/Special:SpecialPages" title="A list of all special pages [Alt+Maj+q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4&amp;printable=yes" rel="alternate" title="Printable version of this page [Alt+Maj+p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4&amp;oldid=187806" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://reprap.org/mediawiki/index.php?title=RAMPS_1.4&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="https://reprap.org/mediawiki/index.php?title=Special:CiteThisPage&amp;page=RAMPS_1.4&amp;id=187806" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last edited on 6 May 2020, at 13:36.</li>
+											<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License</a> unless otherwise noted.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://reprap.org/wiki/RepRap:Privacy_policy" title="RepRap:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="https://reprap.org/wiki/RepRap:About" class="mw-redirect" title="RepRap:About">About RepRap</a></li>
+											<li id="footer-places-disclaimer"><a href="https://reprap.org/wiki/RepRap:General_disclaimer" title="RepRap:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://www.gnu.org/copyleft/fdl.html"><img src="RAMPS%201.4%20-%20RepRap_fichiers/gnu-fdl.png" alt="GNU Free Documentation License" width="88" height="31"></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="https://www.mediawiki.org/"><img src="RAMPS%201.4%20-%20RepRap_fichiers/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/mediawiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /mediawiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.093","walltime":"0.098","ppvisitednodes":{"value":463,"limit":1000000},"ppgeneratednodes":{"value":1519,"limit":1000000},"postexpandincludesize":{"value":4891,"limit":2097152},"templateargumentsize":{"value":975,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%    7.068      1 -total"," 44.42%    3.140      1 Template:Languages"," 34.48%    2.437      1 Template:Development"," 18.48%    1.306      1 Template:RAMPS"," 10.82%    0.765      1 Template:Notice2","  8.42%    0.595      2 Template:Tag"]},"cachereport":{"timestamp":"20200712185424","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":143});});</script>
+	
+
+<div style="display: none; font-size: 13px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body></html>

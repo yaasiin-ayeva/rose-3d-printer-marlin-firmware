@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Triffid Hunter's Calibration Guide - RepRap</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Triffid_Hunter's_Calibration_Guide","wgTitle":"Triffid Hunter's Calibration Guide","wgCurRevisionId":184227,"wgRevisionId":184227,"wgArticleId":12027,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Calibration","Reference","Tutorials"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Triffid_Hunter's_Calibration_Guide","wgRelevantArticleId":12027,"wgRequestId":"60b91059df94136fb3efe8f4","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@0bhc5ha",function($,jQuery,require,module){mw.user.options.set([]);});mw.loader.implement("user.tokens@08dmhpw",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/
+
+});mw.loader.load(["site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="Triffid%20Hunter's%20Calibration%20Guide%20-%20RepRap_fichiers/load.css">
+<script async="" src="Triffid%20Hunter's%20Calibration%20Guide%20-%20RepRap_fichiers/load_002.php"></script>
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:solid 1px #aaa;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:solid 1px #aaa;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#4c59a6;color:#fff}.suggestions-special .special-label{color:#808080;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c0c0c0}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	#toc.tochidden,.toc.tochidden,.toctoggle{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="Triffid%20Hunter's%20Calibration%20Guide%20-%20RepRap_fichiers/load_002.css">
+<meta name="generator" content="MediaWiki 1.30.0">
+<link rel="shortcut icon" href="https://reprap.org/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://reprap.org/mediawiki/opensearch_desc.php" title="RepRap (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://reprap.org/mediawiki/api.php?action=rsd">
+<link rel="license" href="https://www.gnu.org/copyleft/fdl.html">
+<link rel="alternate" type="application/atom+xml" title="RepRap Atom feed" href="https://reprap.org/mediawiki/index.php?title=Special:RecentChanges&amp;feed=atom">
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.min.js"></script><![endif]-->
+<script src="Triffid%20Hunter's%20Calibration%20Guide%20-%20RepRap_fichiers/load.php"></script></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Triffid_Hunter_s_Calibration_Guide rootpage-Triffid_Hunter_s_Calibration_Guide skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+						<div class="mw-indicators mw-body-content">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Triffid Hunter's Calibration Guide</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub" class="noprint">From RepRap</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><div class="mw-parser-output"><div class="LanguageLinks">
+<table style="clear: both; border-collapse: collapse; padding: 0; margin: 0; font-size: 85%;" width="100%">
+<tbody><tr style="background: #ffffff" valign="top">
+<td style="padding: 1px 1em 0; background: #ffffff;">
+<p><a class="mw-selflink selflink">English</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/ar&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/ar (page does not exist)">العربية</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/bg&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/bg (page does not exist)">български</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/ca&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/ca (page does not exist)">català</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/cs&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/cs (page does not exist)">čeština</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/wiki/Triffid_Hunter%27s_Calibration_Guide/de" title="Triffid Hunter's Calibration Guide/de">Deutsch</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/el&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/el (page does not exist)">Ελληνικά</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/wiki/Triffid_Hunter%27s_Calibration_Guide/es" title="Triffid Hunter's Calibration Guide/es">español</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/fa&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/fa (page does not exist)">فارسی</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/wiki/Triffid_Hunter%27s_Calibration_Guide/fr" title="Triffid Hunter's Calibration Guide/fr">français</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/hr&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/hr (page does not exist)">hrvatski</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/hu&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/hu (page does not exist)">magyar</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/it&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/it (page does not exist)">italiano</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/ro&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/ro (page does not exist)">română</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/ja&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/ja (page does not exist)">日本語</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/kr&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/kr (page does not exist)">한국어</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/lt&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/lt (page does not exist)">lietuvių</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/nl&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/nl (page does not exist)">Nederlands</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/no&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/no (page does not exist)">norsk</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/pl&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/pl (page does not exist)">polski</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/pt&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/pt (page does not exist)">português</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/wiki/Triffid_Hunter%27s_Calibration_Guide/ru" title="Triffid Hunter's Calibration Guide/ru">русский</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/tr&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/tr (page does not exist)">Türkçe</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/ua&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/ua (page does not exist)">українська</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/zh_cn&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/zh cn (page does not exist)">中文（中国大陆）‎</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/zh_tw&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/zh tw (page does not exist)">中文（台灣）‎</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/he&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/he (page does not exist)">עברית</a>&nbsp;•&nbsp;
+<a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide/az&amp;action=edit&amp;redlink=1" class="new" title="Triffid Hunter's Calibration Guide/az (page does not exist)">azərbaycanca</a>&nbsp;•&nbsp;
+</p>
+</td></tr></tbody></table></div>
+<p><br>
+</p>
+<div id="toc" class="toc"><div class="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a role="button" tabindex="0" class="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Prerequisites"><span class="tocnumber">1</span> <span class="toctext">Prerequisites</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#XY_steps"><span class="tocnumber">2</span> <span class="toctext">XY steps</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Z_steps"><span class="tocnumber">3</span> <span class="toctext">Z steps</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#E_steps"><span class="tocnumber">4</span> <span class="toctext">E steps</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Calculate"><span class="tocnumber">4.1</span> <span class="toctext">Calculate</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Measure"><span class="tocnumber">4.2</span> <span class="toctext">Measure</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Z_height"><span class="tocnumber">5</span> <span class="toctext">Z height</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Slicer_settings"><span class="tocnumber">6</span> <span class="toctext">Slicer settings</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Layer_height.2C_Extrusion_width"><span class="tocnumber">6.1</span> <span class="toctext">Layer height, Extrusion width</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Nozzle_Temperature"><span class="tocnumber">7</span> <span class="toctext">Nozzle Temperature</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Bed_Temperature"><span class="tocnumber">8</span> <span class="toctext">Bed Temperature</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#E_Steps_Fine_Tuning"><span class="tocnumber">9</span> <span class="toctext">E Steps Fine Tuning</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Finish"><span class="tocnumber">10</span> <span class="toctext">Finish</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Final_Polish:_Bed_Center"><span class="tocnumber">11</span> <span class="toctext">Final Polish: Bed Center</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Optional:_Switch_to_volumetric_E_units"><span class="tocnumber">12</span> <span class="toctext">Optional: Switch to volumetric E units</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#Rationale"><span class="tocnumber">12.1</span> <span class="toctext">Rationale</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Prerequisites">Prerequisites</span></h2>
+<ol><li> A tool to precisely measure 100mm. A vernier caliper is ideal.</li>
+<li> A tool to precisely measure something 0.5mm wide. A micrometer is ideal, but a vernier caliper will do.</li>
+<li> Know your stepper motors' <b>full steps per revolution</b> value. steps = 360 / angle, so 1.8° = 200 steps, 0.9° = 400 steps, etc.</li>
+<li> Know your <b>stepper drivers' microsteps</b> setting. Most Pololus are set to 16x. GEN3 driver 2.3 is fixed to 2 (half step). Some boards have 32x.</li>
+<li> Know the number of <b>teeth on your pulleys</b>. Standard printed 
+pulleys have 8 teeth. Most machined pulleys have 10 or 12 teeth since 8 
+tooth is technically too small for T5 belt</li>
+<li> Know your <b>belt pitch</b>! XL and T5 belts /look/ the same, but the difference is important!</li>
+<li> Know the number of <b>teeth on your extruder gears</b>, or at least the gear ratio.</li>
+<li> Remove all sources of backlash. Your parts won't be usable as calibration pieces if you have lash!</li>
+<li> Open the <a rel="nofollow" class="external text" href="http://prusaprinters.org/calculator/">Online RepRap Calculator</a> to find XY and E steps, layer heights, and acceleration.</li></ol>
+<h2><span class="mw-headline" id="XY_steps">XY steps</span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="https://reprap.org/wiki/File:Teacup_Configtool_Belt_Calculator.png" class="image"><img alt="" src="Triffid%20Hunter's%20Calibration%20Guide%20-%20RepRap_fichiers/300px-Teacup_Configtool_Belt_Calculator.png" class="thumbimage" srcset="/mediawiki/images/thumb/2/2b/Teacup_Configtool_Belt_Calculator.png/450px-Teacup_Configtool_Belt_Calculator.png 1.5x, /mediawiki/images/2/2b/Teacup_Configtool_Belt_Calculator.png 2x" width="300" height="188"></a>  <div class="thumbcaption"><div class="magnify"><a href="https://reprap.org/wiki/File:Teacup_Configtool_Belt_Calculator.png" class="internal" title="Enlarge"></a></div><a href="https://reprap.org/wiki/Teacup_Firmware" title="Teacup Firmware">Teacup Firmware</a>'s Configtool comes with a steps/mm calculator. Values from there are usable for other firmwares, too.</div></div></div>
+<p>Assuming you're using belts and pulleys, the XY steps-per-mm can be 
+accurately calculated using your motor, pulley, and belt 
+characteristics, and once set they shouldn't need to be calibrated 
+further. But there's no harm in making sure! <b>If you've calculated 
+this value correctly but your objects come out the wrong size by a 
+noticeable amount, your belts may be damaged or something else is awry!</b>
+</p><p>The basic formula is:
+</p><p>&lt;math&gt;steps/mm = \frac{motor\ steps\ per\ rev * driver\ microstep}{belt\ pitch * pulley\ number\ of\ teeth}&lt;/math&gt;
+</p><p>Some common examples:
+</p>
+<pre>// NEMA 17 motor with T2 belt and 20-tooth pulley:
+(200 * 16) / (2 * 20) = 80.0
+
+// NEMA 17 motor with T5 belt and 8-tooth pulley:
+(200 * 16) / (5 * 8) = 80.0
+
+// NEMA 17 motor with XL belt and 8-tooth pulley:
+(200 * 16) / (5.08 * 8) = 78.74
+</pre>
+<h2><span class="mw-headline" id="Z_steps">Z steps</span></h2>
+<p>Most RepRap printers use a pair of threaded rods for the Z axis. So 
+to calculate how far the Z axis moves for each revolution of the motor, 
+first you need to know how much rotation is being transmitted to the Z 
+rods, and then use the "thread pitch" of the rod 
+(distance-per-revolution) to determine the vertical motion.
+</p><p>The basic formula to calculate motion on a rotating rod is:
+</p>
+<pre> steps_per_mm = (motor_steps_per_rev * driver_microstep) / thread_pitch 
+</pre>
+<p>Some common examples:
+</p>
+<pre>// NEMA 17 with standard pitch M5 threaded rod:
+(200 * 16) / 0.8 = 4000
+
+// NEMA 17 with standard pitch M8 threaded rod:
+(200 * 16) / 1.25 = 2560
+
+// NEMA 17 with SAE 5/16" threaded rod. It has 18 threads per inch (25.4mm / 18):
+(200 * 16) / (25.4 / 18) = 2267.7165355
+</pre>
+<p>Some printers connect the Z motor to the Z rods with a belt and 
+pulleys. As long as the pulleys have the same diameter the above formula
+ will work. But if the pulleys differ you'll need to include this ratio 
+in the final result. For example, if the motor pulley was half the size 
+of the rod pulley, you would need to multiply the final result by 2.
+</p>
+<h2><span class="mw-headline" id="E_steps">E steps</span></h2>
+<p>There are an increasingly wide variety of motors and extruder setups 
+to choose from. "Wade" extruders use a NEMA motor to drive a large 
+reduction gear that turns a "hobbed bolt." Direct-drive extruders 
+typically use a motor with a planetary gearbox to turn a drive gear, 
+such as the popular MK7 and <a href="https://reprap.org/wiki/MK8" class="mw-redirect" title="MK8">MK8</a>.
+ Bowden setups can use either method to push the filament through a tube
+ to the hot end. There are others, such as worm drives, but we won't get
+ into those here.
+</p>
+<h3><span class="mw-headline" id="Calculate">Calculate</span></h3>
+<p>For a typical Wade extruder, the hobbed bolt will be made from an M8 
+bolt, and its "effective diameter" will be around 7mm. The direct-drive 
+MK7 gear is specified as having an effective diameter of 10.56mm. These 
+are just starting points to get close to the correct value, and then 
+you'll measure and calibrate to get the exact value later.
+</p><p>The standard formula is:
+</p>
+<pre> e_steps_per_mm = (motor_steps_per_rev * driver_microstep) * (big_gear_teeth / small_gear_teeth) / (hob_effective_diameter * pi)
+</pre>
+<p>Some typical examples:
+</p>
+<pre>// Classic Wade with a 39:11 gear ratio
+(200 * 16) * (39 / 11) / (7 * 3.14159) = 515.91048
+
+// Gregstruder with a 51:11 gear ratio
+(200 * 16) * (51 / 11) / (7 * 3.14159) = 674.65217
+
+// Gregstruder with a 43:10 gear ratio
+(200 * 16) * (43 / 10) / (7 * 3.14159) = 625.70681
+
+// MK7 Direct Drive with 2engineers 50:1 planetary gear motor
+(48 * 16) * (50 / 1) / (10.56 * 3.14159) = 1157.49147
+
+// AndrewBCN Ultimate Greg's Wade's Geared Extruder (thing:961630) on RAMPs
+(200 * 16) * (45 / 11) / (7 * 3.14159) = 595.280818 
+
+// RepRapPro Mendel Mini Extruder on RAMPs
+(200 * 16) * (61 / 13) / (7 * 3.14159) = 682.79
+</pre>
+<h3><span class="mw-headline" id="Measure">Measure</span></h3>
+<p>Required tools: vernier caliper with depth gauge, or similar tool 
+that can precisely measure 100mm. Your hob effective diameter is 
+unlikely to be exactly 7mm.
+</p>
+<ol><li> Remove the hot-end from extruder so you don't waste filament.</li>
+<li> Feed in some filament.</li>
+<li> Using the extruder body as a reference point, mark the filament at 120mm.</li>
+<li> Tell the printer to feed 100mm of filament.</li>
+<li> Measure the distance from the extruder body to the mark you made. 
+It will be over 20mm if it moved too little, under if it moved too far.</li>
+<li> <pre>new_e_steps = old_e_steps * (100 / distance_actually_moved) … or, old_e_steps * (100 / (120 - distance_to_mark))</pre></li>
+<li> Set this value in your firmware. You may need to re-flash your board. Sprinter/Marlin supports M92 E<i>nnn</i> to set this value temporarily.</li>
+<li> Repeat from Step 3 until you get between 96-104mm. Then continue with this guide. You'll dial it in perfectly later on.</li>
+<li> <b>Don't flash firmware yet.</b> There's a further refinement to this value below. <i>Why?</i>
+ The back-pressure from the hot-end alters how much plastic each hob 
+revolution pushes, and you'll probably end up tightening your idler more
+ which reduces the hob effective diameter.</li>
+<li> Re-attach hot end.</li></ol>
+<h2><span class="mw-headline" id="Z_height">Z height</span></h2>
+<p>A full guide is available at <a href="https://reprap.org/wiki/Leveling_the_Print_Bed" title="Leveling the Print Bed">Leveling_the_Print_Bed</a>.
+</p><p>At Z=0, you should be able to have a single piece of paper 
+between your nozzle and the bed, and move it with a little "grabbing" 
+but not quite enough to bend the paper when you push it. This is a 
+simple, quick and effective test to use when levelling your bed. This 
+small gap almost perfectly compensates for thermal expansion, which 
+causes your hot-end to actually get longer as it heats up!
+</p><p>Rather than tuning your endstop endlessly, you could simply make a
+ macro that homes Z using the endstop then sends G92 Z-nnn where -nnn is
+ the negative position of your endstop. Your endstop must of course be 
+below Z=0 for this to work. (Not too much, or you may damage the nozzle 
+and/or print-bed!) Ideally in this setup your endstop would be set so 
+that the (cold) nozzle just touches the bed, and then you'd send G92 
+Z=-0.1 (or your measured thermal expansion). Note that most slicing 
+software adds a HOME command followed by G92 Z0 to the starting G-Code, 
+so you will also need to tune your slicing settings to make sure your 
+G-Code homes to Z-nnn. There are now many adjustable Z-endstops 
+available for download, and these can be real time-savers.
+</p><p>When your Z=0 point is set correctly, your bottom layer will be 
+slightly fatter than layers on top, but not extremely so. Most slicing 
+software is set up by default to extrude a little extra material in the 
+first layer, and you can tune this to get the perfect extrusion for your
+ first layer, as well. (See below.)
+</p><p>Bed adhesion is strongly related to the Z=0 point. If you're not 
+getting enough adhesion, print slower with a lower Z=0 point so the 
+first layer is squished more. If you're getting too much adhesion, raise
+ the Z=0 point a little so the first layer isn't quite so squished.
+</p>
+<ol><li> Find the appropriate Z=0 point.</li>
+<li> Send G92 Z0.</li>
+<li> Prepare printer for printing- warm up bed, load filament, etc.</li></ol>
+<h2><span class="mw-headline" id="Slicer_settings">Slicer settings</span></h2>
+<h3><span class="mw-headline" id="Layer_height.2C_Extrusion_width">Layer height, Extrusion width</span></h3>
+<p>These are simple to visualise. When your extruder draws a line of 
+plastic, that line has a height and width. You get to choose these 
+values.
+</p><p>Best results are obtained when layer height &lt; 80% of nozzle diameter, and extrusion width &gt;= nozzle diameter.
+</p><p>Eg; with an 0.35 nozzle, your <b>maximum</b> layer height is 0.35*0.8= <b>0.28mm</b> and your extrusion  width should be 0.4mm or greater.
+with an 0.5mm nozzle, your layer height can be up to 0.4mm, and an 0.25mm nozzle will give you 0.2mm max layer height.
+</p><p><b>You can use a lower layer height or larger extrusion width if you wish, it will work fine</b>. The slicing software automatically calculates the appropriate volume to extrude based on the settings you choose. <b>There is no hard lower limit on layer height</b>
+ - it is limited by your ability to keep flow consistent at very low 
+flowrates. Some reprappers have printed layers as small as 5 micron - 
+0.005mm!
+</p><p>Personally I go for layer height of 0.2mm, and extrusion width of 0.5mm regardless of which nozzle I'm using.
+</p><p>Slic3r automatically chooses an extrusion width for you based on 
+your nozzle diameter. If you're determined to choose, you can use the <i>extrusion width</i>
+ advanced setting. It is frequently advantageous to choose as models may
+ have walls of a particular width, and by choosing you can ensure they 
+are entirely filled with perimeter with no gap in the middle and no 
+infill.
+</p>
+<h2><span class="mw-headline" id="Nozzle_Temperature">Nozzle Temperature</span></h2>
+<p>Each type of plastic, and each colourant for each type of plastic 
+alters the ideal printing temperature. E.g., I can print opaque PLA at 
+165°C with fantastic results, but my translucent PLA prefers 180°C!
+</p><p>Every machine will have different numbers due to differences in 
+thermistor, and how close to barrel temperature your thermistor is 
+actually sensing.
+</p><p>Here's how I find my optimum temperature for each roll of filament that I have:
+</p>
+<ol><li> Choose a fairly simple model that's large enough that you can clearly see the infill while it's printing</li>
+<li> Make sure your hobbed bolt's teeth are clean of debris such as chunks of plastic</li>
+<li> Make sure your idler is tight! really tight! "it hurts my fingers 
+to pull on it and I still can't move it" tight! A too-loose idler gives <i>exactly the same symptoms</i> as too low temperature.</li>
+<li> Start printing</li>
+<li> Lower temperature by 5° every 2-3 layers</li>
+<li> When infill starts being a row of dots instead of a line, increase temperature by 10°.</li>
+<li> Keep monitoring print, increase by 5° if your infill goes dotty 
+again If you find that your prints are weak along the layer lines or 
+even delaminate mid-print, you may need to go higher again. With ABS, 
+wrapping your printer in a towel helps a LOT by keeping out draughts and
+ breezes- but beware any PLA parts caught within!</li>
+<li> Store or remember that temperature for that type of filament</li></ol>
+<h2><span class="mw-headline" id="Bed_Temperature">Bed Temperature</span></h2>
+<p>Bed adhesion is critically important for quality prints. With the right amount of bed adhesion, your parts will:
+</p>
+<ol><li> stick to the bed</li>
+<li> not curl or warp</li>
+<li> not exhibit 'hourglass' warping, and</li>
+<li> detach by themselves when the bed is cool.</li></ol>
+<p>This procedure helps attain 1 through 3 by finding the correct bed 
+surface temperature. 4 is obtained by experimenting with various bed 
+coatings such as PVA wood glue (best for PLA), <a rel="nofollow" class="external text" href="http://forums.reprap.org/read.php?262,189335">UHU Glue</a> (for nylon), automotive window tint, hairspray, <a rel="nofollow" class="external text" href="http://forums.reprap.org/read.php?4,121996">ABS juice</a>, <a rel="nofollow" class="external text" href="http://forums.reprap.org/read.php?4,156005">sugar water</a> (ABS), etc.
+</p>
+<ol><li> Pick a starting temperature. a little too high is better than too low for this test. Suggestions: 110°C for ABS, 65°C for PLA.</li>
+<li> Start a print. If your first layer gets poor adhesion, increase by 3-5° and start again.</li>
+<li> At layer 2, send M104 S0 so your nozzle heater turns off. <b>LEAVE THE BED HEATER ALONE</b>.</li>
+<li> At layer 3, pause the print and move the nozzle away from it. <b>LEAVE THE BED HEATER ALONE</b>.</li>
+<li> Prepare/consume a &lt;favourite beverage&gt; while you wait for bed
+ surface temperature to reach thermal equilibrium. This should take 10 
+minutes at most, generally 5 minutes is plenty.</li>
+<li> Remove the print from your bed. If it is soft or stretchy, your bed
+ temperature is too high. Reduce by 5° and start again. It should behave
+ almost the same as when it is cold.</li>
+<li> When your bed temperature is correct, your part will have hardened 
+while you consumed &lt;favourite beverage&gt; and if you set your bed 
+temperature 5° higher it will remain soft.</li></ol>
+<p>You should generally print your first layer with the bed about 10° 
+hotter than the regular layers' temperature, to ensure that the plastic 
+is very sticky and gets a good grip.
+</p><p>For reference, the SURFACE temperature of your bed (NOT the 
+temperature measured by your sensor) should be around 105°C for ABS, and
+ around 57°C for PLA.
+</p><p>Your thermistor <b>WILL</b> sense a higher temperature than the surface – a gradient of several degrees forms across your glass. <b>DO NOT</b> muck with thermistor tables or move your thermistor to the surface. You <b>WANT</b> it close to the heater so it can respond quickly and give a short feedback loop. Just find <i>whatever number</i> gets the surface to the right temperature, and <i>stick with it</i>!
+</p><p>After performing this procedure, if your prints warp off the bed 
+mid-print at ends or corners, try adding a brim (Slic3r/Cura setting) 
+and experimenting with various bed coatings. PVA wood glue diluted very 
+thinly in water is excellent for PLA, and certain brands of hairspray 
+are reportedly excellent with ABS.
+</p>
+<h2><span class="mw-headline" id="E_Steps_Fine_Tuning">E Steps Fine Tuning</span></h2>
+<p>Now, with everything very close to ideal values, we can finally dial E steps in that final little bit!
+</p>
+<ol><li> Find an object with flat tops on a number of levels, such as <a rel="nofollow" class="external text" href="https://www.thingiverse.com/thing:24238">this cube stack test</a> (scale this object by 250% after loading in Slic3r)</li>
+<li> Slice at 95% rectilinear infill. Use the lowest layer height you're
+ comfortable with - the lower the layer height used for this test, the 
+finer your resulting E steps calibration will be. I use 0.2mm for first 
+run, and if I'm feeling ambitious I'll repeat this process at 0.1mm.</li>
+<li> Print.</li>
+<li> Ignore the first 5-6 layers because they're too sensitive to the exact height of the first layer. If it's <i>obviously</i> over-filling or under-filling, alter E steps or Z=0 point and restart the print.</li>
+<li> Observe infill. If you <b>can't</b> see <i>tiny</i> little gaps between the lines, <b>reduce</b> E steps by 0.5% every 2 layers until you can see tiny gaps.</li>
+<li> Observe solid top layers. If you <b>can</b> see tiny gaps, <b>increase</b> E steps by 0.5% every 2 layers until there's no gaps in the top.</li>
+<li> Send the new E steps to your printer with M92 E<i>nnn</i> <i>without even pausing the print</i> - you will see the result in a couple of layers when the change is this small.</li>
+<li> Goto 5 until the infill has tiny gaps <b>AND</b> the solid top layers do not.</li>
+<li> <b>Now, your E steps value is extremely fine-tuned! Save this value in your firmware's configuration and flash to make permanent.</b></li></ol>
+<h2><span class="mw-headline" id="Finish">Finish</span></h2>
+<p><i> <b>Now</b> </i> print your favourite calibration piece (e.g., <a rel="nofollow" class="external text" href="https://www.thingiverse.com/thing:9804">ultimate calibration</a>) and see how it measures!
+</p>
+<h2><span class="mw-headline" id="Final_Polish:_Bed_Center">Final Polish: Bed Center</span></h2>
+<p>If you find that your prints are not winding up in the center of the 
+bed you may need to configure a "homing offset" to correct the origin 
+point (0,0) which should be in the lower left of your build area.
+</p><p>If after homing your bed with a G28 command your nozzle winds up 
+on the lower left of the printable build area, you should not need any 
+additional tweaking as long as you're able to utilize your entire 
+build-area, if not that may indicate your X_MAX_POS/Y_MAX_POS are set 
+incorrectly.
+</p><p>If however your nozzle homes off the bed you'll need to 
+compensate with a negative value for the X_MIN_POS/Y_MIN_POS indicating 
+the distance from "home position" to the bed area.
+</p><p>Example: My X-Axis has a total travel of &gt; 245mm but my bed is
+ only 200mm wide, my X_MIN_POS is set to -45 so that after 45mm of 
+travel it will end up at 0 on the extreme left side and after 245mm it 
+will be the extreme right.
+</p><p>Also see: <a href="https://reprap.org/wiki/Configuring_Marlin_Bed_Dimensions" title="Configuring Marlin Bed Dimensions">Configuring Marlin Bed Dimensions</a>
+</p>
+<h2><span class="mw-headline" id="Optional:_Switch_to_volumetric_E_units">Optional: Switch to volumetric E units</span></h2>
+<p><i><b>Note:</b> as of Feb 1, 2014, Marlin supports volumetric E units
+ natively, without this modification. Just send an M200 
+D&lt;millimeters&gt; to set filament diameter before your print, and the
+ Marlin settings below are unnecessary. You still need to do step 3 
+(change the filament diameter in your slicer to scale the output to 
+cubic millimeters).</i>
+</p><p>It seems silly to me to have to reskein if you change filament 
+diameter (i.e., when switching colours – or printers!). Follow these 
+instructions if you want to use mm^3 units for E instead of mm.
+</p>
+<ol><li> Record the filament diameter setting you've been using in your slicer.</li>
+<li> Calculate (filament_diameter / 2) ^ 2 * PI. For filament_diameter =
+ 3.0mm, this is almost exactly 7. For 1.75mm filament, it's almost 
+exactly 2.4.</li>
+<li> Change your filament diameter in your slicer to 2*sqrt(1 / pi) = 1.128379</li>
+<li> Divide your E_steps by the number from Step 2.</li>
+<li> Multiply all your E-related speeds and accelerations (esp. maximums
+ in firmware config!), and retract distance by the value from Step 2.</li>
+<li> Repeat E steps calibration above. Your first print should be extremely close.</li></ol>
+<p>Now you can reuse the same gcode over and over again, and simply 
+alter E steps with M92 when you change filament, or use the same gcode 
+on another printer.
+</p>
+<h3><span class="mw-headline" id="Rationale">Rationale</span></h3>
+<p>We currently have 3 tunables affecting one measurable - extrusion 
+multiplier, filament diameter and E steps all affect the amount of 
+plastic extruded.
+</p><p>Filament diameter does not change significantly - it should not 
+change mid-print, and only changes by a small amount when switching from
+ one roll of filament to another.
+</p><p>It should be possible to set two of these tunables to fixed values, and alter only the 3rd when necessary.
+</p><p>It is sensible to choose the tunable which is easiest to alter - 
+this is E steps which can be altered at any time (even mid-print) by 
+sending M92 E<i>nnn</i>.
+</p><p>The slicer calculates the volume of filament to extrude for each 
+line segment. Then, it takes this volume and divides it by 
+(filament_diameter / 2) ^ 2 * PI to find the distance of filament to 
+extrude.
+</p><p>SO if we alter our filament diameter such that (filament_diameter
+ / 2)^2 * PI == 1.0, then the E words in our gcode will be in units of 
+mm^3.
+</p><p>Since our new unit is 7x bigger (area of a 3mm diameter circle is
+ ~7mm^2, so 1mm(length) becomes 7mm^3(volume), for 1.75mm filament the 
+factor is 2.4x), we have to adjust our retraction distance, and E steps 
+and acceleration to suit the new units.
+</p><p>See <a rel="nofollow" class="external text" href="https://wooden-mendel.blogspot.com/2011/09/volumetric-stage-two.html">my blog post</a> for more info.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20200712185643
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.019 seconds
+Real time usage: 0.021 seconds
+Preprocessor visited node count: 163/1000000
+Preprocessor generated node count: 786/1000000
+Post‐expand include size: 2640/2097152 bytes
+Template argument size: 1008/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    3.282      1 Template:Languages
+100.00%    3.282      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key mediawiki:pcache:idhash:12027-0!canonical and timestamp 20200712185643 and revision id 184227
+ -->
+</div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide&amp;oldid=184227">https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide&amp;oldid=184227</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://reprap.org/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="https://reprap.org/wiki/Category:Calibration" title="Category:Calibration">Calibration</a></li><li><a href="https://reprap.org/wiki/Category:Reference" title="Category:Reference">Reference</a></li><li><a href="https://reprap.org/wiki/Category:Tutorials" title="Category:Tutorials">Tutorials</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-createaccount"><a href="https://reprap.org/mediawiki/index.php?title=Special:CreateAccount&amp;returnto=Triffid+Hunter%27s+Calibration+Guide" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://reprap.org/mediawiki/index.php?title=Special:UserLogin&amp;returnto=Triffid+Hunter%27s+Calibration+Guide" title="You are encouraged to log in; however, it is not mandatory [Alt+Maj+o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+														<li id="ca-nstab-main" class="selected"><span><a href="https://reprap.org/wiki/Triffid_Hunter%27s_Calibration_Guide" title="View the content page [Alt+Maj+c]" accesskey="c">Page</a></span></li>
+							<li id="ca-talk"><span><a href="https://reprap.org/wiki/Talk:Triffid_Hunter%27s_Calibration_Guide" rel="discussion" title="Discussion about the content page [Alt+Maj+t]" accesskey="t">Discussion</a></span></li>
+						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label" tabindex="0">
+							<span>Variants</span>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+														<li id="ca-view" class="selected"><span><a href="https://reprap.org/wiki/Triffid_Hunter%27s_Calibration_Guide">Read</a></span></li>
+							<li id="ca-viewsource"><span><a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide&amp;action=edit" title="This page is protected.
+You can view its source [Alt+Maj+e]" accesskey="e">View source</a></span></li>
+							<li id="ca-history" class="collapsible"><span><a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide&amp;action=history" title="Past revisions of this page [Alt+Maj+h]" accesskey="h">View history</a></span></li>
+						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label" style="">
+						<h3 id="p-cactions-label" tabindex="0"><span>More</span></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="/mediawiki/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search RepRap" title="Search RepRap [Alt+Maj+f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Special:Search" name="title"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="https://reprap.org/wiki/Main_Page" title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-Main-Page"><a href="https://reprap.org/wiki/RepRap">Main Page</a></li><li id="n-Build-a-RepRap"><a href="https://reprap.org/wiki/RepRap_Options">Build a RepRap</a></li><li id="n-Glossary"><a href="https://reprap.org/wiki/Glossary">Glossary</a></li><li id="n-Reference"><a href="https://reprap.org/wiki/Reference">Reference</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Participation" aria-labelledby="p-Participation-label">
+			<h3 id="p-Participation-label">Participation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-Recent-Changes"><a href="https://reprap.org/wiki/Special:RecentChanges">Recent Changes</a></li><li id="n-Get-a-Wiki-account"><a href="https://reprap.org/forum/read.php?1,641102" rel="nofollow">Get a Wiki account</a></li><li id="n-Create-a-new-page"><a href="https://reprap.org/wiki/Very_Messy_Example">Create a new page</a></li><li id="n-Donation-Page"><a href="https://sourceforge.net/donate/index.php?group_id=159590" rel="nofollow">Donation Page</a></li><li id="n-Policy"><a href="https://reprap.org/wiki/Policy">Policy</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Community" aria-labelledby="p-Community-label">
+			<h3 id="p-Community-label">Community</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-RepRap-Forum"><a href="https://reprap.org/forum/" rel="nofollow">RepRap Forum</a></li><li id="n-RepRap-IRC"><a href="https://reprap.org/wiki/IRC">RepRap IRC</a></li><li id="n-Development-Index"><a href="https://reprap.org/wiki/Development">Development Index</a></li><li id="n-RepRap-User-Groups"><a href="https://reprap.org/forum/index.php?19" rel="nofollow">RepRap User Groups</a></li><li id="n-Community-Portal"><a href="https://reprap.org/wiki/Community_portal">Community Portal</a></li><li id="n-Licence"><a href="https://reprap.org/wiki/RepRapGPLLicence">Licence</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://reprap.org/wiki/Special:WhatLinksHere/Triffid_Hunter%27s_Calibration_Guide" title="A list of all wiki pages that link here [Alt+Maj+j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://reprap.org/wiki/Special:RecentChangesLinked/Triffid_Hunter%27s_Calibration_Guide" rel="nofollow" title="Recent changes in pages linked from this page [Alt+Maj+k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="https://reprap.org/wiki/Special:SpecialPages" title="A list of all special pages [Alt+Maj+q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide&amp;printable=yes" rel="alternate" title="Printable version of this page [Alt+Maj+p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide&amp;oldid=184227" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://reprap.org/mediawiki/index.php?title=Triffid_Hunter%27s_Calibration_Guide&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="https://reprap.org/mediawiki/index.php?title=Special:CiteThisPage&amp;page=Triffid_Hunter%27s_Calibration_Guide&amp;id=184227" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last edited on 31 December 2018, at 17:02.</li>
+											<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License</a> unless otherwise noted.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://reprap.org/wiki/RepRap:Privacy_policy" title="RepRap:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="https://reprap.org/wiki/RepRap:About" class="mw-redirect" title="RepRap:About">About RepRap</a></li>
+											<li id="footer-places-disclaimer"><a href="https://reprap.org/wiki/RepRap:General_disclaimer" title="RepRap:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://www.gnu.org/copyleft/fdl.html"><img src="Triffid%20Hunter's%20Calibration%20Guide%20-%20RepRap_fichiers/gnu-fdl.png" alt="GNU Free Documentation License" width="88" height="31"></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="https://www.mediawiki.org/"><img src="Triffid%20Hunter's%20Calibration%20Guide%20-%20RepRap_fichiers/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/mediawiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /mediawiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.019","walltime":"0.021","ppvisitednodes":{"value":163,"limit":1000000},"ppgeneratednodes":{"value":786,"limit":1000000},"postexpandincludesize":{"value":2640,"limit":2097152},"templateargumentsize":{"value":1008,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"timingprofile":["100.00%    3.282      1 Template:Languages","100.00%    3.282      1 -total"]},"cachereport":{"timestamp":"20200712185643","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":34});});</script>
+	
+
+<div style="display: none; font-size: 13px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body></html>

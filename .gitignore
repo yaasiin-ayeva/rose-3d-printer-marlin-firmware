@@ -1,0 +1,7 @@
+# Latex Documentation ignore list
+*.out
+*.log
+*.aux
+*.dvi
+*.synctex.gz
+*.class
